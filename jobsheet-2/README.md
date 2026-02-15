@@ -23,3 +23,10 @@ Saya menjalankan `npm run dev` dan hasilnya seperti ini,
 ![npm run dev command](assets/image-6.png)
 ![website serve](assets/image-7.png)
 
+## Langkah 4 – Mengenal Struktur Folder
+
+Saya sudah memahami sedikit struktur folder dari nextjs ini, dan saya sedikit bermain-main dengan kode di index.tsx, \
+Before:
+![before edit](assets/image-8.png)
+After:
+![after edit](assets/image-9.png)

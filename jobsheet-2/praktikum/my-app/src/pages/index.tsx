@@ -27,14 +27,15 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               By{' '}
-              <Image
+              {/* <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"
                 className={styles.vercelLogo}
                 width={100}
                 height={24}
                 priority
-              />
+              /> */}
+              Aakhif
             </a>
           </div>
         </div>
@@ -47,7 +48,9 @@ export default function Home() {
             width={180}
             height={37}
             priority
-          />
+          /> 
+          <div style={{width: '4px', height: '80px', backgroundColor: 'white', margin: '16px'}}></div>
+          <ImageComponent />
         </div>
 
         <div className={styles.grid}>
@@ -110,5 +113,19 @@ export default function Home() {
         </div>
       </main>
     </>
+  )
+}
+
+export function ImageComponent() {
+  return (
+    <Image
+      className={styles.logo}
+      src="/next.svg"
+      alt="Next.js Logo"
+      width={180}
+      height={37}
+      priority
+      style={{ transform: 'scaleX(-1)' }}
+    />
   )
 }
