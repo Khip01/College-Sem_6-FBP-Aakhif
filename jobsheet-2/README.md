@@ -37,3 +37,14 @@ Saya mengubah lagi halaman utama nextjs menjadi seperti ini,
 
 dan hasilnya adalah seperti ini,
 ![display result](assets/image-11.png)
+
+## Langkah 6 – Modifikasi API
+
+Saya awalnya memiliki api dengan hasil seperti ini,
+![api basic](assets/image-12.png)
+
+Lalu saya mengubah kodenya menjadi seperti ini,
+![modif api code](assets/image-13.png)
+
+dan hasilnya seperti ini,
+![modif api response](assets/image-14.png)
