@@ -27,6 +27,7 @@ export function ImageComponent() {
       width={180}
       height={37}
       priority
+      style={{ filter: "brightness(0)" }}
     />
   );
 }

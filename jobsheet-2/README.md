@@ -48,3 +48,9 @@ Lalu saya mengubah kodenya menjadi seperti ini,
 
 dan hasilnya seperti ini,
 ![modif api response](assets/image-14.png)
+
+## Langkah 7 – Modifikasi Background
+
+Saya sudah mengubah background nya jadi putih (itu karena kita tidak menggunakan style css bawaan dari nextjs, import style nya kita nonaktifkan), dan hasilnya adalah seperti berikut,
+
+![disable style.css import- display](assets/image-15.png)
