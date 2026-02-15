@@ -96,3 +96,49 @@ Saya sudah membuat halaman baru di file about.js, dan inilah hasilnya,
 Saya sudah menambahkan link navigasi (dengan menggunakan tag `<Link>`) dari halaman beranda ke halaman about, seperti ini lah hasilnya,
 
 ![navigation with spa gif](assets/gif-1.gif)
+
+# F. Pertanyaan Refleksi
+
+### 1. Mengapa Pages Router disebut sebagai routing berbasis file?
+
+#### **Jawab**
+
+Karena struktur folder dan nama file di dalam direktori pages secara otomatis menentukan route URL dari aplikasi.
+
+### 2. Apa perbedaan Next.js dengan React standar (CRA)?
+
+#### **Jawab**
+
+Perbedaan nextjs dan react app disini adalah seperti berikut,
+
+##### 1. Dari sisi rendering
+
+**React** menggunakan rendering CSR/Client Side Rendering, yang dimana ini mempersulit SEO dari website yang dibuat menggunakan React. Ini dikarenakan pada saat client mengakses halaman React, browser akan mengambil/mendownload halaman kosong terlebih dahulu, lalu React menggenerate nya sembari client mengakses halaman (sehingga client tidak mendapatkan halaman HTML di awal halaman dimuat).
+
+**Next.js** menggunakan SSR/Server Side Rendering, yang dimana Next.js akan menyiapkan HTML terlebih dahulu sebelum dikirim ke sisi client/browser. Sehingga konten/isi HTML sudah siap sebelum client mengambil/mendownload halamannya.
+
+##### 2. Dari sisi routing
+
+**React** menggunakan routing berbasis URL, harus disiapkan routing confignya dengan menginstall library tambahan seperti React Router.
+
+**Next.js** menggunakan routing berbasis file, yang dimana rute halaman akan sesuai dengan susunan file didalam direktori `pages`.
+
+##### 3. Dari sisi arsitektur
+
+**React** merupakan **library** untuk frontend, sehingga jika ingin menerapkan backend butuh backend terpisah seperti Express.js, Go, dkk.
+
+**Next.js** merupakan **framework** fullstack yang dibangun diatas React, bisa digunakan untuk frontend ataupun backend karena menyediakan (routing, server-side, dll) yang tidak dimiliki oleh React standar.
+
+### 3. Apa fungsi perintah npm run dev?
+
+#### **Jawab**
+
+Untuk menjalankan development server secara lokal. Yang dilakukan adalah kompilasi kode secara real-time _(mengcompile kode Typescript ke Javascript biasa secara realtime agar bisa dimengerti oleh browser)_.
+
+### 4. Apa perbedaan npm run dev dan run build ?
+
+#### **Jawab**
+
+`npm run dev` berfungsi untuk running project Next.js pada saat programmer melakukan **proses development**.
+
+Sedangkan `npm run build` digunakan pada saat aplikasi/web dalam tahap **sudah siap produksi/sudah jadi**, sehingga siap untuk di deploy secara online/publik.
