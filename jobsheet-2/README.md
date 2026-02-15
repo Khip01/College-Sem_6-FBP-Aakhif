@@ -2,15 +2,14 @@
 
 ## Langkah 1 – Pengecekan Lingkungan
 
-Dikarenakan saya belum menginstall node dan npm 
-![node and npm not found](assets/image.png) 
+Dikarenakan saya belum menginstall node dan npm
+![node and npm not found](assets/image.png)
 
 Jadi saya mencoba untuk menginstall nya terlebih dahulu,
 ![nvm installation](assets/image-1.png)
 ![nvm version](assets/image-2.png)
 ![installing npm version 24](assets/image-3.png)
 ![git version](assets/image-4.png)
-
 
 ## Langkah 2 – Membuat Project Next.js
 
@@ -30,3 +29,11 @@ Before:
 ![before edit](assets/image-8.png)
 After:
 ![after edit](assets/image-9.png)
+
+## Langkah 5 – Modifikasi Halaman Utama
+
+Saya mengubah lagi halaman utama nextjs menjadi seperti ini,
+![modif code](assets/image-10.png)
+
+dan hasilnya adalah seperti ini,
+![display result](assets/image-11.png)
