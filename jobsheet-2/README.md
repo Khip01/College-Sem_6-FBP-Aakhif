@@ -17,3 +17,9 @@ Jadi saya mencoba untuk menginstall nya terlebih dahulu,
 Saya sudah memuat project baru dengan menggunakan npx (node package execute),
 ![creating nextjs project](assets/image-5.png)
 
+## Langkah 3 – Menjalankan Server Development
+
+Saya menjalankan `npm run dev` dan hasilnya seperti ini,
+![npm run dev command](assets/image-6.png)
+![website serve](assets/image-7.png)
+
