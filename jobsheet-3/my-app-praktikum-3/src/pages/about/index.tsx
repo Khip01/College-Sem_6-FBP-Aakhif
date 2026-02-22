@@ -4,10 +4,10 @@ export default function About() {
   return (
     <div>
       <Head>
-        <title>Halaman About</title>
+        <title>Halaman About Dengan Folder</title>
       </Head>
       <main>
-        <h1>ini halaman about aakhif</h1>
+        <h1>ini halaman about aakhif dengan folder</h1>
       </main>
     </div>
   );
