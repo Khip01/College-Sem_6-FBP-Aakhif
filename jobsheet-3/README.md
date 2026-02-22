@@ -75,3 +75,47 @@ Jadi saya mencoba memberikan parameter id: sepatu-baru
 ![halaman produk dengan parameter id sepatu-baru](image-16.png)
 
 ![halaman produk dengan parameter id baju](image-17.png)
+
+## 5. Membuat Komponen Navbar
+
+### a. Struktur Komponen
+
+Saya membuat susunan folder baru didalam folder `src` menjadi seperti ini,
+
+![struktur susunan folder komponen navbar](image-18.png)
+
+lalu saya mencoba memodifikasi `index.tsx` yang berada didalam folder `components/layouts/navbar`
+
+![modifikasi kode navbar](image-19.png)
+
+Lalu saya melakukan modifikasi ke file `global.css`
+
+![modifikasi global.css](image-20.png)
+
+lalu saya memodifikasi `index.tsx` dalam folder `pages`
+
+![modifikasi kode index.tsx](image-21.png)
+
+Lalu saya cek browser saya dan mendapatkan hasil ini,
+
+![halaman index, hasil navbar](image-22.png)
+
+> Tetapi navbar hanya muncul di index page, tidak di page lainnya
+
+Jadi saya melakukan modifikasi file `_app.tsx` dengan menamabhkan komponen Navbar yang sudah saya buat, dan menghapus komponen Navbar di file index.tsx, dan hasilnya seperti ini,
+
+Di halaman index.tsx,
+
+![halaman index.tsx awal](image-23.png)
+
+Di halaman sepatu,
+
+![halaman sepatu](image-24.png)
+
+Di halaman app,
+
+![halaman setting app](image-25.png)
+
+Di halaman user,
+
+![halaman user](image-26.png)
