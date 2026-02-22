@@ -39,3 +39,39 @@ Lalu saya menambahkan folder baru bernama "password", lalu didalamnya ditambahka
 ![menambahkan folder password](image-7.png)
 
 ![halaman password didalam folder user](image-8.png)
+
+## 4. Dynamic Routing
+
+### a. Buat Halaman Produk
+
+Saya membuat halaman produk baru,
+
+![folder produk baru](image-9.png)
+
+![halaman produk](image-10.png)
+
+Lalu saya membuat file baru bernama `[id].tsx`,
+
+![file id produk baru](image-11.png)
+
+Lalu saya modifikasi kode nya dan mencoba memberikan segment sepatu
+
+![segment sepatu ditambahkan di halaman produk](image-12.png)
+
+Dan di console log hasilnya seperti berikut,
+
+![console log produk dengan segmen sepatu](image-13.png)
+
+Lalu saya memodifikasi `[id].tsx` agar dapat mengambil nilai dari id,
+
+![kode hasil modifikasi [id].tsx](image-15.png)
+
+![modifikasi [id].tsx agar dapat mengambil nilai id](image-14.png)
+
+### b. Uji di Browser
+
+Jadi saya mencoba memberikan parameter id: sepatu-baru
+
+![halaman produk dengan parameter id sepatu-baru](image-16.png)
+
+![halaman produk dengan parameter id baju](image-17.png)
