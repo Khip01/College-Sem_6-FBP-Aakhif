@@ -33,3 +33,9 @@ Dan hasilnya menjadi seperti ini,
 ![halaman user didalam folder user](image-5.png)
 
 ### b. Nested Lebih Dalam
+
+Lalu saya menambahkan folder baru bernama "password", lalu didalamnya ditambahkan file `index.tsx` seperti berikut,
+
+![menambahkan folder password](image-7.png)
+
+![halaman password didalam folder user](image-8.png)
