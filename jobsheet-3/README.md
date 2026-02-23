@@ -148,3 +148,9 @@ Saya mencoba membuat route baru,
 Dan berikut adalah hasilnya,
 
 ![gif rute profil dan edit profil baru](Screencast_20260223_153736.gif)
+
+## Tugas 2 – Dynamic Routing
+
+Saya sudah menambahkan rute baru untuk `/blog` dan `/blog/[slug]`, dan berikut adalah hasilnya,
+
+![gif hasil dynamic routing darirute blog](Screencast_20260223_160056.gif)
