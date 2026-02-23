@@ -4,15 +4,15 @@
 
 Saya sudah menambahkan halaman about dengan cara menambahkan file `about.tsx` di folder `pages`
 
-![halaman about dengan file about.tsx](image.png)
+![halaman about dengan file about.tsx](assets/image.png)
 
 ## 2. Routing Menggunakan Folder
 
 Saya sudah membuat folder dengan file index.tsx didalamnya (yang berisi tampilan about yang sudah dipindah kedalam folder)
 
-![halaman about didalam folder about](image-1.png)
+![halaman about didalam folder about](assets/image-1.png)
 
-![halaman about yang lebih rapi](image-2.png)
+![halaman about yang lebih rapi](assets/image-2.png)
 
 ## 3. Nested Routing
 
@@ -20,25 +20,25 @@ Saya sudah membuat folder dengan file index.tsx didalamnya (yang berisi tampilan
 
 Saya mencoba untuk membuat folder settingsdan mengisinya dengan file `user.tsx` dan `app.tsx`
 
-![halaman app di folder setting](image-3.png)
+![halaman app di folder setting](assets/image-3.png)
 
-![halaman user di folder setting](image-4.png)
+![halaman user di folder setting](assets/image-4.png)
 
 Setelah itu saya modifikasi halaman user dengan cara memindahkan `user.tsx` kedalam folder baru bernama user, dan me-rename nya menjadi `index.tsx`
 
-![folder user baru dengan file `index.ts` didalamnya](image-6.png)
+![folder user baru dengan file `index.ts` didalamnya](assets/image-6.png)
 
 Dan hasilnya menjadi seperti ini,
 
-![halaman user didalam folder user](image-5.png)
+![halaman user didalam folder user](assets/image-5.png)
 
 ### b. Nested Lebih Dalam
 
 Lalu saya menambahkan folder baru bernama "password", lalu didalamnya ditambahkan file `index.tsx` seperti berikut,
 
-![menambahkan folder password](image-7.png)
+![menambahkan folder password](assets/image-7.png)
 
-![halaman password didalam folder user](image-8.png)
+![halaman password didalam folder user](assets/image-8.png)
 
 ## 4. Dynamic Routing
 
@@ -46,35 +46,35 @@ Lalu saya menambahkan folder baru bernama "password", lalu didalamnya ditambahka
 
 Saya membuat halaman produk baru,
 
-![folder produk baru](image-9.png)
+![folder produk baru](assets/image-9.png)
 
-![halaman produk](image-10.png)
+![halaman produk](assets/image-10.png)
 
 Lalu saya membuat file baru bernama `[id].tsx`,
 
-![file id produk baru](image-11.png)
+![file id produk baru](assets/image-11.png)
 
 Lalu saya modifikasi kode nya dan mencoba memberikan segment sepatu
 
-![segment sepatu ditambahkan di halaman produk](image-12.png)
+![segment sepatu ditambahkan di halaman produk](assets/image-12.png)
 
 Dan di console log hasilnya seperti berikut,
 
-![console log produk dengan segmen sepatu](image-13.png)
+![console log produk dengan segmen sepatu](assets/image-13.png)
 
 Lalu saya memodifikasi `[id].tsx` agar dapat mengambil nilai dari id,
 
-![kode hasil modifikasi [id].tsx](image-15.png)
+![kode hasil modifikasi [id].tsx](assets/image-15.png)
 
-![modifikasi [id].tsx agar dapat mengambil nilai id](image-14.png)
+![modifikasi [id].tsx agar dapat mengambil nilai id](assets/image-14.png)
 
 ### b. Uji di Browser
 
 Jadi saya mencoba memberikan parameter id: sepatu-baru
 
-![halaman produk dengan parameter id sepatu-baru](image-16.png)
+![halaman produk dengan parameter id sepatu-baru](assets/image-16.png)
 
-![halaman produk dengan parameter id baju](image-17.png)
+![halaman produk dengan parameter id baju](assets/image-17.png)
 
 ## 5. Membuat Komponen Navbar
 
@@ -82,23 +82,23 @@ Jadi saya mencoba memberikan parameter id: sepatu-baru
 
 Saya membuat susunan folder baru didalam folder `src` menjadi seperti ini,
 
-![struktur susunan folder komponen navbar](image-18.png)
+![struktur susunan folder komponen navbar](assets/image-18.png)
 
 lalu saya mencoba memodifikasi `index.tsx` yang berada didalam folder `components/layouts/navbar`
 
-![modifikasi kode navbar](image-19.png)
+![modifikasi kode navbar](assets/image-19.png)
 
 Lalu saya melakukan modifikasi ke file `global.css`
 
-![modifikasi global.css](image-20.png)
+![modifikasi global.css](assets/image-20.png)
 
 lalu saya memodifikasi `index.tsx` dalam folder `pages`
 
-![modifikasi kode index.tsx](image-21.png)
+![modifikasi kode index.tsx](assets/image-21.png)
 
 Lalu saya cek browser saya dan mendapatkan hasil ini,
 
-![halaman index, hasil navbar](image-22.png)
+![halaman index, hasil navbar](assets/image-22.png)
 
 > Tetapi navbar hanya muncul di index page, tidak di page lainnya
 
@@ -106,35 +106,35 @@ Jadi saya melakukan modifikasi file `_app.tsx` dengan menamabhkan komponen Navba
 
 Di halaman index.tsx,
 
-![halaman index.tsx awal](image-23.png)
+![halaman index.tsx awal](assets/image-23.png)
 
 Di halaman sepatu,
 
-![halaman sepatu](image-24.png)
+![halaman sepatu](assets/image-24.png)
 
 Di halaman app,
 
-![halaman setting app](image-25.png)
+![halaman setting app](assets/image-25.png)
 
 Di halaman user,
 
-![halaman user](image-26.png)
+![halaman user](assets/image-26.png)
 
 ## 6. Membuat Layout Global (App Shell)
 
 Saya mencoba membuat appshell yang dimana ada navbar yang statis dan children yang dinamis,
 
-![kode components appshell](image-27.png)
+![kode components appshell](assets/image-27.png)
 
 Setelah itu saya mengimplementasikannya di `_app.tsx`,
 
-![modifikasi kode _app.tsx dengan footer](image-28.png)
+![modifikasi kode _app.tsx dengan footer](assets/image-28.png)
 
 Dan hasilnya seluruh halaman yang berada di dalam AppShell akan ada footernya,
 
-![halaman index.tsx](image-29.png)
+![halaman index.tsx](assets/image-29.png)
 
-![halaman about](image-30.png)
+![halaman about](assets/image-30.png)
 
 # E. Tugas Praktikum
 
@@ -147,33 +147,33 @@ Saya mencoba membuat route baru,
 
 Dan berikut adalah hasilnya,
 
-![gif rute profil dan edit profil baru](Screencast_20260223_153736.gif)
+![gif rute profil dan edit profil baru](assets/Screencast_20260223_153736.gif)
 
 ## Tugas 2 – Dynamic Routing
 
 Saya sudah menambahkan rute baru untuk `/blog` dan `/blog/[slug]`, dan berikut adalah hasilnya,
 
-![gif hasil dynamic routing darirute blog](Screencast_20260223_160056.gif)
+![gif hasil dynamic routing darirute blog](assets/Screencast_20260223_160056.gif)
 
 ## Tugas 3 – Layout
 
 Saya menambahkan footer di appshell, tetapi sebelum itu saya hapus terlebih dahulu footer di `_app.tsx`
 
-![melakukan komentar pada footer di file _app.tsx](image-31.png)
+![melakukan komentar pada footer di file _app.tsx](assets/image-31.png)
 
 Setelah itu saya baru menambahkan footer di `AppShell` seperti berikut,
 
-![penambahan footer di AppShell](image-32.png)
+![penambahan footer di AppShell](assets/image-32.png)
 
 Dan tampilannya seperti berikut,
 
-![halaman /blog/[slug]](image-33.png)
+![halaman /blog/[slug]](assets/image-33.png)
 
-![halaman /blog](image-34.png)
+![halaman /blog](assets/image-34.png)
 
-![halaman /about](image-35.png)
+![halaman /about](assets/image-35.png)
 
-![halaman index](image-36.png)
+![halaman index](assets/image-36.png)
 
 # F. Pertanyaan Refleksi
 
