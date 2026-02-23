@@ -154,3 +154,23 @@ Dan berikut adalah hasilnya,
 Saya sudah menambahkan rute baru untuk `/blog` dan `/blog/[slug]`, dan berikut adalah hasilnya,
 
 ![gif hasil dynamic routing darirute blog](Screencast_20260223_160056.gif)
+
+## Tugas 3 – Layout
+
+Saya menambahkan footer di appshell, tetapi sebelum itu saya hapus terlebih dahulu footer di `_app.tsx`
+
+![melakukan komentar pada footer di file _app.tsx](image-31.png)
+
+Setelah itu saya baru menambahkan footer di `AppShell` seperti berikut,
+
+![penambahan footer di AppShell](image-32.png)
+
+Dan tampilannya seperti berikut,
+
+![halaman /blog/[slug]](image-33.png)
+
+![halaman /blog](image-34.png)
+
+![halaman /about](image-35.png)
+
+![halaman index](image-36.png)

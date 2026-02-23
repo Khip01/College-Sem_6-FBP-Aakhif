@@ -8,10 +8,15 @@ const AppShell = (props: AppShellProps) => {
   const { children } = props;
 
   return (
-    <main>
-      <Navbar />
-      {children}
-    </main>
+    <>
+      <main>
+        <Navbar />
+        {children}
+      </main>
+      <footer>
+        <p>footer AppShell</p>
+      </footer>
+    </>
   );
 };
 

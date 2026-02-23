@@ -11,9 +11,9 @@ export default function App({ Component, pageProps }: AppProps) {
     // </>
     <AppShell>
       <Component {...pageProps} />
-      <footer>
+      {/* <footer>
         <p>footer aakhif</p>
-      </footer>
+      </footer> */}
     </AppShell>
   );
 }
