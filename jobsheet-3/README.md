@@ -135,3 +135,16 @@ Dan hasilnya seluruh halaman yang berada di dalam AppShell akan ada footernya,
 ![halaman index.tsx](image-29.png)
 
 ![halaman about](image-30.png)
+
+# E. Tugas Praktikum
+
+## Tugas 1 – Routing
+
+Saya mencoba membuat route baru,
+
+- `/profile`
+- `/profile/edit`
+
+Dan berikut adalah hasilnya,
+
+![gif rute profil dan edit profil baru](Screencast_20260223_153736.gif)
