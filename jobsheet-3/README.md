@@ -119,3 +119,19 @@ Di halaman app,
 Di halaman user,
 
 ![halaman user](image-26.png)
+
+## 6. Membuat Layout Global (App Shell)
+
+Saya mencoba membuat appshell yang dimana ada navbar yang statis dan children yang dinamis,
+
+![kode components appshell](image-27.png)
+
+Setelah itu saya mengimplementasikannya di `_app.tsx`,
+
+![modifikasi kode _app.tsx dengan footer](image-28.png)
+
+Dan hasilnya seluruh halaman yang berada di dalam AppShell akan ada footernya,
+
+![halaman index.tsx](image-29.png)
+
+![halaman about](image-30.png)
