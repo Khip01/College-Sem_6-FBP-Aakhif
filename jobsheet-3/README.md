@@ -174,3 +174,25 @@ Dan tampilannya seperti berikut,
 ![halaman /about](image-35.png)
 
 ![halaman index](image-36.png)
+
+# F. Pertanyaan Refleksi
+
+### 1. Apa perbedaan routing berbasis file dan routing manual?
+
+#### **Jawab**
+
+Jika routing berbasis file, rute ditentukan berdasarkan susunan folder/direktori dan file nya.
+
+Jika routing manual yaitu menentukan rute aplikasi dengan cara manual dengan memberikan path url nya, apa aturan yang diberikan ke url tersebut, serta memberikan file apa yang bertanggung jawab menampilkan view atas url tersebut, secara manual menggunakan kode.
+
+### 2. Mengapa dynamic routing penting dalam aplikasi web?
+
+#### **Jawab**
+
+Karena dengan dynamic routing itu bisa menjadi tempat pemberian nilai/data antar halaman.
+
+### 3. Apa keuntungan menggunakan layout global dibanding memanggil komponen satu per satu?
+
+#### **Jawab**
+
+Pada saat ada perubahan dalam pemanggilan komponen, kita bisa fokus ke satu pemanggilan komponen saja (misal update kode komponen navbar di `AppShell` saja), tanpa perlu mengubah pemanggilan di file-file lain (apabila pemanggilan komponen dilakukan secara manual di masing-masing file).
