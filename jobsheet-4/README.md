@@ -91,3 +91,19 @@ Dan hasilnya pada saat saya coba mengakses rute `/product` adalah seperti ini,
 ![mencoba untuk login setelah kode redirect diberikan](Screencast_20260224_164240.gif)
 
 Tapi sayangnya kalo kita lihat disitu tombol login seperti tidak berfungsi, karena pada saat push() ke halaman `/produk`, di halaman product dia malah di redirect kembali ke halaman login. Mengapa? ya karena state dari variabel `isLogin` itu selalu `false`.
+
+Maka dari itu tombol login ini terlihat seperti tidak melakukan apapun.
+
+Jadi saya modifikasi kode nya agar state dari variabel `isLogin` itu berubah menjadi true.
+
+Dan hasilnya adalah seperti berikut,
+
+![fix login redirect](Screencast_20260224_171922.gif)
+
+Jadi disini yang saya tangkap adalah, kita berusaha menentukan redirect/tidaknya dari state variabel `isLogin`, di kode tombol logout ini di halaman produk,
+
+![halaman index.tsx produk](image-18.png)
+
+disitu di fungsi `handlerLogout` saya hanya memanggil fungsi seIsLogin untuk mengubah state `isLogin` menjadi false, sehingga saya tidak perlu melakukan push ke halaman login (karena sudah ada redirect yang mengecek apakah state variabel `isLogin` adalah false) di sebelah sini,
+
+![useEffect mendengarkan perubahan variabel isLogin](image-19.png)

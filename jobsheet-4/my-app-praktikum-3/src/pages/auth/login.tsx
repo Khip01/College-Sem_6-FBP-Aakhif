@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const halamanLogin = () => {
+const halamanLogin = ({ setIsLogin }: any) => {
   const { push } = useRouter();
 
   const handlerLogin = () => {
+    setIsLogin(true);
     push("/produk");
   };
 
