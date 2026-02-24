@@ -41,3 +41,17 @@ dan hasilnya menjadi seperti berikut,
 Tetapi untuk sementara saya menggunakan kode ini saja untuk menampilkan item,
 
 ![kode yang dipaka (kode sebelumnya)](image-9.png)
+
+## Langkah 4 – Optional Catch-All Route
+
+Ketika saya mencoba mengakses rute `http://localhost:3000/shop` saya mendapatkan halaman notfound next.js
+
+![notfound karena tidak ada slug yg diberikan](image-10.png)
+
+sehingga agar rute parameter slug berupa opsional, saya memberikan kurung siku tambahan seperti berikut,
+
+![menamabhkan kurung siku tambahan di file bernama ...slug](image-11.png)
+
+Sehingga pada saat saya coba akses rutenya, hasilnya menampilkan seperti berikut
+
+![hasil undefined karena nilai dari array tidak ada](image-12.png)
