@@ -63,3 +63,9 @@ Saya mencoba untuk menambahkan validasi agar tidak error saat slug kosong,
 ![validasi slug kosong](image-13.png)
 
 ![tampilan jika slug kosong](image-14.png)
+
+## Langkah 6 – Membuat Halaman Login & Register
+
+Saya membuat folder `pages/auth`, setelah itu didalamnya ada file login.tsx dan register.tsx,
+
+![folder pages/auth](image-15.png)
