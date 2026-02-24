@@ -69,3 +69,13 @@ Saya mencoba untuk menambahkan validasi agar tidak error saat slug kosong,
 Saya membuat folder `pages/auth`, setelah itu didalamnya ada file login.tsx dan register.tsx,
 
 ![folder pages/auth](image-15.png)
+
+## Langkah 7 – Navigasi Imperatif (router.push)
+
+Lalu saya menambahkan tombol Login didalam halaman login seperti berikut
+
+![menambahkan button di halaman login](image-16.png)
+
+Dan hasilnya seperti ini,
+
+![mencoba menekan tombol login](Screencast_20260224_163432.gif)
