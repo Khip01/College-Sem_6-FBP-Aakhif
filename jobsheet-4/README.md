@@ -121,3 +121,9 @@ Saya sudah mencoba membuat catch-all route `/category/[...slug].tsx`, dan menamp
 Saya sudah memodifikasi file `login.tsx` dan `register.tsx` agar bisa berpindah pindah dengan tag `<Link>`, dan juga saya bisa berpindah ke halaman `produk` dengan tombol login, berikut adalah hasilnya,
 
 ![tampilan berhasil melakukan perpindahan halaman sesuai dengan fungsinya](Screencast_20260224_175459.gif)
+
+## Tugas 3 (Pengayaan)
+
+Saya juga sudah menerapkan ogiredirect jika user belum login, hasilnya adalah seperti berikut,
+
+![berhasil menerapan redirect di halaman produk](Screencast_20260224_175813.gif)
