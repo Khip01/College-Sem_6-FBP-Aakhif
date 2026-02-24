@@ -115,3 +115,9 @@ disitu di fungsi `handlerLogout` saya hanya memanggil fungsi seIsLogin untuk men
 Saya sudah mencoba membuat catch-all route `/category/[...slug].tsx`, dan menampilkan seluruh parameternya sebagai list. Dan hasilnya adalah seperti berikut,
 
 ![catch-all route](image-20.png)
+
+## Tugas 2 (Wajib)
+
+Saya sudah memodifikasi file `login.tsx` dan `register.tsx` agar bisa berpindah pindah dengan tag `<Link>`, dan juga saya bisa berpindah ke halaman `produk` dengan tombol login, berikut adalah hasilnya,
+
+![tampilan berhasil melakukan perpindahan halaman sesuai dengan fungsinya](Screencast_20260224_175459.gif)
