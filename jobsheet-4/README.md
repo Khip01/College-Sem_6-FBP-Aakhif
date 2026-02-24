@@ -79,3 +79,15 @@ Lalu saya menambahkan tombol Login didalam halaman login seperti berikut
 Dan hasilnya seperti ini,
 
 ![mencoba menekan tombol login](Screencast_20260224_163432.gif)
+
+## Langkah 8 – Simulasi Redirect (Belum Login)
+
+Di halaman product (`index.tsx`), saya menamabhkan kode berikut untuk melakukan redirect,
+
+![kode tambahan untuk melakukan redirect](image-17.png)
+
+Dan hasilnya pada saat saya coba mengakses rute `/product` adalah seperti ini,
+
+![mencoba untuk login setelah kode redirect diberikan](Screencast_20260224_164240.gif)
+
+Tapi sayangnya kalo kita lihat disitu tombol login seperti tidak berfungsi, karena pada saat push() ke halaman `/produk`, di halaman product dia malah di redirect kembali ke halaman login. Mengapa? ya karena state dari variabel `isLogin` itu selalu `false`.
