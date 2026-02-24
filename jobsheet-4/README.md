@@ -107,3 +107,11 @@ Jadi disini yang saya tangkap adalah, kita berusaha menentukan redirect/tidaknya
 disitu di fungsi `handlerLogout` saya hanya memanggil fungsi seIsLogin untuk mengubah state `isLogin` menjadi false, sehingga saya tidak perlu melakukan push ke halaman login (karena sudah ada redirect yang mengecek apakah state variabel `isLogin` adalah false) di sebelah sini,
 
 ![useEffect mendengarkan perubahan variabel isLogin](image-19.png)
+
+# E. Tugas Praktikum
+
+## Tugas 1 (Wajib)
+
+Saya sudah mencoba membuat catch-all route `/category/[...slug].tsx`, dan menampilkan seluruh parameternya sebagai list. Dan hasilnya adalah seperti berikut,
+
+![catch-all route](image-20.png)
