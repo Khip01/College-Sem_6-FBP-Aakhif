@@ -55,3 +55,11 @@ sehingga agar rute parameter slug berupa opsional, saya memberikan kurung siku t
 Sehingga pada saat saya coba akses rutenya, hasilnya menampilkan seperti berikut
 
 ![hasil undefined karena nilai dari array tidak ada](image-12.png)
+
+## Langkah 5 – Validasi Parameter
+
+Saya mencoba untuk menambahkan validasi agar tidak error saat slug kosong,
+
+![validasi slug kosong](image-13.png)
+
+![tampilan jika slug kosong](image-14.png)
