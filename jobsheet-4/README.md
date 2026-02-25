@@ -127,3 +127,36 @@ Saya sudah memodifikasi file `login.tsx` dan `register.tsx` agar bisa berpindah 
 Saya juga sudah menerapkan ogiredirect jika user belum login, hasilnya adalah seperti berikut,
 
 ![berhasil menerapan redirect di halaman produk](Screencast_20260224_175813.gif)
+
+# F. Pertanyaan Evaluasi
+
+### 1. Apa perbedaan [id].js dan [...slug].js?
+
+#### **Jawab**
+
+Jadi perbedaan nya yaitu, jika `[id].tsx` hanya bisa mengambil satu parameter dari rute, tetapi jika `[...slug].tsx` bisa mengambil banyak parameter dari rute.
+
+### 2. Mengapa slug berbentuk array?
+
+#### **Jawab**
+
+Sebenarnya penamaan slug sendiri digunakan agar bertujuan untuk human readable, dan `slug` yang kita gunakan di praktikum selama ini dibuat bertujuan agar kita bisa mengirim multiple/lebih dari satu parameter didalam rute.
+
+### 3. Kapan sebaiknya menggunakan Link dan router.push()?
+
+#### **Jawab**
+
+Kita menggunakan tag `<Link>` pada saat kita hendak berpindah halaman instan (untuk mengedepankan UX), karena karakternya sendiri yang tidak melakukan reload halaman.
+
+Sedangkan `router.push()` digunakan pada saat kita sedang melakukan pemrosesan data didalam fungsi, seperti submit form, redirect user, dan sejenisnya.
+
+### 4. Mengapa navigasi Next.js tidak me-refresh halaman?
+
+#### **Jawab**
+
+Tergantung, sebenarnya jika kita menggunakan router.push() halaman akan me-refresh. Jika kita menggunakan tag `<Link>` maka kita tidak melakukan refresh/reload halaman.
+
+Karena karakter dari Next.js sendiri yang berupa Client Side rendering dan data sudah di `_prefetch_` sebelum user melakukan pergantian halaman. Seperti pada dokumentasi Next.js berikut:
+
+> [!TIP]
+> Prefetching is the process of loading a route in the background before the user navigates to it. This makes navigation between routes in your application feel instant, because by the time a user clicks on a link, the data to render the next route is already available client side.
