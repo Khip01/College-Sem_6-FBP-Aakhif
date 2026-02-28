@@ -1,0 +1,32 @@
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+
+type Props = {
+  isLogin: boolean;
+  setIsLogin: (value: boolean) => void;
+};
+
+const produk = ({ isLogin, setIsLogin }: Props) => {
+  const { push } = useRouter();
+
+  useEffect(() => {
+    if (!isLogin) {
+      push("/auth/login");
+    }
+  }, [isLogin]);
+
+  const handlerLogout = () => {
+    // tanpa melakukan push() ke login, ini sudah auto redirect
+    // karena state isLogin nya menjadi false
+    setIsLogin(false);
+  };
+
+  return (
+    <div>
+      <main>Produk User Page Aakhif</main>
+      <button onClick={handlerLogout}>Logout</button>
+    </div>
+  );
+};
+
+export default produk;
