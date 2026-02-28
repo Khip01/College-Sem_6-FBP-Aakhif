@@ -67,3 +67,11 @@ Setelah itu saya mencoba menambahkan kode didalam `/views/auth/login/index.tsx`,
 Tampilannya sama saja seperti sebelumnya, karena kita hanya merubah/memodifikasi struktur file dan direktori nya saja,
 
 ![tampilan halaman login masih tetap](image-11.png)
+
+## 6. Inline Styling (CSS-in-JS)
+
+Saya melakukan inline styling di halaman login (views `index.tsx`) seperti berikut,
+
+![kode modifikasi login menggunakan inline style](image-12.png)
+
+![tampilan setelah modifikasi halaman login menggunakan inline style](image-13.png)
