@@ -43,3 +43,13 @@ Lalu saya mencoba menambahkan `login.module.css` (styling untuk halaman login) d
 Terlihat juga saya sudah menerapkannya di kode `login.tsx`, dan hasilnya adalah seperti berikut,
 
 ![tampilan halaman login](image-6.png)
+
+## 4. Conditional Rendering Navbar (Tanpa Navbar di Login)
+
+Saya memodifikasi file `index.tsx` pada folder `AppShell` seperti berikut,
+
+![modifikasi kode index.tsx](image-7.png)
+
+Sehingga hasilnya halaman loginnya tidak ada navbar nya,
+
+![tampilan halaman login setelah index.tsx di AppShell di perbarui](image-8.png)
