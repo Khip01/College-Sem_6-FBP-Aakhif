@@ -143,3 +143,22 @@ Lalu saya mencoba mengimplementasikan tailwind tadi ke halaman login di bagian t
 Dan berikut adalah tampilannya,
 
 ![tampilan tag h1 setelah menerapkan style tailwind](image-26.png)
+
+# E. Tugas Praktikum
+
+## Tugas 1
+
+- Buat halaman Register
+- Gunakan CSS Module
+
+Karena sebelumnya halaman register masih berupa polosan seperti ini,
+
+![halaman register polosan (sebelum)](image-27.png)
+
+saya mencoba melaukan styling halaman register dengan menggunakan `module.css`, dan berikut adalah hasilnya,
+
+![kode akhir halaman register](image-28.png)
+
+Lalu tampilannya adalah sebagai berikut,
+
+![tampilan akhir halaman register](image-29.png)
