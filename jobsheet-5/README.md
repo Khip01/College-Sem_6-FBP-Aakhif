@@ -75,3 +75,39 @@ Saya melakukan inline styling di halaman login (views `index.tsx`) seperti berik
 ![kode modifikasi login menggunakan inline style](image-12.png)
 
 ![tampilan setelah modifikasi halaman login menggunakan inline style](image-13.png)
+
+## 7. Kombinasi Global CSS + CSS Module
+
+Saya mencoba menggabungkan styling module.css dengan styling global, seperti berikut (di tampilan navbar),
+
+![gabungan styling global.css dan module.css untuk navbar](image-14.png)
+
+dan hasilnya adalah seperti berikut (ukuran font dari navbarnya saya kecilkan),
+
+![tampilan navbar menggunakan gabungan style](image-15.png)
+
+## 8. SCSS (SASS)
+
+### a. Install SASS
+
+Saya menjalankan command berikut di project ini,
+
+![install sass di konsole](image-16.png)
+
+![muncul package baru di package.json](image-17.png)
+
+### b. Global Variable
+
+Saya mencoba menambahkan colors.scss pada folder styles
+
+![menambahkan colors.scss](image-18.png)
+
+### c. Gunakan di Module
+
+Saya mencoba menambahkan style scss baru di views login, dan menggantikan style css biasa menggunakan scss, dan seperti berikut adalah kodenya,
+
+![perubahan kode dari css biasa menjadi menggunakan scss](image-19.png)
+
+Lalu berikut adalah tampilannya,
+
+![tampilan halaman login sesudah menggunakan scss](image-20.png)
