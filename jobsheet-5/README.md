@@ -31,3 +31,15 @@ Lalu saya memodifikasi kode `index.tsx` di folder navbar,
 ![isi modifikasi index.tsx](image-3.png)
 
 ![tampilan nya](image-4.png)
+
+## 3. Styling untuk Pages (CSS Module)
+
+### a. Contoh Login Page
+
+Lalu saya mencoba menambahkan `login.module.css` (styling untuk halaman login) di folder auth,
+
+![kode di file login.module.css baru dan penerapannya](image-5.png)
+
+Terlihat juga saya sudah menerapkannya di kode `login.tsx`, dan hasilnya adalah seperti berikut,
+
+![tampilan halaman login](image-6.png)
