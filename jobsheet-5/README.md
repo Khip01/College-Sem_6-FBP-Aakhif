@@ -53,3 +53,17 @@ Saya memodifikasi file `index.tsx` pada folder `AppShell` seperti berikut,
 Sehingga hasilnya halaman loginnya tidak ada navbar nya,
 
 ![tampilan halaman login setelah index.tsx di AppShell di perbarui](image-8.png)
+
+## 5. Refactoring Struktur Project (Best Practice)
+
+Lalu saya mencoba merapihkan struktur loginmenjadi seperti berikut,
+
+![struktur views baru untuk auth](image-9.png)
+
+Setelah itu saya mencoba menambahkan kode didalam `/views/auth/login/index.tsx`, dan memindahkan login.module.css ke dalam folder `views/auth/login/` dan hasilnya seperti berikut,
+
+![hasil refactor kode views login baru yang lebih bersih](image-10.png)
+
+Tampilannya sama saja seperti sebelumnya, karena kita hanya merubah/memodifikasi struktur file dan direktori nya saja,
+
+![tampilan halaman login masih tetap](image-11.png)
