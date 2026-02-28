@@ -162,3 +162,24 @@ saya mencoba melaukan styling halaman register dengan menggunakan `module.css`, 
 Lalu tampilannya adalah sebagai berikut,
 
 ![tampilan akhir halaman register](image-29.png)
+
+
+## Tugas 2
+
+- Refactor halaman Produk ke folder views
+- Pisahkan Hero Section dan Main Section
+
+Jadi sebelumnya halaman produk itu tampilannya masih berada di route `pages/produk`, sekarang saya akan merapihkan tampilannya kedalam `pages/views/produk/`, dan berikut adalah hasilnya,
+
+Berikut adalah halaman utama produk (rute `/produk/`),
+
+![kode rute /produk/](image-30.png)
+
+![tampilan rute /produk/](image-33.png)
+
+Lalu berikut adalah rute `/produk/:id/`,
+
+![kode rute /produk/:id/](image-31.png)
+
+![tampilan rute /produk/:id/](image-32.png)
+
