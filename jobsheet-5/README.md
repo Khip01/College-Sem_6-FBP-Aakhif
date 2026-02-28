@@ -183,3 +183,22 @@ Lalu berikut adalah rute `/produk/:id/`,
 
 ![tampilan rute /produk/:id/](image-32.png)
 
+## Tugas 3
+
+Jadi saya ingin membuat folder baru bernama `utility`, didalam folder `components` seperti berikut,
+
+![folder baru bernama utility](image-34.png)
+
+Setelah itu saya menambahkan 5 utility components seperti berikut,
+
+![5 file components utility menggunakan tailwindcss](image-35.png)
+
+- `body-text.tsx`
+- `footer.tsx`
+- `primary-button.tsx`
+- `text-field.tsx`
+- `title-text.tsx`
+
+Dan berikut adalah sedikit isi kodenya,
+
+![kode dari masing masing komponen](image-36.png)

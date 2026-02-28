@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Navbar from "../navbar";
+import Footer from "@/components/utility/footer";
 
 const disableNavbar = ["/auth/login", "/auth/register"];
 
@@ -14,15 +15,13 @@ const AppShell = (props: AppShellProps) => {
   // console.log(useRouter());
 
   return (
-    <>
-      <main>
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-grow">
         {!disableNavbar.includes(pathname) && <Navbar />}
         {children}
       </main>
-      <footer>
-        <p>footer AppShell</p>
-      </footer>
-    </>
+      {!disableNavbar.includes(pathname) && <Footer />}
+    </div>
   );
 };
 

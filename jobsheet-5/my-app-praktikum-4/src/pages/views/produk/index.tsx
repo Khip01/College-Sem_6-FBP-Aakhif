@@ -1,3 +1,4 @@
+import TitleText from "@/components/utility/title-text";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -23,7 +24,9 @@ const TampilanProduk = ({ isLogin, setIsLogin }: Props) => {
 
   return (
     <div>
-      <main>Produk User Page Aakhif</main>
+      <main>
+        <TitleText text="Halaman Produk" />
+      </main>
       <button onClick={handlerLogout}>Logout</button>
     </div>
   );
