@@ -202,3 +202,30 @@ Setelah itu saya menambahkan 5 utility components seperti berikut,
 Dan berikut adalah sedikit isi kodenya,
 
 ![kode dari masing masing komponen](image-36.png)
+
+# F. Pertanyaan Refleksi
+
+### 1. Kapan sebaiknya menggunakan CSS Module dibanding Global CSS?
+
+#### **Jawab**
+
+Saat kita ingin melakukan styling untuk satu component/satu halaman/satu file saja, yang dimana tidak digunakan/dipanggil dalam seluruh basis kode.
+
+### 2. Apa kelemahan inline styling?
+
+#### **Jawab**
+
+Kita tidak bisa memanggil style nya berulang ulang untuk digunakan di komponen lain, karena stylingnya hanya untuk tag yang bersangkutan saja.
+
+### 3. Mengapa SCSS cocok untuk project skala besar?
+
+#### **Jawab**
+
+Karena kemampuannya yang bisa melakukan import lebih rapi dan performance, susunan kode styling yang lebih rapi dalam kemampuan nesting style, bisa menerapkan reusable logic seperti variable dan mixin.
+
+### 4. Apa keunggulan Tailwind dibanding CSS tradisional?
+
+#### **Jawab**
+
+Mudah untuk diimplementasikan langsung ke dalam tag yang bersangkutan tanpa perlu menuliskan banyak kode styling terpisah diluar tag, ada beberapa style css yang sudah dibungkus oleh tailwind sehingga terlihat lebih praktis, tidak boros file/boros kode karena harus menuliskan kode css tersendiri.
+
