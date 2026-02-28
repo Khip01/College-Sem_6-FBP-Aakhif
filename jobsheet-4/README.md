@@ -4,91 +4,91 @@
 
 Saya menjalankan project di jobsheet 3 sebelumnya,
 
-![running next.js project](image.png)
+![running next.js project](assets/image.png)
 
 ## Langkah 2 – Membuat Catch-All Route
 
 Saya mencoba membuat rute baru bernama `...slug.tsx` sehingga pada saat saya akses seperti ini,
 
-![mencoba mengakses url ...slug](image-1.png)
+![mencoba mengakses url ...slug](assets/image-1.png)
 
 Dan hasilnya di `console.log()` seperti ini,
 
-![hasil console.log catch all route](image-2.png)
+![hasil console.log catch all route](assets/image-2.png)
 
 Lalu saya memodifkasi file `...slug` untuk menampilkan nilai query nya dan hasilnya seperti berikut,
 
-![hasil tampilan seluruh query](image-3.png)
+![hasil tampilan seluruh query](assets/image-3.png)
 
 ## Langkah 3 – Pengujian Catch-All Route
 
 Saya menguji rute dengan jumlah slug yang bervariasi,
 
-![percobaan 1 slug](image-4.png)
+![percobaan 1 slug](assets/image-4.png)
 
-![percobaan 2 slug](image-5.png)
+![percobaan 2 slug](assets/image-5.png)
 
-![percobaan 3 slug](image-6.png)
+![percobaan 3 slug](assets/image-6.png)
 
 Jadi karena hasil tampilannya kurang tepat, jadi saya memperbaiki file `...slug.tsx` saya,
 
-![kode perbaikan file ...slug.tsx](image-7.png)
+![kode perbaikan file ...slug.tsx](assets/image-7.png)
 
 dan hasilnya menjadi seperti berikut,
 
-![hasil tampilan item setelah perbaikan](image-8.png)
+![hasil tampilan item setelah perbaikan](assets/image-8.png)
 
 Tetapi untuk sementara saya menggunakan kode ini saja untuk menampilkan item,
 
-![kode yang dipaka (kode sebelumnya)](image-9.png)
+![kode yang dipaka (kode sebelumnya)](assets/image-9.png)
 
 ## Langkah 4 – Optional Catch-All Route
 
 Ketika saya mencoba mengakses rute `http://localhost:3000/shop` saya mendapatkan halaman notfound next.js
 
-![notfound karena tidak ada slug yg diberikan](image-10.png)
+![notfound karena tidak ada slug yg diberikan](assets/image-10.png)
 
 sehingga agar rute parameter slug berupa opsional, saya memberikan kurung siku tambahan seperti berikut,
 
-![menamabhkan kurung siku tambahan di file bernama ...slug](image-11.png)
+![menamabhkan kurung siku tambahan di file bernama ...slug](assets/image-11.png)
 
 Sehingga pada saat saya coba akses rutenya, hasilnya menampilkan seperti berikut
 
-![hasil undefined karena nilai dari array tidak ada](image-12.png)
+![hasil undefined karena nilai dari array tidak ada](assets/image-12.png)
 
 ## Langkah 5 – Validasi Parameter
 
 Saya mencoba untuk menambahkan validasi agar tidak error saat slug kosong,
 
-![validasi slug kosong](image-13.png)
+![validasi slug kosong](assets/image-13.png)
 
-![tampilan jika slug kosong](image-14.png)
+![tampilan jika slug kosong](assets/image-14.png)
 
 ## Langkah 6 – Membuat Halaman Login & Register
 
 Saya membuat folder `pages/auth`, setelah itu didalamnya ada file login.tsx dan register.tsx,
 
-![folder pages/auth](image-15.png)
+![folder pages/auth](assets/image-15.png)
 
 ## Langkah 7 – Navigasi Imperatif (router.push)
 
 Lalu saya menambahkan tombol Login didalam halaman login seperti berikut
 
-![menambahkan button di halaman login](image-16.png)
+![menambahkan button di halaman login](assets/image-16.png)
 
 Dan hasilnya seperti ini,
 
-![mencoba menekan tombol login](Screencast_20260224_163432.gif)
+![mencoba menekan tombol login](assets/Screencast_20260224_163432.gif)
 
 ## Langkah 8 – Simulasi Redirect (Belum Login)
 
 Di halaman product (`index.tsx`), saya menamabhkan kode berikut untuk melakukan redirect,
 
-![kode tambahan untuk melakukan redirect](image-17.png)
+![kode tambahan untuk melakukan redirect](assets/image-17.png)
 
 Dan hasilnya pada saat saya coba mengakses rute `/product` adalah seperti ini,
 
-![mencoba untuk login setelah kode redirect diberikan](Screencast_20260224_164240.gif)
+![mencoba untuk login setelah kode redirect diberikan](assets/Screencast_20260224_164240.gif)
 
 Tapi sayangnya kalo kita lihat disitu tombol login seperti tidak berfungsi, karena pada saat push() ke halaman `/produk`, di halaman product dia malah di redirect kembali ke halaman login. Mengapa? ya karena state dari variabel `isLogin` itu selalu `false`.
 
@@ -98,15 +98,15 @@ Jadi saya modifikasi kode nya agar state dari variabel `isLogin` itu berubah men
 
 Dan hasilnya adalah seperti berikut,
 
-![fix login redirect](Screencast_20260224_171922.gif)
+![fix login redirect](assets/Screencast_20260224_171922.gif)
 
 Jadi disini yang saya tangkap adalah, kita berusaha menentukan redirect/tidaknya dari state variabel `isLogin`, di kode tombol logout ini di halaman produk,
 
-![halaman index.tsx produk](image-18.png)
+![halaman index.tsx produk](assets/image-18.png)
 
 disitu di fungsi `handlerLogout` saya hanya memanggil fungsi seIsLogin untuk mengubah state `isLogin` menjadi false, sehingga saya tidak perlu melakukan push ke halaman login (karena sudah ada redirect yang mengecek apakah state variabel `isLogin` adalah false) di sebelah sini,
 
-![useEffect mendengarkan perubahan variabel isLogin](image-19.png)
+![useEffect mendengarkan perubahan variabel isLogin](assets/image-19.png)
 
 # E. Tugas Praktikum
 
@@ -114,19 +114,19 @@ disitu di fungsi `handlerLogout` saya hanya memanggil fungsi seIsLogin untuk men
 
 Saya sudah mencoba membuat catch-all route `/category/[...slug].tsx`, dan menampilkan seluruh parameternya sebagai list. Dan hasilnya adalah seperti berikut,
 
-![catch-all route](image-20.png)
+![catch-all route](assets/image-20.png)
 
 ## Tugas 2 (Wajib)
 
 Saya sudah memodifikasi file `login.tsx` dan `register.tsx` agar bisa berpindah pindah dengan tag `<Link>`, dan juga saya bisa berpindah ke halaman `produk` dengan tombol login, berikut adalah hasilnya,
 
-![tampilan berhasil melakukan perpindahan halaman sesuai dengan fungsinya](Screencast_20260224_175459.gif)
+![tampilan berhasil melakukan perpindahan halaman sesuai dengan fungsinya](assets/Screencast_20260224_175459.gif)
 
 ## Tugas 3 (Pengayaan)
 
 Saya juga sudah menerapkan ogiredirect jika user belum login, hasilnya adalah seperti berikut,
 
-![berhasil menerapan redirect di halaman produk](Screencast_20260224_175813.gif)
+![berhasil menerapan redirect di halaman produk](assets/Screencast_20260224_175813.gif)
 
 # F. Pertanyaan Evaluasi
 
