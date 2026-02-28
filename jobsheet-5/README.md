@@ -111,3 +111,35 @@ Saya mencoba menambahkan style scss baru di views login, dan menggantikan style 
 Lalu berikut adalah tampilannya,
 
 ![tampilan halaman login sesudah menggunakan scss](image-20.png)
+
+## 9. Tailwind CSS
+
+### a. Install
+
+Saya mencoba menginstall tailwind, dan package lainnya di project ini dengan command seperti berikut,
+
+![install beberapa package termasuk tailwindcss](image-21.png)
+
+Lalu saya init package tailwind nya,
+
+![melakukan init tailwindcss nya](image-22.png)
+
+### b. Konfigurasi tailwind.config.js
+
+Lalu saya melakukan konfigurasi tailwind.config.js
+
+![kode konfigurasi tailwind.config.js](image-23.png)
+
+### c. Import di Global CSS
+
+![kode import di global css](image-24.png)
+
+### d. Contoh Penggunaan
+
+Lalu saya mencoba mengimplementasikan tailwind tadi ke halaman login di bagian tag <h1> nya,
+
+![kode perubahan style dari tag h1 dengan tailwind](image-25.png)
+
+Dan berikut adalah tampilannya,
+
+![tampilan tag h1 setelah menerapkan style tailwind](image-26.png)
