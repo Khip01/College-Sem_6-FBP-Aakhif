@@ -78,3 +78,10 @@ Dan hasilnya adalah sebagai berikut,
 
 ![halaman not found tanpa menampilkan navbar](image-12.png)
 
+## Langkah 6 – Menampilkan Gambar dari Folder Public
+
+Lalu saya mencoba untuk menambahkan gambar di halaman 404,
+
+![kode 404 notfound dengan tambahan gambar](image-13.png)
+
+![tampilan not found dengan gambar](image-14.png)
