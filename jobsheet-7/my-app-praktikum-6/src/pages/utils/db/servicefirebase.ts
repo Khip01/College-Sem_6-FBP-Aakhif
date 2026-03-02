@@ -3,9 +3,8 @@ import app from "./firebase";
 
 const db = getFirestore(app);
 
-export async function retrieveProduct(collectionName: string) {
+export async function retrieveData(collectionName: string) {
   const snapshot = await getDocs(collection(db, collectionName));
-  console.log(snapshot.docs);
   const data = snapshot.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),

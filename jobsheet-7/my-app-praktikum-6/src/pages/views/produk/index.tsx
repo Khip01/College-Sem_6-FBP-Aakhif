@@ -17,6 +17,7 @@ type ProductType = {
 const TampilanProduk = ({ isLogin, setIsLogin }: Props) => {
   const { push } = useRouter();
   const [products, setProducts] = useState([]);
+  const [categories, setCategory] = useState([]);
 
   useEffect(() => {
     if (!isLogin) {
@@ -27,6 +28,11 @@ const TampilanProduk = ({ isLogin, setIsLogin }: Props) => {
       .then((res) => res.json())
       .then((resData) => setProducts(resData.data))
       .catch((err) => console.error("Error fetching products:", err));
+
+    fetch("/api/category")
+      .then((res) => res.json())
+      .then((resData) => setCategory(resData.data))
+      .catch((err) => console.error("Error fetching category:", err));
   }, [isLogin]);
 
   const handlerLogout = () => {
@@ -38,6 +44,19 @@ const TampilanProduk = ({ isLogin, setIsLogin }: Props) => {
   return (
     <div>
       <main>
+        <TitleText text="Kategori Produk" />
+        {categories.length > 0 ? (
+          <div>
+            {categories.map((cat: ProductType, index: number) => (
+              <span key={cat.id}>
+                {cat.name} {index === categories.length - 1 ? "" : " - "}
+              </span>
+            ))}
+          </div>
+        ) : (
+          <p>Loading category...</p>
+        )}
+        <br />
         <TitleText text="Daftar Produk" />
         {products.length > 0 ? (
           <div>

@@ -71,3 +71,30 @@ Lalu saya mencoba untuk melakukan GET data produk dari firebase menggunakan API 
 Lalu setelah berhasil, saya mencoba memodifikasi halaman produk agar bisa menampilkan produk dari firebase, dan hasilnya adalah seperti berikut,
 
 ![tampilan halaman produk dengan data yang diambil dari firestore database](image-12.png)
+
+# F. Tugas Praktikum
+
+### Tugas 1 (Wajib)
+
+- Tambahkan minimal 3 data produk di Firestore
+- Pastikan data tampil di halaman produk
+
+Saya mencoba menambahkan data dari firestore contoh adalah beberapa data berikut,
+
+![tampilan collection di firestore database](image-13.png)
+
+Dan hasilnya di tampilan halaman produk seperti berikut,
+
+![tampilan halaman produk (list produk)](image-14.png)
+
+### Tugas 2 (Wajib)
+
+- Tambahkan field baru:
+  - category
+- Tampilkan category di frontend
+
+Jadi saya sudah menambahkan collection baru bernama `category` untuk ditampilkan di halaman produk, hasilnya adalah seperti berikut,
+
+![tampilan collection category di firestore database](image-15.png)
+
+![tampilan list category di halaman produk](image-16.png)
