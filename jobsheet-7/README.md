@@ -57,3 +57,17 @@ Lalu akhirnya setelah saya membuat file `.env.local` saya anggil variabel didala
 Setelah selesai melakukan setup, kini saya akan mencoba untuk mengambil data dari firestore database di collection yang sudah saya buat tadi. Yang saya lakukan adalah membuat file baru didalam direktori `/pages/utils/db/` bernama `servicefirebase.ts` seperti berikut,
 
 ![tampilan kode servicefirebase.ts](image-9.png)
+
+## Langkah 10 – API Mengambil Data Firebase
+
+Lalu saya mencoba memodifikasi file `produk.ts` didalam direktori `/pages/api/` untuk mengambil data dari firebase seperti berikut,
+
+![tampilan kode produk.js setelah diperbarui](image-10.png)
+
+Lalu saya mencoba untuk melakukan GET data produk dari firebase menggunakan API `/api/produk/`, dan hasilnya adalah sebagai berikut,
+
+![tampilan response produk dari firestore database](image-11.png)
+
+Lalu setelah berhasil, saya mencoba memodifikasi halaman produk agar bisa menampilkan produk dari firebase, dan hasilnya adalah seperti berikut,
+
+![tampilan halaman produk dengan data yang diambil dari firestore database](image-12.png)
