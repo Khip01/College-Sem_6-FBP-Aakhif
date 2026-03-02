@@ -20,3 +20,13 @@ Lalu saya coba cek di inspect element,
 
 Terlihat jika language nya sudah berubah menjadi "id".
 
+## Langkah 3 – Pengaturan Title per Halaman
+
+Saya mencoba menambahkan tag `<title>` di halaman index.tsx halaman pages (alias url '/')
+
+![kode title di index.tsx dari folder pages](image-3.png)
+
+Dan hasilnya adalah seperti berikut,
+
+![tampilan title di browser berubah](image-4.png)
+
