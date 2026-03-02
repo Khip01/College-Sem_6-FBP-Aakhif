@@ -99,3 +99,12 @@ Tambahkan:
 Karena saya belum menambahkan judul halamantitle di halaman 404, berikut adalah hasilnya,
 
 ![tampilan title/judul yang sudah diperbaiki](image-15.png)
+
+## Tugas 2 (Wajib)
+
+- Custom warna, font, dan layout halaman 404
+- Navbar tidak tampil di halaman 404
+
+Karena navbar sudah berhasil tidak tampil di halaman 404 dan juga layout nya sudah diperbaiki, sekarang saya ingin mengubah font dari halaman 404 not found saya menjadi seperti ini hasilnya,
+
+![mengubah tampilan font](image-16.png)
