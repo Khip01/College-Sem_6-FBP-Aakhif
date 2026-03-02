@@ -121,3 +121,31 @@ Di halmaan 404 not found saya coba tambahkan tombol untuk mengarahkan ke halaman
 ![mengarahkan ke tombol home menggunakan tag <Link>](image-17.png)
 
 ![gif penerapan tombol navigasi ke home di halaman not found](Screencast_20260302_115428.gif)
+
+# F. Pertanyaan Evaluasi
+
+### 1. Apa fungsi utama `\_document.tsx`?
+
+#### **Jawab**
+
+Jadi file `_document.tsx` disini fungsinya untuk tempat tampilan dasar server side pertama kali dimuat. Disini kita bisa memberikan/mengatur tag-tag untuk kepentingan SEO.
+
+### 2. Mengapa `<title>` tidak disarankan di `\_document.tsx`?
+
+#### **Jawab**
+
+Menurut saya, karena nanti sistem informasi web yang akan dibuat bisa saja berkemungkinan memberikan title yg berbeda-beda/berubah-ubah tergantung dari rute halaman/halamannya, sehingga ditakutkan nanti jika sudah diinisialisasi duluan di `_document.tsx` nantinya akan menghasilkan hasil yang tidak diinginkan.
+
+Sehingga inilah mengapa, diciptakan dari awal pembuatan project nextjs sudah ada component terpisah untuk `<Head>` yang memungkinkan untuk mengatur title di halaman yang berbeda-beda.
+
+### 3. Apa perbedaan halaman biasa dan halaman`404.tsx`?
+
+#### **Jawab**
+
+Untuk halaman biasa ya akan diakses sesuai route page/rute dari halaman mereka, tetapi jika halaman menggunakan file 404.tsx itu adalah file spesial/khusus untuk halaman not found (kalo tampilan not found, secara otomatis akan menggunakan halaman di file 404.tsx)
+
+### 4. Mengapa folder public tidak perlu di-import?
+
+#### **Jawab**
+
+karena dari next js sendiri folder public digunakan/dirancang untuk memberikan tempat bagi assets static, bukan sebagai module, sehingga bisa dipanggil langsung.
