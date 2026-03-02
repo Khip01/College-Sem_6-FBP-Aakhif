@@ -108,3 +108,16 @@ Karena saya belum menambahkan judul halamantitle di halaman 404, berikut adalah 
 Karena navbar sudah berhasil tidak tampil di halaman 404 dan juga layout nya sudah diperbaiki, sekarang saya ingin mengubah font dari halaman 404 not found saya menjadi seperti ini hasilnya,
 
 ![mengubah tampilan font](image-16.png)
+
+## Tugas 3 (Pengayaan)
+
+Tambahkan tombol:
+
+- “Kembali ke Home”
+  - Gunakan navigasi Next.js (Link)
+
+Di halmaan 404 not found saya coba tambahkan tombol untuk mengarahkan ke halaman home, yang dimana tombol ini menggunakan tag `<Link>` seperti berikut,
+
+![mengarahkan ke tombol home menggunakan tag <Link>](image-17.png)
+
+![gif penerapan tombol navigasi ke home di halaman not found](Screencast_20260302_115428.gif)
