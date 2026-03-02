@@ -85,3 +85,17 @@ Lalu saya mencoba untuk menambahkan gambar di halaman 404,
 ![kode 404 notfound dengan tambahan gambar](image-13.png)
 
 ![tampilan not found dengan gambar](image-14.png)
+
+# E. Tugas Praktikum
+
+## Tugas 1 (Wajib)
+
+Tambahkan:
+
+- Judul halaman
+- Deskripsi singkat (DONE)
+- Gambar ilustrasi (DONE)
+
+Karena saya belum menambahkan judul halamantitle di halaman 404, berikut adalah hasilnya,
+
+![tampilan title/judul yang sudah diperbaiki](image-15.png)
