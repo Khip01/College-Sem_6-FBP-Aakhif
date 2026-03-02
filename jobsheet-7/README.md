@@ -39,3 +39,9 @@ Lalu saya melakukan instalasi firebase di project nextjs saya dengan menggunakan
 Dan saya juga sudah menambahkan firebase.ts ke dalam project saya di direktori `pages/utils/db/`
 
 ![tampilan file firebase.ts konfigurasi firebase](image-6.png)
+
+## Langkah 7 – Konfigurasi Environment Variable
+
+Lalu agar saya bisa dengan aman menyimpan isi konfigurasi firebase, saya membuat ile `.env.local` di root project nextjs saya,
+
+![tampilan file baru .env.local](image-7.png)
