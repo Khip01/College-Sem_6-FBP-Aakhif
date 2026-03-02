@@ -107,3 +107,31 @@ Jadi saya sudah menambahkan collection baru bernama `category` untuk ditampilkan
 Jadi saya disini akan menambahkan tombol untuk melakukan refresh seluruh data nya (baik itu produk ataupun category), dan hasilnya adalah seperti berikut,
 
 ![apercobaan melakukan refresh data dari firestore database](Screencast_20260302_170811.gif)
+
+# G. Pertanyaan Evaluasi
+
+### 1. Apa fungsi API Routes pada Next.js?
+
+#### **Jawab**
+
+Jadi fungsi API Routes yang telah kita lakukan disini adalah untuk melakukan pembuatan endpoint API dengan rute struktur folder.
+
+### 2. Mengapa .env.local tidak boleh di-push ke repository?
+
+#### **Jawab**
+
+Karena isinya bisa jadi adalah beberapa environment variabel yang memang tidak boleh diperlihatkan ke publik (rahasia internal), sehingga menghindari potensi terjadinya hal-hal yang tidak diinginkan.
+
+### 3. Apa perbedaan data statis dan data dinamis?
+
+#### **Jawab**
+
+Data statis itu data yang tidak berubah, datanya tetap, datanya sendiri tidak mengalami perubahan setelah dimuat.
+
+Sedangkan data dinamis adalah data yang dapat mengalami perubhaan setelah dimuat, misal berubah setelah direload, setelah data diubah/dimodifikasi, sehingga tampilannya bisa berbeda dari tampilan awal.
+
+### 4. Mengapa Next.js disebut framework fullstack?
+
+#### **Jawab**
+
+Karena nextjs sendiri dapat menghandle backend logic aplikasi, terhubung ke database, dan juga dapat membuat endpoint API sendiri.
