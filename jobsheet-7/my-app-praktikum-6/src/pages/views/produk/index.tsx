@@ -14,6 +14,23 @@ type ProductType = {
   size: string;
 };
 
+async function fetchData(setProducts: any, setCategory: any) {
+  try {
+    fetch("/api/produk")
+      .then((res) => res.json())
+      .then((resData) => setProducts(resData.data))
+      .catch((err) => console.error("Error fetching products:", err));
+
+    fetch("/api/category")
+      .then((res) => res.json())
+      .then((resData) => setCategory(resData.data))
+      .catch((err) => console.error("Error fetching category:", err));
+  } catch (err) {
+    console.error("Error fetching data:", err);
+    return [];
+  }
+}
+
 const TampilanProduk = ({ isLogin, setIsLogin }: Props) => {
   const { push } = useRouter();
   const [products, setProducts] = useState([]);
@@ -24,15 +41,7 @@ const TampilanProduk = ({ isLogin, setIsLogin }: Props) => {
       push("/auth/login");
     }
 
-    fetch("/api/produk")
-      .then((res) => res.json())
-      .then((resData) => setProducts(resData.data))
-      .catch((err) => console.error("Error fetching products:", err));
-
-    fetch("/api/category")
-      .then((res) => res.json())
-      .then((resData) => setCategory(resData.data))
-      .catch((err) => console.error("Error fetching category:", err));
+    fetchData(setProducts, setCategory);
   }, [isLogin]);
 
   const handlerLogout = () => {
@@ -44,6 +53,12 @@ const TampilanProduk = ({ isLogin, setIsLogin }: Props) => {
   return (
     <div>
       <main>
+        <br />
+        <button onClick={() => fetchData(setProducts, setCategory)}>
+          Refresh Data
+        </button>
+        <br />
+        <br />
         <TitleText text="Kategori Produk" />
         {categories.length > 0 ? (
           <div>
@@ -72,6 +87,8 @@ const TampilanProduk = ({ isLogin, setIsLogin }: Props) => {
           <p>Loading products...</p>
         )}
       </main>
+      <br />
+      <br />
       <button onClick={handlerLogout}>Logout</button>
     </div>
   );

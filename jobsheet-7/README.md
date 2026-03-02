@@ -98,3 +98,12 @@ Jadi saya sudah menambahkan collection baru bernama `category` untuk ditampilkan
 ![tampilan collection category di firestore database](image-15.png)
 
 ![tampilan list category di halaman produk](image-16.png)
+
+### Tugas 3 (Pengayaan)
+
+- Tambahkan tombol Refresh Data
+- Gunakan fetch ulang tanpa reload halaman
+
+Jadi saya disini akan menambahkan tombol untuk melakukan refresh seluruh data nya (baik itu produk ataupun category), dan hasilnya adalah seperti berikut,
+
+![apercobaan melakukan refresh data dari firestore database](Screencast_20260302_170811.gif)
