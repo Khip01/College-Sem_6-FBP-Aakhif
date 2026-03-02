@@ -4,7 +4,7 @@
 
 Saya mencoba menjalankan project sebelumnya,
 
-![tampilan running project saya](image.png)
+![tampilan running project saya](assets/image.png)
 
 Terlihat jika saya tidak mengalami kendala apapun.
 
@@ -12,11 +12,11 @@ Terlihat jika saya tidak mengalami kendala apapun.
 
 Saya melakukan modifikasi file `_document.tsx` dengan kode berikut,
 
-![modifikasi lang menjadi id di file _document.tsx](image-1.png)
+![modifikasi lang menjadi id di file _document.tsx](assets/image-1.png)
 
 Lalu saya coba cek di inspect element,
 
-![pengecekan lang id di inspect element](image-2.png)
+![pengecekan lang id di inspect element](assets/image-2.png)
 
 Terlihat jika language nya sudah berubah menjadi "id".
 
@@ -24,11 +24,11 @@ Terlihat jika language nya sudah berubah menjadi "id".
 
 Saya mencoba menambahkan tag `<title>` di halaman index.tsx halaman pages (alias url '/')
 
-![kode title di index.tsx dari folder pages](image-3.png)
+![kode title di index.tsx dari folder pages](assets/image-3.png)
 
 Dan hasilnya adalah seperti berikut,
 
-![tampilan title di browser berubah](image-4.png)
+![tampilan title di browser berubah](assets/image-4.png)
 
 ## Langkah 4 – Membuat Custom Error Page (404)
 
@@ -38,21 +38,21 @@ Saya akan mencoba menghandle halaman error 404 not found dengan cara pertama-tam
 
 Tetapi sebelum itu, karena saya merasa ada yang janggal dengan tampilannya, seperti h1 yang membuat text masih menjadi biasa saja seperti ini,
 
-![tag heading 1 tidak bekerja](image-5.png)
+![tag heading 1 tidak bekerja](assets/image-5.png)
 
 Terlihat jika harusnya tulisan `"Praktikum Next.js Page Router"` itu harusnya sedang menggunakan heading 1, akhirnya saya memutuskan untuk menguninstall tailwindcss dengan cara,
 
 uninstall tailwindcss dan package lainnya,
 
-![uninstall tailwindcss](image-6.png)
+![uninstall tailwindcss](assets/image-6.png)
 
 menghapus file `tailwind.config.js` dan `postcss.config.js`, dan juga menghapus folder cache `.next`, `node_modules`, an `package-lock.json`, sehingga melakukan install kembali,
 
-![uninstall segala cache dari running sebelumnya](image-7.png)
+![uninstall segala cache dari running sebelumnya](assets/image-7.png)
 
 Dan pada saat saya jalankan `npm run dev` kembali, hasilnya sudah benar dan sesuai,
 
-![hasil perbaikan dengan menghapus tailwindcss](image-8.png)
+![hasil perbaikan dengan menghapus tailwindcss](assets/image-8.png)
 
 Sehingga kita bisa melanjutkan ke halaman 404 notfound,
 
@@ -60,7 +60,7 @@ Sehingga kita bisa melanjutkan ke halaman 404 notfound,
 
 Saya sudah membuat file `404.tsx` di folder `pages/` dan juga isinya dan seperti inilah hasilnya pada saat saya mencoba memanggil localhost dengan segmen `dashboard/`,
 
-![tampilan not found](image-9.png)
+![tampilan not found](assets/image-9.png)
 
 Terlihat jika hasilnya sudah sesuai dengan heading 1 dan juga `404.tsx` juga berhasil ditampilkan.
 
@@ -68,23 +68,23 @@ Terlihat jika hasilnya sudah sesuai dengan heading 1 dan juga `404.tsx` juga ber
 
 Sekarang saya ingin mencoba styling halaman 404 ini dengan scss, dengan membuat file baru bernama `404.module.scss` di dalaman folder `styles/`dan hasilnya adalah seperti berikut,
 
-![kode styling scss](image-10.png)!
+![kode styling scss](assets/image-10.png)
 
-![tampilan 404 setelah di styling menggunakan scss](image-11.png)
+![tampilan 404 setelah di styling menggunakan scss](assets/image-11.png)
 
 Lalu karena tampilan 404 notfound nya masih ada navbarnya, jadi saya mencoba untuk menghilangkannya dengan cara menambahkan halaman 404 ke blacklist yang ada di file `AppShell` (agar navbar tidak ditampilkan).
 
 Dan hasilnya adalah sebagai berikut,
 
-![halaman not found tanpa menampilkan navbar](image-12.png)
+![halaman not found tanpa menampilkan navbar](assets/image-12.png)
 
 ## Langkah 6 – Menampilkan Gambar dari Folder Public
 
 Lalu saya mencoba untuk menambahkan gambar di halaman 404,
 
-![kode 404 notfound dengan tambahan gambar](image-13.png)
+![kode 404 notfound dengan tambahan gambar](assets/image-13.png)
 
-![tampilan not found dengan gambar](image-14.png)
+![tampilan not found dengan gambar](assets/image-14.png)
 
 # E. Tugas Praktikum
 
@@ -98,7 +98,7 @@ Tambahkan:
 
 Karena saya belum menambahkan judul halamantitle di halaman 404, berikut adalah hasilnya,
 
-![tampilan title/judul yang sudah diperbaiki](image-15.png)
+![tampilan title/judul yang sudah diperbaiki](assets/image-15.png)
 
 ## Tugas 2 (Wajib)
 
@@ -107,7 +107,7 @@ Karena saya belum menambahkan judul halamantitle di halaman 404, berikut adalah 
 
 Karena navbar sudah berhasil tidak tampil di halaman 404 dan juga layout nya sudah diperbaiki, sekarang saya ingin mengubah font dari halaman 404 not found saya menjadi seperti ini hasilnya,
 
-![mengubah tampilan font](image-16.png)
+![mengubah tampilan font](assets/image-16.png)
 
 ## Tugas 3 (Pengayaan)
 
@@ -118,9 +118,9 @@ Tambahkan tombol:
 
 Di halmaan 404 not found saya coba tambahkan tombol untuk mengarahkan ke halaman home, yang dimana tombol ini menggunakan tag `<Link>` seperti berikut,
 
-![mengarahkan ke tombol home menggunakan tag <Link>](image-17.png)
+![mengarahkan ke tombol home menggunakan tag <Link>](assets/image-17.png)
 
-![gif penerapan tombol navigasi ke home di halaman not found](Screencast_20260302_115428.gif)
+![gif penerapan tombol navigasi ke home di halaman not found](assets/Screencast_20260302_115428.gif)
 
 # F. Pertanyaan Evaluasi
 
