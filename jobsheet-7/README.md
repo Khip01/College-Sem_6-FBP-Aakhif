@@ -51,3 +51,9 @@ Lalu agar saya bisa dengan aman menyimpan isi konfigurasi firebase, saya membuat
 Lalu akhirnya setelah saya membuat file `.env.local` saya anggil variabel didalamnya untuk saya gunakan di file `/pages/utils/db/firebase.ts`, hasilnya seperti berikut,
 
 ![pemanggilan variabel .env.local](image-8.png)
+
+## Langkah 9 – Ambil Data dari Firestore
+
+Setelah selesai melakukan setup, kini saya akan mencoba untuk mengambil data dari firestore database di collection yang sudah saya buat tadi. Yang saya lakukan adalah membuat file baru didalam direktori `/pages/utils/db/` bernama `servicefirebase.ts` seperti berikut,
+
+![tampilan kode servicefirebase.ts](image-9.png)
