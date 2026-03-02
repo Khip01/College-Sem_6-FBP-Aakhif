@@ -17,3 +17,15 @@ Saya membuat route api baru bernama `pages/api/produk`, dan hasilnya adalah sepe
 Lalu saya mencoba melakukan fetch data dari api ke halaman produk project nextjs ini, dan berikut adalah hasilnya,
 
 ![tampilan hasil fetching data produk](image-2.png)
+
+# E. Integrasi Firebase
+
+## Langkah 5 – Setup Firebase
+
+Saya mencoba membuat project Firebase baru seperti berikut,
+
+![project baru next js](image-3.png)
+
+Dan saya juga sudah selesai membuat collection baru seperti berikut,
+
+![tampilan collection firestore](image-4.png)
