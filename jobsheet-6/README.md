@@ -64,3 +64,17 @@ Saya sudah membuat file `404.tsx` di folder `pages/` dan juga isinya dan seperti
 
 Terlihat jika hasilnya sudah sesuai dengan heading 1 dan juga `404.tsx` juga berhasil ditampilkan.
 
+## Langkah 5 – Styling Halaman 404
+
+Sekarang saya ingin mencoba styling halaman 404 ini dengan scss, dengan membuat file baru bernama `404.module.scss` di dalaman folder `styles/`dan hasilnya adalah seperti berikut,
+
+![kode styling scss](image-10.png)!
+
+![tampilan 404 setelah di styling menggunakan scss](image-11.png)
+
+Lalu karena tampilan 404 notfound nya masih ada navbarnya, jadi saya mencoba untuk menghilangkannya dengan cara menambahkan halaman 404 ke blacklist yang ada di file `AppShell` (agar navbar tidak ditampilkan).
+
+Dan hasilnya adalah sebagai berikut,
+
+![halaman not found tanpa menampilkan navbar](image-12.png)
+
