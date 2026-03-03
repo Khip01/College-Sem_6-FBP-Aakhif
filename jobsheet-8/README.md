@@ -47,3 +47,21 @@ Saya mencoba menambahkan kode untuk menampilkan skeleton loading, dengan memodif
 Karena disitu hanya skeletonnya saja yang ditampilkan, jadi sekarang saya memperbaiki lagi kode nya agar skeletonnya ditampilkan pada saat loading saja, dan hasilnya seperti ini,
 
 ![tampilan skeleton beserta dengan produknya](Screencast_20260303_161215.gif)
+
+## Bagian 5 – Implementasi SWR
+
+Saya melakukan install SWR (Stale-While-Revalidate) melewati terminal seperti berikut,
+
+![tampilan terminal instalasi SWR](image-8.png)
+
+Lalu saya mengimplementasikan SWR di kode index.tsx dari direktori `pages/product/` saya seperti berikut,
+
+![tampilan kode menggunakan swr di pages/produk/index.tsx](image-9.png)
+
+Lalu saya mencoba merapihkan pemanggilan swr dengan meletakkan fungsi `fetcher` di folder `pages/utils/swr/` seperti berikut,
+
+![tampilan kode fetcher yang terpisah agar rapi](image-10.png)
+
+Jadi perbandingan antara useEffect manual dengan SWR adalah,
+
+Menurut saya, selain karena dari struktur kode, handling error, state isLoading, dan response `data` nya lebih rapi menggunakan SWR (Stale While Revalidate), walaupun sedikit tidak terlihat, tapi library SWR mempunyai kemampuan untuk melakukan caching pada saat melakukan request data, tidak seperti useEffect yang dimana setiap kali `fetch()` dipanggil akan melakukan fetch data dari endpoint tersebut dari nol.

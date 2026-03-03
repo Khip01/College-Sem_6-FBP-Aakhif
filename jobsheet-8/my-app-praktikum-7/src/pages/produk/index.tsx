@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import TampilanProduk from "../views/product/";
+import useSWR from "swr";
+import fetcher from "../utils/swr/fetcher";
 
 type Props = {
   isLogin: boolean;
@@ -7,20 +9,22 @@ type Props = {
 };
 
 const produk = ({ isLogin, setIsLogin }: Props) => {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    fetch("/api/products")
-      .then((response) => response.json())
-      .then((responseData) => setProducts(responseData.data))
-      .catch((error) => {
-        console.error("Error fetching products:", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("/api/products")
+  //     .then((response) => response.json())
+  //     .then((responseData) => setProducts(responseData.data))
+  //     .catch((error) => {
+  //       console.error("Error fetching products:", error);
+  //     });
+  // }, []);
+
+  const { data, error, isLoading } = useSWR("/api/products", fetcher);
 
   return (
     <>
-      <TampilanProduk products={products} />
+      <TampilanProduk products={isLoading ? [] : data.data} />
     </>
   );
 };
