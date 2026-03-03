@@ -65,3 +65,42 @@ Lalu saya mencoba merapihkan pemanggilan swr dengan meletakkan fungsi `fetcher` 
 Jadi perbandingan antara useEffect manual dengan SWR adalah,
 
 Menurut saya, selain karena dari struktur kode, handling error, state isLoading, dan response `data` nya lebih rapi menggunakan SWR (Stale While Revalidate), walaupun sedikit tidak terlihat, tapi library SWR mempunyai kemampuan untuk melakukan caching pada saat melakukan request data, tidak seperti useEffect yang dimana setiap kali `fetch()` dipanggil akan melakukan fetch data dari endpoint tersebut dari nol.
+
+# D. Tugas Praktikum
+
+## Tugas Individu
+
+### 1. Jelaskan perbedaan:
+
+- Client Side Rendering
+- Server Side Rendering
+- Static Site Generation
+
+#### **Jawab**
+
+Beberapa yang disebutkan itu adalah teknik website dalam memuat konten nya sebelum disajikan ke pengguna.
+
+Jika server-side rendering, teknik server-side ini akan melakukan render di sisi server, jadi kontennya akan siap setelah semuanya sudah di render di sisi server.
+
+Jika client-side rendering, itu menggunakan teknik rendering di sisi client/pengguna nya, jadi dia akan memberikan halaman/konten kosong, dan akan di muat seiring pada saat pengguna mengaksesnya.
+
+Jika static-site generation ini adalah teknik yang dimana seluruh konten dari website itu digenerate secara keseluruhan pada saat project web di build/release/deploy, jadi semua kontennya pada saat sampai ke pengguna akan statis (sama saja tidak berubah ubah), sehingga pada saat ada update harus mendeploy ulang.
+
+### 2. Buat halaman produk dengan:
+
+- Skeleton loading
+- Animasi
+
+Sudah, dan berikut adalah hasilnya,
+
+![skeleton loading beserta kontennya](Screencast_20260303_161215.gif)
+
+#### **Jawab**
+
+### 3. Refactor kode dari useEffect menjadi SWR.
+
+#### **Jawab**
+
+Saya sudah melakukan refactor kode dari penggunaan useEffect menjadi SWR, kode nya seperti berikut,
+
+![refactor kode menggunakan swr di pages/produk/index.tsx](image-9.png)
