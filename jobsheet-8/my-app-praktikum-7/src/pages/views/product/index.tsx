@@ -35,7 +35,20 @@ const TampilanProduk = ({ products }: { products: ProductType[] }) => {
             ))}
           </div>
         ) : (
-          <p>Loading products...</p>
+          <div className={styles.produk__content}>
+            <div className={styles.produk__content__skeleton}>
+              <div className={styles.produk__content__skeleton__image}></div>
+              <div className={styles.produk__content__skeleton__name}></div>
+              <div className={styles.produk__content__skeleton__category}></div>
+              <div className={styles.produk__content__skeleton__price}></div>
+            </div>
+            <div className={styles.produk__content__skeleton}>
+              <div className={styles.produk__content__skeleton__image}></div>
+              <div className={styles.produk__content__skeleton__name}></div>
+              <div className={styles.produk__content__skeleton__category}></div>
+              <div className={styles.produk__content__skeleton__price}></div>
+            </div>
+          </div>
         )}
       </div>
     </div>

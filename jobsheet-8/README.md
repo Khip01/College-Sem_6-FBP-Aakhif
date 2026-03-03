@@ -37,3 +37,13 @@ Lalu saya mencoba untuk melakukan styling menggunakan scss dengan cara membuat m
 ![tampilan kode views product](image-5.png)
 
 ![tampilan halaman produk](image-6.png)
+
+## Bagian 3 – Implementasi Skeleton Loading
+
+Saya mencoba menambahkan kode untuk menampilkan skeleton loading, dengan memodifikasi file `index.tsx` dan `product.module.scss` dari direktori `pages/views/product/` dan hasilnya adalah seperti berikut,
+
+![tampilan skeleton dari halaman produk](image-7.png)
+
+Karena disitu hanya skeletonnya saja yang ditampilkan, jadi sekarang saya memperbaiki lagi kode nya agar skeletonnya ditampilkan pada saat loading saja, dan hasilnya seperti ini,
+
+![tampilan skeleton beserta dengan produknya](Screencast_20260303_161215.gif)
