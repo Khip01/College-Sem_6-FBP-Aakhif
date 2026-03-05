@@ -20,4 +20,16 @@ Saya mencoba mengimplementasikan retrieve data menggunakan rendering server sepe
 
 Sehingga tampilannya pada saat halaman direfresh seperti ini,
 
-![tampilan halaman pada saat selesai direfresh](image-3.png)
+![tampilan halaman pada saat selesai direfresh](image-3.png)\_
+
+Pada saat saya akses, tidak ada tampilan skeleton yang ditampilkan, karena pada saat halaman selesai di muat, data sudah siap untuk ditampilkan.
+
+## Bagian 3 – Refactor Type ( produk type )
+
+Saya mencoba untuk membuat folder `types` pada folder pages untuk meletakkan type dari product yang akan dipanggil berulang-ulang (seperti `models` di laravel), seperti berikut,
+
+![tampilan types product baru](image-4.png)
+
+Setelah itu saya melakukan modifikasi pada file `server.tsx` yang tadi kita buat untuk menggunakan types product yang telah kita buat barusan seperti berikut,
+
+![tampilan kode server.tsx setelah dilakukan refactor](image-5.png)

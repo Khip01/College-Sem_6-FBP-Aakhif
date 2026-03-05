@@ -1,14 +1,7 @@
 import TampilanProduk from "../views/product";
+import { ProductType } from "../types/product.type";
 
-type ProdukType = {
-  id: string;
-  name: string;
-  price: number;
-  image: string;
-  category: string;
-};
-
-const HalamanProdukServer = (props: { products: ProdukType[] }) => {
+const HalamanProdukServer = (props: { products: ProductType[] }) => {
   return (
     <>
       <TampilanProduk products={props.products} />
