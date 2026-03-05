@@ -33,3 +33,17 @@ Saya mencoba untuk membuat folder `types` pada folder pages untuk meletakkan typ
 Setelah itu saya melakukan modifikasi pada file `server.tsx` yang tadi kita buat untuk menggunakan types product yang telah kita buat barusan seperti berikut,
 
 ![tampilan kode server.tsx setelah dilakukan refactor](image-5.png)
+
+## Bagian 4 – Uji Perbedaan SSR vs CSR
+
+Sekarang saya igin melakukan uji pada halaman yang menggunakan SSR dan CSR,
+
+### Uji 1 - Skeleton
+
+Saya membuka halaman CSR dan melakukan refresh dan hasilnya seperti ini,
+
+![tampilan halaman CSR pada saat dimuat](Screencast_20260305_084522.gif)
+
+Lalu saya membuka halaman SSR dan melakukan refresh, dan hasilnya seperti ini,
+
+![tampilan halaman SSR pada saat dimuat](Screencast_20260305_090534.gif)
