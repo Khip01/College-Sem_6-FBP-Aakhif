@@ -27,3 +27,31 @@ Lalu hasil dari halaman staticnya adalah seperti berikut,
 ![tampilan halaman static](image-3.png)
 
 Pada saat saya load halaman nya, proses memuatnya terasa sangat cepat, dikarenakan semua konten dari API nya sudah diambil dan digenerate langsung menjadi sebuah halaman statis.
+
+## Bagian 4 – Pengujian Perubahan Data
+
+### Uji 1 – Tambah Data di Database
+
+Saya mencoba menambahkan data dari database untuk mengetest apakah masing masing halaman yang sudah saya buat bisa menangkap perubahan data baru dari database,
+
+jadi saya menambahkan data berikut,
+
+![tampilan data baru yang akan diinput dari database langsung](image-5.png)
+
+dan hasilnya untuk di halaman `/produk` (CSR) adalah sebagai berikut,
+
+![tampilan halaman /produk (CSR)](image-6.png)
+
+dan hasilnya untuk di halaman `/produk/server` (SSR) adalah sebagai berikut,
+
+![tampilan halaman /produk/server (SSR)](image-7.png)
+
+dan hasilnya untuk di halaman `/produk/static` (SSG) adalah sebagai berikut,
+
+![tampilan halaman /produk/static (SSG)](image-8.png)
+
+Terlihat jika halaman yang menggunakan Static Generated tidak memperbarui tampilannya, karena dia sudah digenerate secara statis tadi.
+
+Sehingga dapat disimpulkan jika pada saat sudah mencapai tahap produksi menggunakan SSG (Static-Site Generation) itu datanya tidak akan diperbarui lagi.
+
+Kecuali jika kita menjalankan project nya di lingkungan development (menggunakan `npm run dev` bukan `npm run start`, maka data baru bisa termuat)
