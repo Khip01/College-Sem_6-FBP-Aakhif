@@ -2,7 +2,7 @@
 
 Saya sudah memnyesuaikan isi field database firestore saya menjadi seperti berikut,
 
-![penyesuaian isi field dan document dari firestore database](image.png)
+![penyesuaian isi field dan document dari firestore database](assets/image.png)
 
 ## Bagian 1 – Setup Data Produk
 
@@ -16,51 +16,51 @@ Saya sudah membuat file baru dengan nama `product.tsx` di direktori `pages/api/`
 
 Dan hasilnya adalah seperti berikut,
 
-![get products api](image-1.png)
+![get products api](assets/image-1.png)
 
 ## Bagian 2 – Implementasi CSR dengan useEffect
 
 Saya membuat file baru bernama `index.tsx` di direktori `pages/views/product/` untuk tampilan halaman product yang baru seperti berikut,
 
-![membuat tampilan product di folder pages/views/product/](image-2.png)
+![membuat tampilan product di folder pages/views/product/](assets/image-2.png)
 
 Lalu saya gunakan dan saya panggil views `product` yang saya buat di halaman produk, direktori `pages/produk/index.tsx`,
 
-![tampilan kode produk yang sudah dimodifikasi](image-3.png)
+![tampilan kode produk yang sudah dimodifikasi](assets/image-3.png)
 
 Dan berikut adalah hasilnya,
 
-![tampilan halaman produk](image-4.png)
+![tampilan halaman produk](assets/image-4.png)
 
 Lalu saya mencoba untuk melakukan styling menggunakan scss dengan cara membuat modul scss baru di direktori `pages/views/products/` bernama `product.module.scss`
 
-![tampilan kode views product](image-5.png)
+![tampilan kode views product](assets/image-5.png)
 
-![tampilan halaman produk](image-6.png)
+![tampilan halaman produk](assets/image-6.png)
 
 ## Bagian 3 – Implementasi Skeleton Loading
 
 Saya mencoba menambahkan kode untuk menampilkan skeleton loading, dengan memodifikasi file `index.tsx` dan `product.module.scss` dari direktori `pages/views/product/` dan hasilnya adalah seperti berikut,
 
-![tampilan skeleton dari halaman produk](image-7.png)
+![tampilan skeleton dari halaman produk](assets/image-7.png)
 
 Karena disitu hanya skeletonnya saja yang ditampilkan, jadi sekarang saya memperbaiki lagi kode nya agar skeletonnya ditampilkan pada saat loading saja, dan hasilnya seperti ini,
 
-![tampilan skeleton beserta dengan produknya](Screencast_20260303_161215.gif)
+![tampilan skeleton beserta dengan produknya](assets/Screencast_20260303_161215.gif)
 
 ## Bagian 5 – Implementasi SWR
 
 Saya melakukan install SWR (Stale-While-Revalidate) melewati terminal seperti berikut,
 
-![tampilan terminal instalasi SWR](image-8.png)
+![tampilan terminal instalasi SWR](assets/image-8.png)
 
 Lalu saya mengimplementasikan SWR di kode index.tsx dari direktori `pages/product/` saya seperti berikut,
 
-![tampilan kode menggunakan swr di pages/produk/index.tsx](image-9.png)
+![tampilan kode menggunakan swr di pages/produk/index.tsx](assets/image-9.png)
 
 Lalu saya mencoba merapihkan pemanggilan swr dengan meletakkan fungsi `fetcher` di folder `pages/utils/swr/` seperti berikut,
 
-![tampilan kode fetcher yang terpisah agar rapi](image-10.png)
+![tampilan kode fetcher yang terpisah agar rapi](assets/image-10.png)
 
 Jadi perbandingan antara useEffect manual dengan SWR adalah,
 
@@ -93,7 +93,7 @@ Jika static-site generation ini adalah teknik yang dimana seluruh konten dari we
 
 Sudah, dan berikut adalah hasilnya,
 
-![skeleton loading beserta kontennya](Screencast_20260303_161215.gif)
+![skeleton loading beserta kontennya](assets/Screencast_20260303_161215.gif)
 
 #### **Jawab**
 
@@ -103,4 +103,4 @@ Sudah, dan berikut adalah hasilnya,
 
 Saya sudah melakukan refactor kode dari penggunaan useEffect menjadi SWR, kode nya seperti berikut,
 
-![refactor kode menggunakan swr di pages/produk/index.tsx](image-9.png)
+![refactor kode menggunakan swr di pages/produk/index.tsx](assets/image-9.png)
