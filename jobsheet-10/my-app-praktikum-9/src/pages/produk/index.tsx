@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import TampilanProduk from "../views/product/";
+import TampilanProduk from "../../views/product";
 import useSWR from "swr";
-import fetcher from "../utils/swr/fetcher";
+import fetcher from "../../utils/swr/fetcher";
 
 type Props = {
   isLogin: boolean;

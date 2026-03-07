@@ -1,5 +1,5 @@
-import TampilanProduk from "../views/product";
-import { ProductType } from "../types/product.type";
+import TampilanProduk from "../../views/product";
+import { ProductType } from "../../types/product.type";
 
 const HalamanProdukServer = (props: { products: ProductType[] }) => {
   return (

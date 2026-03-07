@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { retrieveData } from "../utils/db/servicefirebase";
+import { retrieveData } from "../../utils/db/servicefirebase";
 
 type Data = {
   status: boolean;

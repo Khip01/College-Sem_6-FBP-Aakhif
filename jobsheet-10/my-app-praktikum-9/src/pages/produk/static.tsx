@@ -1,5 +1,5 @@
-import { ProductType } from "../types/product.type";
-import TampilanProduk from "../views/product";
+import { ProductType } from "../../types/product.type";
+import TampilanProduk from "../../views/product";
 
 const HalamanProdukStatic = (props: { products: ProductType[] }) => {
   const { products } = props;
@@ -14,7 +14,7 @@ const HalamanProdukStatic = (props: { products: ProductType[] }) => {
 
 export default HalamanProdukStatic;
 
-export async function getStaticprops() {
+export async function getStaticProps() {
   const res = await fetch("http://localhost:3000/api/products");
   const response: { data: ProductType[] } = await res.json();
   return {
