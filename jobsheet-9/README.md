@@ -47,3 +47,15 @@ Saya membuka halaman CSR dan melakukan refresh dan hasilnya seperti ini,
 Lalu saya membuka halaman SSR dan melakukan refresh, dan hasilnya seperti ini,
 
 ![tampilan halaman SSR pada saat dimuat](Screencast_20260305_090534.gif)
+
+### Uji 2 – Network Tab
+
+Saya mencoba membandingkan SSR dan CSR menggunakan network tab dari inspect element, pertama-tama saya coba untuk melihat di mode **CSR** terlebih dahulu, dan hasilnya adalah seperti berikut,
+
+![tampilan bukti halaman CSR melakukan pemanggilan API di sisi pengguna/client](image-6.png)
+
+Terlihat jika ada request yang dilakukan dari sisi client untuk halaman produk. Sekarang saya ingin mencoba menggunakan halaman **SSR**, dan hasilnya adalah sebagai berikut,
+
+![tampilan bukti halaman SSR tidak melakukan pemanggilan API dari sisi pengguna](image-7.png)
+
+Terlihat jika tidak ada request yang dilakukan untuk menampilkan item product dari penggunaan halaman SSR.
