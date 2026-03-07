@@ -59,3 +59,35 @@ Terlihat jika ada request yang dilakukan dari sisi client untuk halaman produk. 
 ![tampilan bukti halaman SSR tidak melakukan pemanggilan API dari sisi pengguna](image-7.png)
 
 Terlihat jika tidak ada request yang dilakukan untuk menampilkan item product dari penggunaan halaman SSR.
+
+# D. Tugas Praktikum
+
+## Tugas Individu
+
+### 1. Buat 2 halaman:
+
+- /products (CSR)
+- /products/server (SSR)
+
+#### **Jawab**
+
+Saya sudah melakukan pembuatan 2 halaman produk yang dimana masing-masing menggunakan implementasi CSR, dan SSR untuk melakukan pengambilan data.
+
+![tampilan halaman CSR pada saat dimuat](Screencast_20260305_084522.gif)
+
+![tampilan halaman SSR pada saat dimuat](Screencast_20260305_090534.gif)
+
+### 2. Dokumentasikan:
+
+- Screenshot CSR
+- Screenshot SSR
+- Perbedaan Network tab
+- Perbedaan View Source
+
+#### **Jawab**
+
+Saya sudah melihat tampilan network (jejak get response) dari masing-masing halmaan dan berikut gambarnya,
+
+![tampilan bukti halaman CSR melakukan pemanggilan API di sisi pengguna/client](image-6.png)
+
+![tampilan bukti halaman SSR tidak melakukan pemanggilan API dari sisi pengguna](image-7.png)
