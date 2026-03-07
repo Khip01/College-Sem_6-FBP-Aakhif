@@ -55,3 +55,15 @@ Terlihat jika halaman yang menggunakan Static Generated tidak memperbarui tampil
 Sehingga dapat disimpulkan jika pada saat sudah mencapai tahap produksi menggunakan SSG (Static-Site Generation) itu datanya tidak akan diperbarui lagi.
 
 Kecuali jika kita menjalankan project nya di lingkungan development (menggunakan `npm run dev` bukan `npm run start`, maka data baru bisa termuat)
+
+### Uji 2 – Build Ulang
+
+Sehingga untuk memperbarui halaman yang digenerate dengan Static-Site Generation, project harus dibuild lagi terlebih dahulu (di build ke production menggunakan `npm run build` sembari menjalankan `npm run dev`) seperti berikut,
+
+![tampilan setelah melakukan npm run build](image-9.png)
+
+Setelah itu saya coba jalankan `npm run start` untuk menjalankan environment prouction, dan hasilnya seperti berikut,
+
+![tampilan halaman static setelah build dilakukan](image-10.png)
+
+Terlihat jika data dari halaman staticnya sudah terupdate.
