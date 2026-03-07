@@ -97,3 +97,39 @@ Saya sudah membuat 3 halaman untuk menguji perbedaan load data di halaman CSR, S
 #### **Jawab**
 
 Saya sudah mencoba menambahkan data pada percobaan praktikum, dan hasilnya memang hanya halaman dengan metode render SSG saja yang datanya tidak berubah walaupuun data di database ditambah/dikurangi.
+
+# E. Studi Analisis
+
+Jawab pertanyaan berikut:
+
+### 1. Mengapa SSG tidak menampilkan data terbaru?
+
+#### **Jawab**
+
+Karena dari namanya sudah terlihat, yaitu "Static". Yang dimana itu karena metode SSG memiliki teknik render halaman dengan cara digenerate pada saat build menjadi website statis (alias kontennya sudah full digenerate dan tidak bisa diganti ganti lagi alias statis).
+
+### 2. Mengapa SSG lebih cepat?
+
+#### **Jawab**
+
+Karena dari awal pengguna ingin mengakses halaman, isi konten halamannya sudah siap dan lengkap, semua datanya sudah diunduh dan siap untuk ditampilkan, sehingga pada saat mengunjungi halaman SSG seperti mengunjungi halaman html css statis biasa.
+
+### 3. Kapan SSG tidak cocok digunakan?
+
+#### **Jawab**
+
+SSG sangat cocok digunakan pada saat tampilan halamannya tidak banyak butuh melakukan perubahan secara realtime/tidak butuh banyak perubahan konten yang dinamis. Cocok digunakan juga pada saat kita ingin sekali mengejar kualitas SEO yang bagus, dan performa load website yang lancar, sehingga itu memperbagus UX pengguna pada saat mengunjungi halaman kita.
+
+### 4. Mengapa e-commerce tidak cocok menggunakan SSG murni?
+
+#### **Jawab**
+
+Karena data/isi konten yang ada di website e-commerce itu banyak melakukan perubahan secara realtime, atau bahkan butuh melakukan perubahan data sehingga isi konten dapat berubah sewaktu-waktu.
+
+### 5. Apa perbedaan build mode dan development mode?
+
+#### **Jawab**
+
+Jika build mode seperti `npm run build` adalah perintah untuk melakukan build/pembuatan project ke tahap production ready/final produksi, jadi feel pada saat mengaksesnya adalah feel mengakses halaman pada saat sudah di publik/di release.
+
+Jika development mode seperti `npm run dev`, adalah mode tampilan web di tahap pengembangan, maka bisa saja masih terjadi pengubahan kode/perubahan isi konten sesuai dengan isi database/isinya masih bisa berubah2 untuk tahap pengujian dan pengembangan website.
