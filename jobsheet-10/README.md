@@ -67,3 +67,33 @@ Setelah itu saya coba jalankan `npm run start` untuk menjalankan environment pro
 ![tampilan halaman static setelah build dilakukan](image-10.png)
 
 Terlihat jika data dari halaman staticnya sudah terupdate.
+
+# D. Tugas Praktikum
+
+## Tugas Individu
+
+### 1. Buat 3 halaman:
+
+- CSR
+- SSR
+- SSG
+
+#### **Jawab**
+
+Saya sudah membuat 3 halaman untuk menguji perbedaan load data di halaman CSR, SSR, dan SSG, seperti berikut,
+
+![tampilan halaman /produk (CSR)](image-6.png)
+
+![tampilan halaman /produk/server (SSR)](image-7.png)
+
+![tampilan halaman /produk/static (SSG)](image-8.png)
+
+### 2. Lakukan pengujian:
+
+- Tambah data
+- Hapus data
+- Bandingkan hasil
+
+#### **Jawab**
+
+Saya sudah mencoba menambahkan data pada percobaan praktikum, dan hasilnya memang hanya halaman dengan metode render SSG saja yang datanya tidak berubah walaupuun data di database ditambah/dikurangi.
