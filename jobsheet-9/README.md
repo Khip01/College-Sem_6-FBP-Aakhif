@@ -91,3 +91,35 @@ Saya sudah melihat tampilan network (jejak get response) dari masing-masing halm
 ![tampilan bukti halaman CSR melakukan pemanggilan API di sisi pengguna/client](image-6.png)
 
 ![tampilan bukti halaman SSR tidak melakukan pemanggilan API dari sisi pengguna](image-7.png)
+
+# E. Studi Analisis
+
+Jawab pertanyaan berikut:
+
+### 1. Mengapa SSR lebih baik untuk SEO?
+
+#### **Jawab**
+
+Karena, konten akan dimuat sebelum pengguna melihat halaman nya, jadi konten penuh dari web nya sudah terender duluan.
+
+### 2. Kapan sebaiknya menggunakan SSR?
+
+#### **Jawab**
+
+Pada saat kita butuh SEO website yang bagus agar konten kita terlacak oleh mesin pencari, selain itu pada saat ingin menyajikan konten yang langsung diperlihatkan ke pengguna (konten yang cepat dimuat) karena proses memuat dibebankan ke sisi server.
+
+### 3. Apa kekurangan SSR dibanding CSR?
+
+#### **Jawab**
+
+Karena tadi di bebankan ke server, sehingga beban proses di server itu tinggi.
+
+Sehingga jika website memiliki trafik yang sangat padat, maka akan terjadi perlambatan atau bahkan timeout di sisi backend server nya (jika memang backend server nya tidak mumpuni).
+
+Selain itu, halaman dengan SSR jika melakukan perpindahan halaman harus melakukan reload halaman yang signifikan dan komunikasi dengan server terus menerus untuk mendapatkan/merender halaman full nya.
+
+### 4. Mengapa skeleton tidak muncul pada SSR?
+
+#### **Jawab**
+
+Karena pada saat halaman dimuat, data memang sudah tidak kosong (alias langsung sudah ada konten nya), sehingga skeleton menjadi tidak ditampilkan karena sisi user tidak melakukan load data apapun.
