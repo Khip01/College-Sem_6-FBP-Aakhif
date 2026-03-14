@@ -1,16 +1,22 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import TampilanProdukId from "../../views/produk/detail";
+import useSWR from "swr";
+import fetcher from "@/utils/swr/fetcher";
+import DetailProduk from "@/views/DetailProduct";
 
 const HalamanProduk = () => {
   //   const Router = useRouter();
   //   console.log(Router);
 
-  // const { query } = useRouter();
+  const { query } = useRouter();
+  const { data, error, isLoading } = useSWR(
+    `/api/products/${query.id}`,
+    fetcher,
+  );
 
   return (
     <>
-      <TampilanProdukId />
+      <DetailProduk products={isLoading ? [] : data.data} />
     </>
   );
 };
