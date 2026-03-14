@@ -43,3 +43,15 @@ Setelah itu saya membuat file `detailProduk.module.scss` dan `index.tsx` baru be
 Dan hasilnya adalah seperti berikut,
 
 ![tampilan detail produk setelah perubahan](image-11.png)
+
+## Bagian 3 – Implementasi SSR
+
+Lalu saya mencoba untuk mengubah kode CSR yang ada di `/produk/[id].tsx dan menggantinya ke penggunaan SSR,
+
+![tampilan kode CSR yang telah diubah ke SSR di halaman produk detail](image-12.png)
+
+Dan tampilannya adalah sebagai berikut,
+
+![tampilan gif perpundahan halaman produk menuju detail produk](Screencast_20260314_220520.gif)
+
+Terlihat jika hasilnya memang tidak ada load image pada saat melihat detial image/load sudah dilakukan di sisi server sebelum tampil ke pengguna.
