@@ -55,3 +55,21 @@ Dan tampilannya adalah sebagai berikut,
 ![tampilan gif perpundahan halaman produk menuju detail produk](Screencast_20260314_220520.gif)
 
 Terlihat jika hasilnya memang tidak ada load image pada saat melihat detial image/load sudah dilakukan di sisi server sebelum tampil ke pengguna.
+
+## Bagian 4 – Implementasi Static Site Generation (Dynamic SSG)
+
+Sekarang saya memodifikasi lagi halaman detail produk untuk menggunakan SSG (Static Site Generation) dengan mengedit file
+
+![tampilan kode dari detail produk setelah dimodifikasi](image-13.png)
+
+Tak lupa juga untuk memodifikasi views dari halaman detail produk,
+
+![tampilan kode dari views detail produk setelah modifikasi](image-14.png)
+
+Setelah itu tak lupa saya untuk melakukan build halaman SSG yang sudah dimodifkasi tadi,
+
+![tampilan konsole hasil build halaman SSG detail produk](image-15.png)
+
+Setelah itu saya mencoba menjalankan browser di halaman produk dan mencoba melihat detail produknya hasil dari modifikasi menggunakan SSG,
+
+![tampilan detail produk pada saat menggunakan renderer SSG](Screencast_20260315_232133.gif)
