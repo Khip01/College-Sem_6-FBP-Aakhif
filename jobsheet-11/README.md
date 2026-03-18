@@ -144,3 +144,44 @@ Dan hasilnya adalah seperti berikut,
 ![tampilan berhasil load produk yang telah ditambahkan (setelah dilakukan build SSG kembali)](image-23.png)
 
 Terlihat jika kita berhasil menampilkan produk baru yang barusan ditambahkan, itu karena kita melakukan build ulang SSG dari nextjs.
+
+# E. Tugas Praktikum
+
+### 1. Implementasikan halaman detail dengan:
+
+- CSR
+- SSR
+- SSG
+
+Saya sudah mengimmplementasikan beberapa metode renderer diantaranya CSR, SSR, dan SSg di praktikum dan pengujian sebelumnya.
+
+### 2.Buat tabel perbandingan:
+
+| Aspek          | CSR | SSR | SSG |
+| -------------- | --- | --- | --- |
+| Loading        | ✅  | ❌  | ❌  |
+| Build Required | ❌  | ❌  | ✅  |
+| SEO            | ❌  | ✅  | ✅  |
+| Perubahan Data | ✅  | ✅  | ❌  |
+
+### 3. Dokumentasikan:
+
+- Screenshot
+- Network tab
+- Build result
+
+Saya sudah mencoba dan berikut adalah hasilnya,
+
+#### CSR
+
+![tampilan request pada saat mempraktekan metode rendering CSR](image-16.png)
+
+#### SSR
+
+![tampilan inspect dengan menggunakan metode SSR](image-17.png)
+
+#### SSG
+
+![tampilan build di konsole](image-22.png)
+
+![tampilan berhasil load produk yang telah ditambahkan (setelah dilakukan build SSG kembali)](image-23.png)
