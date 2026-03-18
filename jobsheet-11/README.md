@@ -185,3 +185,37 @@ Saya sudah mencoba dan berikut adalah hasilnya,
 ![tampilan build di konsole](image-22.png)
 
 ![tampilan berhasil load produk yang telah ditambahkan (setelah dilakukan build SSG kembali)](image-23.png)
+
+# F. Pertanyaan Analisis
+
+### 1. Mengapa getStaticPaths wajib pada dynamic SSG?
+
+#### **Jawab**
+
+Karena itu untuk memanggil path statis yang telah dibuat dari hasil melakukan generation/build SSG.
+
+### 2. Mengapa CSR membutuhkan loading state?
+
+#### **Jawab**
+
+Karena website pertama kali menyajikan halaman kosong terlebih dahulu di sisi client, setelah itu baru data akan dimuat pada saat user sedang membuka halaman tersebut.
+
+### 3. Mengapa SSG tidak menampilkan produk baru tanpa build ulang?
+
+#### **Jawab**
+
+Karena produk baru tidak ada dalam path statis (pada saat itu kan halaman memanggil getStaticPath alih alih memanggil server atau meminta request), alhasil jika belum di build SSg maka produk baru tidak akan pernah terdaftar di path statis.
+
+### 4. Mana metode terbaik untuk halaman detail e-commerce?
+
+#### **Jawab**
+
+Untuk halaman e-commerce yang pastinya mengalami perubahan data yang signifikan bisa menggunakan antara CSR (Client Side Rendering) ataupun SSR (Server Side Rendering), tergantung pada pengaturan beban yang hendak diberikan, ingin memberikan beban lebih ke sisi client atau sisi server untuk mengatasi pemuatan data/produk.
+
+### 5. Apa risiko menggunakan SSG untuk produk yang sering berubah?
+
+#### **Jawab**
+
+Jika menggunakan SSG untuk produk yang sering berubah, risikonya nanti akan sering membutuhkan build ulang disaat sebuah produk bertambah/berkurang/diperbarui, belum lagi proses build yang pasti memakan waktu yang tidak sedikit.
+
+Sehingga bisa saja user menemukan bug produk tidak bisa diakses karena data produk masih proses dibuild SSG/bahkan belum di build.
