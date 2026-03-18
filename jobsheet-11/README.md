@@ -4,75 +4,75 @@
 
 Saya menambahkan link pada masing masing item, sehingga item bisa ditekan,
 
-![menambahkan link pada item produk](image.png)
+![menambahkan link pada item produk](assets/image.png)
 
-![tampilan url pada saat item produk di hover](image-1.png)
+![tampilan url pada saat item produk di hover](assets/image-1.png)
 
-![tampilan detail produk pada saat salah satu item produk ditekan](image-2.png)
+![tampilan detail produk pada saat salah satu item produk ditekan](assets/image-2.png)
 
 ## Bagian 2 – Implementasi CSR (Client Rendering)
 
 Saya sudah memodifikasi halaman `detail product` agar bisa mengambil data produk dari database berdasarkan id yang diterima,
 
-![tampilan halaman detail produk](image-3.png)
+![tampilan halaman detail produk](assets/image-3.png)
 
 Melakukan rename file `produk.ts` -> [[...produk]].ts di folder api,
 
-![rename file produk.ts](image-4.png)
+![rename file produk.ts](assets/image-4.png)
 
 Melakukan modifikasi `serviceirebase.ts`,
 
-![modifikasi file servicefirebase.ts](image-5.png)
+![modifikasi file servicefirebase.ts](assets/image-5.png)
 
 Melakukan modifikasi juga ke file `[[...produk]].ts`
 
-![tampilan file produk.ts yang telah dimodifikasi](image-6.png)
+![tampilan file produk.ts yang telah dimodifikasi](assets/image-6.png)
 
 Sehingga pada saat saya coba api nya, hasilnya seperti ini,
 
-![tampilan endpoint api yang sudah berhasil menampilkan data detail produk](image-7.png)
+![tampilan endpoint api yang sudah berhasil menampilkan data detail produk](assets/image-7.png)
 
-![tampilan endpoint api dengan id yang tidak sesuai](image-8.png)
+![tampilan endpoint api dengan id yang tidak sesuai](assets/image-8.png)
 
 Setelah itu saya membuat file `detailProduk.module.scss` dan `index.tsx` baru beserta isinya,
 
-![tampilan isi module scss dan index nya](image-9.png)
+![tampilan isi module scss dan index nya](assets/image-9.png)
 
-![tampilan isi halaman detail](image-10.png)
+![tampilan isi halaman detail](assets/image-10.png)
 
 Dan hasilnya adalah seperti berikut,
 
-![tampilan detail produk setelah perubahan](image-11.png)
+![tampilan detail produk setelah perubahan](assets/image-11.png)
 
 ## Bagian 3 – Implementasi SSR
 
 Lalu saya mencoba untuk mengubah kode CSR yang ada di `/produk/[id].tsx dan menggantinya ke penggunaan SSR,
 
-![tampilan kode CSR yang telah diubah ke SSR di halaman produk detail](image-12.png)
+![tampilan kode CSR yang telah diubah ke SSR di halaman produk detail](assets/image-12.png)
 
 Dan tampilannya adalah sebagai berikut,
 
-![tampilan gif perpundahan halaman produk menuju detail produk](Screencast_20260314_220520.gif)
+![tampilan gif perpundahan halaman produk menuju detail produk](assets/Screencast_20260314_220520.gif)
 
-Terlihat jika hasilnya memang tidak ada load image pada saat melihat detial image/load sudah dilakukan di sisi server sebelum tampil ke pengguna.
+Terlihat jika hasilnya memang tidak ada load assets/image pada saat melihat detial assets/image/load sudah dilakukan di sisi server sebelum tampil ke pengguna.
 
 ## Bagian 4 – Implementasi Static Site Generation (Dynamic SSG)
 
 Sekarang saya memodifikasi lagi halaman detail produk untuk menggunakan SSG (Static Site Generation) dengan mengedit file
 
-![tampilan kode dari detail produk setelah dimodifikasi](image-13.png)
+![tampilan kode dari detail produk setelah dimodifikasi](assets/image-13.png)
 
 Tak lupa juga untuk memodifikasi views dari halaman detail produk,
 
-![tampilan kode dari views detail produk setelah modifikasi](image-14.png)
+![tampilan kode dari views detail produk setelah modifikasi](assets/image-14.png)
 
 Setelah itu tak lupa saya untuk melakukan build halaman SSG yang sudah dimodifkasi tadi,
 
-![tampilan konsole hasil build halaman SSG detail produk](image-15.png)
+![tampilan konsole hasil build halaman SSG detail produk](assets/image-15.png)
 
 Setelah itu saya mencoba menjalankan browser di halaman produk dan mencoba melihat detail produknya hasil dari modifikasi menggunakan SSG,
 
-![tampilan detail produk pada saat menggunakan renderer SSG](Screencast_20260315_232133.gif)
+![tampilan detail produk pada saat menggunakan renderer SSG](assets/Screencast_20260315_232133.gif)
 
 # D. Pengujian
 
@@ -86,7 +86,7 @@ Setelah itu saya mencoba menjalankan browser di halaman produk dan mencoba melih
 
 Saya mencoba mengunjungi halaman detail produk dan memperhatikan bagian API request seperti berikut,
 
-![tampilan request pada saat mempraktekan metode rendering CSR](image-16.png)
+![tampilan request pada saat mempraktekan metode rendering CSR](assets/image-16.png)
 
 Terlihat jika nextjs sempat melakukan request data produk terlebih dahulu.
 
@@ -100,7 +100,7 @@ Terlihat jika nextjs sempat melakukan request data produk terlebih dahulu.
 
 Saya mencoba untuk memuat kembali halaman dengan menggunakan metode rendering SSR dan hasilnya seperti berikut,
 
-![tampilan inspect dengan menggunakan metode SSR](image-17.png)
+![tampilan inspect dengan menggunakan metode SSR](assets/image-17.png)
 
 Terlihat disini jika di sisi client, nextjs tidak terlihat melakukan request apapun.
 
@@ -121,27 +121,27 @@ Terlihat disini jika di sisi client, nextjs tidak terlihat melakukan request apa
 
 Saya sekarang mencoba untuk memuat halaman produk kembali dengan menggunakan metode SSG,
 
-![tampilan 3 produk awal](image-18.png)
+![tampilan 3 produk awal](assets/image-18.png)
 
 Terlihat awalnya hanya 3 produk saja, setelah itu saya mencoba menambahkan produk baru dari database firebase,
 
-![penambahan record produk baru](image-19.png)
+![penambahan record produk baru](assets/image-19.png)
 
 Dan pada saat saya cek di halaman `/produk` hasilnya seperti ini,
 
-![tampilan produk sekarang ada 4 item](image-20.png)
+![tampilan produk sekarang ada 4 item](assets/image-20.png)
 
 Terlihat sudah ada 4 item, tetapi jika kita mencoba membuka item baru yang telah kita tambahkan barusan (belum melakukan build SSG kembali setelah melakukan penambahan) hasilnya seperti berikut,
 
-![tampilan not found produk detail tidak ditemukan](image-21.png)
+![tampilan not found produk detail tidak ditemukan](assets/image-21.png)
 
 Telrihat jika produknya tidak ditemukan, karena kita belum melakukan build SSG ulang setelah melakukan penambahan data baru untuk halaman produk detail. Setelah itu saya melakukan build ulang (dengan `npm run dev` masih dijalankan) seperti berikut,
 
-![tampilan build di konsole](image-22.png)
+![tampilan build di konsole](assets/image-22.png)
 
 Dan hasilnya adalah seperti berikut,
 
-![tampilan berhasil load produk yang telah ditambahkan (setelah dilakukan build SSG kembali)](image-23.png)
+![tampilan berhasil load produk yang telah ditambahkan (setelah dilakukan build SSG kembali)](assets/image-23.png)
 
 Terlihat jika kita berhasil menampilkan produk baru yang barusan ditambahkan, itu karena kita melakukan build ulang SSG dari nextjs.
 
@@ -174,17 +174,17 @@ Saya sudah mencoba dan berikut adalah hasilnya,
 
 #### CSR
 
-![tampilan request pada saat mempraktekan metode rendering CSR](image-16.png)
+![tampilan request pada saat mempraktekan metode rendering CSR](assets/image-16.png)
 
 #### SSR
 
-![tampilan inspect dengan menggunakan metode SSR](image-17.png)
+![tampilan inspect dengan menggunakan metode SSR](assets/image-17.png)
 
 #### SSG
 
-![tampilan build di konsole](image-22.png)
+![tampilan build di konsole](assets/image-22.png)
 
-![tampilan berhasil load produk yang telah ditambahkan (setelah dilakukan build SSG kembali)](image-23.png)
+![tampilan berhasil load produk yang telah ditambahkan (setelah dilakukan build SSG kembali)](assets/image-23.png)
 
 # F. Pertanyaan Analisis
 
