@@ -73,3 +73,74 @@ Setelah itu tak lupa saya untuk melakukan build halaman SSG yang sudah dimodifka
 Setelah itu saya mencoba menjalankan browser di halaman produk dan mencoba melihat detail produknya hasil dari modifikasi menggunakan SSG,
 
 ![tampilan detail produk pada saat menggunakan renderer SSG](Screencast_20260315_232133.gif)
+
+# D. Pengujian
+
+### Uji 1 – CSR
+
+- Refresh halaman detail
+- Perhatikan loading
+- Periksa Network → XHR → API request terlihat
+
+#### Jawab
+
+Saya mencoba mengunjungi halaman detail produk dan memperhatikan bagian API request seperti berikut,
+
+![tampilan request pada saat mempraktekan metode rendering CSR](image-16.png)
+
+Terlihat jika nextjs sempat melakukan request data produk terlebih dahulu.
+
+### Uji 2 – SSR
+
+- Refresh halaman detail
+- Tidak ada loading
+- Periksa Network → tidak terlihat fetch detail
+
+#### Jawab
+
+Saya mencoba untuk memuat kembali halaman dengan menggunakan metode rendering SSR dan hasilnya seperti berikut,
+
+![tampilan inspect dengan menggunakan metode SSR](image-17.png)
+
+Terlihat disini jika di sisi client, nextjs tidak terlihat melakukan request apapun.
+
+### Uji 3 – SSG ( Lakukan seperti langkah sebelumya pada Jobsheet 10)
+
+1. Jalankan:
+   - npm run build
+   - npm run start
+2. Tambahkan produk baru di database.
+3. Buka halaman detail produk baru:
+   > Hasil: Tidak muncul.
+4. Build ulang:
+   - npm run build
+   - npm run start
+     > Hasil: Baru muncul.
+
+#### Jawab
+
+Saya sekarang mencoba untuk memuat halaman produk kembali dengan menggunakan metode SSG,
+
+![tampilan 3 produk awal](image-18.png)
+
+Terlihat awalnya hanya 3 produk saja, setelah itu saya mencoba menambahkan produk baru dari database firebase,
+
+![penambahan record produk baru](image-19.png)
+
+Dan pada saat saya cek di halaman `/produk` hasilnya seperti ini,
+
+![tampilan produk sekarang ada 4 item](image-20.png)
+
+Terlihat sudah ada 4 item, tetapi jika kita mencoba membuka item baru yang telah kita tambahkan barusan (belum melakukan build SSG kembali setelah melakukan penambahan) hasilnya seperti berikut,
+
+![tampilan not found produk detail tidak ditemukan](image-21.png)
+
+Telrihat jika produknya tidak ditemukan, karena kita belum melakukan build SSG ulang setelah melakukan penambahan data baru untuk halaman produk detail. Setelah itu saya melakukan build ulang (dengan `npm run dev` masih dijalankan) seperti berikut,
+
+![tampilan build di konsole](image-22.png)
+
+Dan hasilnya adalah seperti berikut,
+
+![tampilan berhasil load produk yang telah ditambahkan (setelah dilakukan build SSG kembali)](image-23.png)
+
+Terlihat jika kita berhasil menampilkan produk baru yang barusan ditambahkan, itu karena kita melakukan build ulang SSG dari nextjs.
