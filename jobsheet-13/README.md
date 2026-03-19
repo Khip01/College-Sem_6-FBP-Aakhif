@@ -23,3 +23,9 @@ Sehingga pada saat saya jalankan di browser hasilnya seperti ini,
 ![tampilan redirected you too many times](image-3.png)
 
 Terlihat jika alasan not workingnya karena "...redirected you too many times.", itu artinya kita terus terusan diredirect tanpa henti.
+
+## Bagian 4 – Batasi Route Tertentu
+
+Lalu untuk mengatasi masalah ini, saya melakukan konfigurasi route, dengan membatasi rute tertentu saja yang dapat menerapkan middleware ini. Disini middleware akan saya terapkan di rute `/produk` dan `/about` saja,
+
+![tampilan kode konfigurasi di middleware](image-4.png)
