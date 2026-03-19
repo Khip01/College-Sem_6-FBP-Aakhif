@@ -29,3 +29,11 @@ Terlihat jika alasan not workingnya karena "...redirected you too many times.", 
 Lalu untuk mengatasi masalah ini, saya melakukan konfigurasi route, dengan membatasi rute tertentu saja yang dapat menerapkan middleware ini. Disini middleware akan saya terapkan di rute `/produk` dan `/about` saja,
 
 ![tampilan kode konfigurasi di middleware](image-4.png)
+
+## Bagian 5 – Simulasi Sistem Login
+
+Setelah itu baru kita coba terapkan logika middleware kedalam sistem login, dengan cara saya menambahkan beberapa pengkondisian sederhana seperti berikut,
+
+![tampilan kode middleware dengan pengkondisian login sederhana](image-5.png)
+
+Dengan kode tersebut maka kita tidak akan bisa masuk ke halaman produk (karena variabel isLogin akan terus `false`).
