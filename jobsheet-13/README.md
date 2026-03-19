@@ -83,3 +83,69 @@ export const config = {
 | Glitch          | Ada                | Tidak                |
 | Security        | Lemah              | Lebih aman           |
 | Skalabilitas    | Harus tiap halaman | Sekali di middleware |
+
+# F. Tugas Praktikum
+
+## Tugas Individu
+
+### 1. Buat halaman:
+
+- /products
+- /about
+- /login
+
+#### **Jawab**
+
+saya sudah mempunyai ketiga halaman tersebut, tampilannya adalah seperti berikut,
+
+**halaman `/produk`**
+
+![tampilan halaman /produk](image-6.png)
+
+**halaman `/about`**
+
+![tampilan halaman /about](image-7.png)
+
+**halaman `/login`**
+
+![tampilan halaman /login](image-8.png)
+
+### 2. Implementasikan Middleware:
+
+- Redirect ke /login jika belum login.
+- Izinkan akses jika login true.
+
+#### **Jawab**
+
+Saya sudah membuat redirect otomatis ke halaman login jika variabel `isLogin = false`,
+
+![tampilan redirect jika isLogin = false](Screencast_20260319_211151.gif)
+
+Lalu jika `isLogin = true` maka halaman produk bisa diakses,
+
+![tampilan redirect jika isLogin = true](Screencast_20260319_211413.gif)
+
+### 3. Tambahkan proteksi hanya untuk route tertentu.
+
+#### **Jawab**
+
+Saya sudah menambahkan proteksi middleware dengan cara memberikan config di kode `middleware.ts` seperti berikut,
+
+![tampilan config dari middleware sebagai proteksi](image-9.png)
+
+### 4. Dokumentasikan:
+
+- Screenshot sebelum dan sesudah redirect.
+- Perbandingan dengan useEffect.
+
+#### **Jawab**
+
+Pada saat redirect menggunakan `middleware`,
+
+![tampilan redirect jika isLogin = true](Screencast_20260319_211413.gif)
+
+dan ini adalah redirect menggunakan `useEffect` (video lama)
+
+![berhasil menerapan redirect di halaman produk](Screencast_20260224_175813.gif)
+
+_Terlihat jika menggunakan useEffect ada blink membuka halaman produk sebentar._
