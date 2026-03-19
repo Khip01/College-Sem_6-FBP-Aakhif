@@ -82,3 +82,13 @@ Sekarang saya ingin menambahkan token security di query parameter revalidate seb
 Setelah itu saya modifikasi lagi file `revalidate.ts` dengan menambahkan pengkondisian token seperti berikut,
 
 ![tampilan kode pengkondisian dengan token](image-14.png)
+
+# E. Pengujian Manual Revalidation
+
+Sekarang saya mencoba mengakses endpoint revalidate dengan menggunakan token yang benar,
+
+![tampilan response revalidate dengan menggunakan token yang benar](image-15.png)
+
+sekarang dengan menggunakan token yang salah,
+
+![tampilan response endpoint revalidate dengan menggunkaan token yang salah](image-16.png)
