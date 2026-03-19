@@ -1,9 +1,9 @@
 import TampilanLogin from "../../views/auth/login";
 
-const halamanLogin = ({ setIsLogin }: any) => {
+const halamanLogin = () => {
   return (
     <>
-      <TampilanLogin setIsLogin={setIsLogin} />
+      <TampilanLogin />
     </>
   );
 };

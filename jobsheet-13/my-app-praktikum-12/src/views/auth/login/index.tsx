@@ -7,11 +7,11 @@ import PrimaryButton from "@/components/utility/primary-button";
 import BodyText from "@/components/utility/body-text";
 import TextField from "@/components/utility/text-field";
 
-const TampilanLogin = ({ setIsLogin }: any) => {
+const TampilanLogin = () => {
   const { push } = useRouter();
 
   const handlerLogin = () => {
-    setIsLogin(true);
+    // setIsLogin(true);
     push("/produk");
   };
 
