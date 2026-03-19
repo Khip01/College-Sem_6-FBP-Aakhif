@@ -149,3 +149,37 @@ dan ini adalah redirect menggunakan `useEffect` (video lama)
 ![berhasil menerapan redirect di halaman produk](Screencast_20260224_175813.gif)
 
 _Terlihat jika menggunakan useEffect ada blink membuka halaman produk sebentar._
+
+# G. Pertanyaan Analisis
+
+### 1. Mengapa middleware lebih aman dibanding useEffect?
+
+#### **Jawab**
+
+Karena middleware sesuai namanya yaitu sesuatu yang berada di tengah tengah rute, jadi sebelum mengakses ke ujung rute tujuan, kita melalui validasi middleware terlebih dahulu, sehingga pengguna tidak sampai ke ujung rute tujuan terlebih dahulu sebelum divalidasi oleh middleware.
+
+Dan memang sangat direkomendasikan di arsitektur autentikasi seperti ini untuk menggunakan middleware.
+
+### 2. Mengapa middleware tidak menimbulkan glitch?
+
+#### **Jawab**
+
+Karena jika memang pengguna tidak terauntetikasi/gagal memenuhi persyaratan tertentu di middleware, tampoilan web tidak akan langsung menampilkan tampilan rute tujuan.
+
+### 3. Apa risiko jika semua halaman diproteksi tanpa pengecualian?
+
+#### **Jawab**
+
+maka halaman browser akan mengalami error "..redirected you too many times.", yang dimana rute tidak akan ada habisnya meredirect pengguna.
+
+### 4. Kapan middleware tidak diperlukan?
+
+#### **Jawab**
+
+pada saat halaman hanya menampilkan konten-konten tanpa validasi ditengah perpindahan halaman seperti autentikasi dan authorisasi contohnya.
+
+### 5. Apa perbedaan middleware dan API route?
+
+#### **Jawab**
+
+Middleware itu adalah sebuah program ditengah-tengah proses perpindahan halaman (bisa digunakan untuk melakukan pengecekan/validasi). Jika API route itu adalah sekumpulan rute yang dibuat bertujuan untuk membuat API endpoint.
