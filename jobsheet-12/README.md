@@ -27,3 +27,32 @@ Lalu saya coba lihat tampilannya di web, setelah dilakukan penambahan data tampi
 ![tampilan halaman static setelah perubahan data di database](image-4.png)
 
 Terlihat jika data baru berhasil ditampilkan walaupun ini menggunakan Site Generation.
+
+# D. On-Demand Revalidation
+
+## Bagian 1 – Buat API Revalidate
+
+Sekarang saya ingin membuat ISR manual dengan trigger, jadi ada sesuatu yang di trigger terlebih dahulu maka data di website akan diperbarui.Untuk langkah pertama ini saya coba membuat file baru di `pages/api/` bernama `revalidate.ts` seperti berikut,
+
+![tampilan kode revalidate di api](image-5.png)
+
+Sehingga untuk melakukan revalidate/merefresh data produk di halaman static, kita bisa tinggal mengakses rute url `/api/revalidate`
+
+> [!NOTE]
+> UNtuk mengenguji nya, pastikan kita menjalankan `npm start` alih-alih menggunakan `npm run dev`
+
+Misalnya jika kita hapus salah satu item produk seperti berikut (Nama Produk: Sepatu Adidas Merah),
+
+![tampilan penghapusan salah satu document produk](image-6.png)
+
+Tampilan awalnya sebelum dilakukan revalidate adalah seperti ini,
+
+![tampilan awal sebelum revalidate](image-7.png)
+
+Setelah itu saya akses endpoint `api/revalidate`
+
+![tampilan akses endpoint revalidate](image-8.png)
+
+Sehingga pada saat halaman direfresh, produknya sudah hilang seperti berikut,
+
+![tampilan produk adidas merah yang hilang](image-9.png)
