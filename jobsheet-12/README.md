@@ -92,3 +92,71 @@ Sekarang saya mencoba mengakses endpoint revalidate dengan menggunakan token yan
 sekarang dengan menggunakan token yang salah,
 
 ![tampilan response endpoint revalidate dengan menggunkaan token yang salah](image-16.png)
+
+# F. Perbandingan SSG vs ISR
+
+| Aspek       | SSG               | ISR                 |
+| ----------- | ----------------- | ------------------- |
+| Update Data | Harus build ulang | Otomatis / Trigger  |
+| Cache       | Static permanen   | Static + Refresh    |
+| Cocok untuk | Konten tetap      | Konten semi-dinamis |
+
+# G. Tugas Praktikum
+
+Tugas Individu
+
+### 1. Tambahkan lagi produk pada firebase
+
+#### **Jawab**
+
+Saya sudah melakukannya di praktikum sebelumnya, seperti berikut,
+
+![tampilan tambah document baru](image-3.png)
+
+![tampilan halaman static setelah perubahan data di database](image-4.png)
+
+### 2. Implementasikan ISR dengan revalidate: 10.
+
+#### **Jawab**
+
+Saya sudah mengimplementasikannya sebelumnnya, seperti berikut,
+
+![tampilan kode revalidate](image.png)
+
+### 3. Tambahkan endpoint On-Demand Revalidation.
+
+#### **Jawab**
+
+Seperti berikut adalah kode on demand revalidation yang ada di endpoint `/api/revalidate`
+
+![tampilan kode revalidate di api](image-5.png)
+
+### 4. Tambahkan validasi token.
+
+#### **Jawab**
+
+Saya sudah mencoba untuk menambahkan validasi dengan menggunakan token,
+
+![tampilan response revalidate dengan menggunakan token yang benar](image-15.png)
+
+### 5. Uji dengan:
+
+    - Token benar
+    - Token salah
+    - Tanpa token
+
+#### **Jawab**
+
+sudah dan seperti ini hasilnya,
+
+mengakses endpoint revalidate dengan menggunakan token yang benar,
+
+![tampilan response revalidate dengan menggunakan token yang benar](image-15.png)
+
+sekarang dengan menggunakan token yang salah,
+
+![tampilan response endpoint revalidate dengan menggunkaan token yang salah](image-16.png)
+
+akses revalidate endpoint tanpa menggunakan token,
+
+![tampilan response endpoint revalidate tanpa menggunakan token](image-17.png)
