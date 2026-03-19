@@ -56,3 +56,19 @@ Setelah itu saya akses endpoint `api/revalidate`
 Sehingga pada saat halaman direfresh, produknya sudah hilang seperti berikut,
 
 ![tampilan produk adidas merah yang hilang](image-9.png)
+
+## Bagian 2 – Tambahkan Parameter Data
+
+Setelah itu saya juga bisa menambahkan kondisi haklaman apa yang ingin di revalidate menggunakan query parameter, sehingga saya ubah kode nya menjadi seperti berikut,
+
+![tampilan kode saya untuk melakukan pengecekan query parameter](image-10.png)
+
+Sehingga pada saat dicoba, hasilnya akan seperti berikut,
+
+tampilan tanpa query data:
+
+![tampilan tanpa query data](image-11.png)
+
+tampilan dengan query data:
+
+![tampilan dengan query data](image-12.png)
