@@ -72,3 +72,13 @@ tampilan tanpa query data:
 tampilan dengan query data:
 
 ![tampilan dengan query data](image-12.png)
+
+## Bagian 3 – Tambahkan Token Security
+
+Sekarang saya ingin menambahkan token security di query parameter revalidate sebagai pengaman agar tidak sembarang user bsal melakukan revalidate. Pertama-tama saya memperbarui file `.env.local` dengan menambahkan variabel env baru bernama `REVALIDATE_TOKEN` seperti berikut,
+
+![tampilan kode .env.local](image-13.png)
+
+Setelah itu saya modifikasi lagi file `revalidate.ts` dengan menambahkan pengkondisian token seperti berikut,
+
+![tampilan kode pengkondisian dengan token](image-14.png)
