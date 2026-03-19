@@ -160,3 +160,37 @@ sekarang dengan menggunakan token yang salah,
 akses revalidate endpoint tanpa menggunakan token,
 
 ![tampilan response endpoint revalidate tanpa menggunakan token](image-17.png)
+
+# H. Pertanyaan Analisis
+
+### 1. Mengapa ISR lebih fleksibel dibanding SSG?
+
+#### **Jawab**
+
+Karena kemampuannya yang bisa melakukan update data, yang dimana bisa melalui update otomatis ataupun via trigger.
+
+### 2. Apa perbedaan revalidate waktu dan on-demand?
+
+#### **Jawab**
+
+Jika **revalidate waktu** maka revalidate akan dilakukan di halaman tersebut pada rentang waktu yang ditentukan, sehingga website akan terus mengecek revalidate dengan jeda waktu yang ditentukan.
+
+Jika on-demand, artinya revalidate akan dilakukan hanya ketika ada sesuatu yang mentrigger. Jika trigger tidak dijalankan maka data akan tetap alias tidak berubah (tidak dilakukan revalidate).
+
+### 3. Mengapa endpoint revalidation harus diamankan?
+
+#### **Jawab**
+
+Agar tidak sembarang orang bisa melakukan revalidate, untuk menjaga event data revalidate hanya dilakukan di waktu-waktu/di trigger trigger tertentu.
+
+### 4. Apa risiko jika token tidak digunakan?
+
+#### **Jawab**
+
+Maka orang lain yang mungkin sudah mengetahui endpoint trigger bisa melakukan trigger sesuka hati, sehingga bisa membebani request yang tidak perlu dilakukan ke cloud/server apabila dilakukan semena-mena.
+
+### 5. Kapan ISR lebih cocok dibanding SSR?
+
+#### **Jawab**
+
+ISR lebih cocok digunakan pada saat data yang ditampilkan bisa berupa data/konten dinamis, bisa berubah kapan saja. SSR hanya digunakna ketika ingin membuat halaman statis tanpa perubahan data/konten didalam website.
