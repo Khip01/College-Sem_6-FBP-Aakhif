@@ -23,3 +23,43 @@ Saya menambahkan variabel secret di `.env.local` untuk menjadi secret dari next 
 Lalu saya menuju ke file `_app.tsx` dan memodifikasi kode nya untuk mengimplementasikan autentikasi session dari next auth, dengan cara menambahkan `SessionProvider` seperti berikut,
 
 ![tampilan kode implementasi SessionProvider](image-3.png)
+
+## Bagian 5 – Tambahkan Tombol Login & Logout
+
+Lalu sekarang saya akan menambahkan tombol sign in/login di Navbar dari web nextjs saya seperti berikut,
+
+![tampilan kode navbar dan styling module css nya](image-4.png)
+
+![tampilan halaman root "/" dari website dengan tombol sign in di navbar](image-5.png)
+
+Sehingga pada saat saya tekan tombol Sign In nya hasilnya seperti berikut,
+
+![tampilan form sign in dari next-auth](image-6.png)
+
+Setelah itu saya coba tekan tombol "Sign in with credentials" nya, dan mendapatkan session baru seperti ini jika di inspect,
+
+![tampilan session setelah menekan tombol sign in](image-7.png)
+
+Sehingga untuk menangkap data dari session tersebut bisa dengan cara menambahkan kode seperti berikut (contohnya di navbar),
+
+![tampilan pengkondisian tombol sign in di navbar](image-8.png)
+
+Sehingga saya sudah bisa melakukan Sign In dan Sign Out seperti berikut,
+
+_pertama-tama session akan kosong,_
+
+![tampilan halaman dasar/root dengan navbar sign in](image-9.png)
+
+_setelah itu menekan tombol sign in dan mengisi form,_
+
+![tampilan halaman form sign in dan pengisian field form nya](image-10.png)
+
+_setelah itu menekan tombol "Sign in with credentials" dan mendapatkan session baru beserta datanya (email),_
+
+![tampilan session setelah sign in](image-11.png)
+
+_terlihat di gambar diatas tombol "sign in" berubah menjadi "sign out", dan sekarang kita coba menekannya,_
+
+![tampilan halaman web dasar dan inspect session setelah sign out](image-12.png)
+
+_terlihat jika setelah menekan tombol "sign out", tombol nya berubah menjadi "sign in" dan data didalam session nya sudah tidak ada._
