@@ -147,3 +147,67 @@ Klik Sign Out → Akses `/profile`
 #### **Jawab**
 
 ![tampilan sudah login lalu mencoba logout (di halaman profile), setelah auto redirect ke beranda dan tidak bisa masuk ke /profile](Screencast_20260320_174225.gif)
+
+# H. Tugas Praktikum
+
+### 1. Implementasikan login menggunakan Credentials Provider.
+
+#### **Jawab**
+
+Saya sudah mengimmplementasikan credentials provider di kode next-auth nya,
+
+![tampilan kode next auth options](image-1.png)
+
+### 2. Tambahkan field full name.
+
+#### **Jawab**
+
+Saya juga sudah mengimplementasikan field full name ke next auth saya di sisi callback,
+
+![tampilan kode konfigurasi next-auth setelah penambahan full name](image-14.png)
+
+### 3. Tampilkan full name setelah login.
+
+#### **Jawab**
+
+Berikut adalah tampilan full name setelah login di inspect element,
+
+![tampilan halaman dasar/root dengan inspect data dari session](image-16.png)
+
+### 4. Buat halaman profile.
+
+#### **Jawab**
+
+Lalu halaman profile nya adalah seperti berikut,
+
+![tampilan halmaan profil beserta inspect session nya](image-18.png)
+
+### 5. Lindungi halaman profile dengan middleware.
+
+#### **Jawab**
+
+SAya sudah melindungi halaman `/profile` nya menggunakan `withAuth` yang diimplementasikan di middleware seperti berikut hasilnya,
+
+![tampilan belum login tapi mencoba mengakses halaman /profile (gagal)](Screencast_20260320_173624.gif)
+
+### 6. Dokumentasikan:
+
+#### **Jawab**
+
+- Screenshot login
+
+![tampilan form sign in dari next-auth](image-6.png)
+
+- Screenshot session
+
+![tampilan halaman dasar/root dengan inspect data dari session](image-16.png)
+
+- Screenshot redirect middleware
+
+_(redirect belum login)_
+
+![tampilan belum login tapi mencoba mengakses halaman /profile (gagal)](Screencast_20260320_173624.gif)
+
+_(sudah login lalu melakukan logout)_
+
+![tampilan sudah login lalu mencoba logout (di halaman profile), setelah auto redirect ke beranda dan tidak bisa masuk ke /profile](Screencast_20260320_174225.gif)
