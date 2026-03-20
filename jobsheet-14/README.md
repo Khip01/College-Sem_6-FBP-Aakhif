@@ -4,63 +4,63 @@
 
 Saya menginstall library `next-auth` seperti berikut,
 
-![tampilan konsole menjalankan perintah npm install](image.png)
+![tampilan konsole menjalankan perintah npm install](assets/image.png)
 
 ## Bagian 2 – Konfigurasi API Auth
 
 Saya menambahkan konfigurasi untuk autentikasi menggunakan next-auth dengan cara membuat file baru bernama [...next-auth].ts di folder `/pages/api/auth/` seperti berikut,
 
-![tampilan kode next auth options](image-1.png)
+![tampilan kode next auth options](assets/image-1.png)
 
 ## Bagian 3 – Tambahkan Secret
 
 Saya menambahkan variabel secret di `.env.local` untuk menjadi secret dari next auth seperti berikut,
 
-![tampilan next auth secret dari env local](image-2.png)
+![tampilan next auth secret dari env local](assets/image-2.png)
 
 ## Bagian 4 – Tambahkan SessionProvider
 
 Lalu saya menuju ke file `_app.tsx` dan memodifikasi kode nya untuk mengimplementasikan autentikasi session dari next auth, dengan cara menambahkan `SessionProvider` seperti berikut,
 
-![tampilan kode implementasi SessionProvider](image-3.png)
+![tampilan kode implementasi SessionProvider](assets/image-3.png)
 
 ## Bagian 5 – Tambahkan Tombol Login & Logout
 
 Lalu sekarang saya akan menambahkan tombol sign in/login di Navbar dari web nextjs saya seperti berikut,
 
-![tampilan kode navbar dan styling module css nya](image-4.png)
+![tampilan kode navbar dan styling module css nya](assets/image-4.png)
 
-![tampilan halaman root "/" dari website dengan tombol sign in di navbar](image-5.png)
+![tampilan halaman root "/" dari website dengan tombol sign in di navbar](assets/image-5.png)
 
 Sehingga pada saat saya tekan tombol Sign In nya hasilnya seperti berikut,
 
-![tampilan form sign in dari next-auth](image-6.png)
+![tampilan form sign in dari next-auth](assets/image-6.png)
 
 Setelah itu saya coba tekan tombol "Sign in with credentials" nya, dan mendapatkan session baru seperti ini jika di inspect,
 
-![tampilan session setelah menekan tombol sign in](image-7.png)
+![tampilan session setelah menekan tombol sign in](assets/image-7.png)
 
 Sehingga untuk menangkap data dari session tersebut bisa dengan cara menambahkan kode seperti berikut (contohnya di navbar),
 
-![tampilan pengkondisian tombol sign in di navbar](image-8.png)
+![tampilan pengkondisian tombol sign in di navbar](assets/image-8.png)
 
 Sehingga saya sudah bisa melakukan Sign In dan Sign Out seperti berikut,
 
 _pertama-tama session akan kosong,_
 
-![tampilan halaman dasar/root dengan navbar sign in](image-9.png)
+![tampilan halaman dasar/root dengan navbar sign in](assets/image-9.png)
 
 _setelah itu menekan tombol sign in dan mengisi form,_
 
-![tampilan halaman form sign in dan pengisian field form nya](image-10.png)
+![tampilan halaman form sign in dan pengisian field form nya](assets/image-10.png)
 
 _setelah itu menekan tombol "Sign in with credentials" dan mendapatkan session baru beserta datanya (email),_
 
-![tampilan session setelah sign in](image-11.png)
+![tampilan session setelah sign in](assets/image-11.png)
 
 _terlihat di gambar diatas tombol "sign in" berubah menjadi "sign out", dan sekarang kita coba menekannya,_
 
-![tampilan halaman web dasar dan inspect session setelah sign out](image-12.png)
+![tampilan halaman web dasar dan inspect session setelah sign out](assets/image-12.png)
 
 _terlihat jika setelah menekan tombol "sign out", tombol nya berubah menjadi "sign in" dan data didalam session nya sudah tidak ada._
 
@@ -68,19 +68,19 @@ _terlihat jika setelah menekan tombol "sign out", tombol nya berubah menjadi "si
 
 Sekarang saya ingin menambahkan Full Name ke data yang berada di dalam session, seperti ini kode nya,
 
-![tampilan kode konfigurasi next-auth setelah penambahan full name](image-14.png)
+![tampilan kode konfigurasi next-auth setelah penambahan full name](assets/image-14.png)
 
 lalu setelah itu saya melakukan modifikasi styling terlebih dahulu seperti berikut hasilnya,
 
-![tampilan halaman setelah modifikasi styling](image-13.png)
+![tampilan halaman setelah modifikasi styling](assets/image-13.png)
 
 lalu saya mencoba untuk melakukan sign in dengan beberapa field form terisi seperti berikut,
 
-![tampilan form sign in yang terisi](image-15.png)
+![tampilan form sign in yang terisi](assets/image-15.png)
 
 Sehingga isi dari sessionnya adalah seperti berikut,
 
-![tampilan halaman dasar/root dengan inspect data dari session](image-16.png)
+![tampilan halaman dasar/root dengan inspect data dari session](assets/image-16.png)
 
 Terlihat data Full Name sudah muncul.
 
@@ -90,19 +90,19 @@ Setelah itu saya mencoba untuk menambahkan proteksi untuk halaman profile.
 
 Pertama-tama saya memodifikasi halaman profile menjadi seperti berikut,
 
-![tampilan kode dari halaman profil](image-17.png)
+![tampilan kode dari halaman profil](assets/image-17.png)
 
 Sehingga hasilnya menjadi seperti ini,
 
-![tampilan halmaan profil beserta inspect session nya](image-18.png)
+![tampilan halmaan profil beserta inspect session nya](assets/image-18.png)
 
 Setelah itu saya coba buat middleware authorization nya untuk halaman profil, dengan cara membuat file baru bernama `withAuth.ts` di folder `src/middleware` sejajar dengan pages,
 
-![tampilan kode dari file withAuth.ts](image-19.png)
+![tampilan kode dari file withAuth.ts](assets/image-19.png)
 
 an juga memodifikasi middleware nya untuk mengimplementasikan middleware auth tadi, yang sudah kita buat di file `withAuth.ts`,
 
-![tampilan kode middleware setelah modifikasi withAuth](image-20.png)
+![tampilan kode middleware setelah modifikasi withAuth](assets/image-20.png)
 
 Sehingga pada saat user yang belum login mengakses rute `/produk`, `/about`, `/profile`, mereka akan diredirect ke halaman dashbaord langsung oleh middleware `withAuth`.
 
@@ -120,7 +120,7 @@ Akses: `/profile`
 
 Mencoba mengakses halaman `/profile` tetapi **belum login** hasilnya,
 
-![tampilan belum login tapi mencoba mengakses halaman /profile (gagal)](Screencast_20260320_173624.gif)
+![tampilan belum login tapi mencoba mengakses halaman /profile (gagal)](assets/Screencast_20260320_173624.gif)
 
 ## Uji 2 – Sudah Login
 
@@ -134,7 +134,7 @@ Login terlebih dahulu → Akses `/profile`
 
 Mencoba mengakses halaman `/profile` tetapi **sudah melakukan login** hasilnya,
 
-![tampilan sudah login dan mencoba mengakses halaman /produk dan /profile (bisa)](Screencast_20260320_174011.gif)
+![tampilan sudah login dan mencoba mengakses halaman /produk dan /profile (bisa)](assets/Screencast_20260320_174011.gif)
 
 ## Uji 3 – Logout
 
@@ -146,7 +146,7 @@ Klik Sign Out → Akses `/profile`
 
 #### **Jawab**
 
-![tampilan sudah login lalu mencoba logout (di halaman profile), setelah auto redirect ke beranda dan tidak bisa masuk ke /profile](Screencast_20260320_174225.gif)
+![tampilan sudah login lalu mencoba logout (di halaman profile), setelah auto redirect ke beranda dan tidak bisa masuk ke /profile](assets/Screencast_20260320_174225.gif)
 
 # H. Tugas Praktikum
 
@@ -156,7 +156,7 @@ Klik Sign Out → Akses `/profile`
 
 Saya sudah mengimmplementasikan credentials provider di kode next-auth nya,
 
-![tampilan kode next auth options](image-1.png)
+![tampilan kode next auth options](assets/image-1.png)
 
 ### 2. Tambahkan field full name.
 
@@ -164,7 +164,7 @@ Saya sudah mengimmplementasikan credentials provider di kode next-auth nya,
 
 Saya juga sudah mengimplementasikan field full name ke next auth saya di sisi callback,
 
-![tampilan kode konfigurasi next-auth setelah penambahan full name](image-14.png)
+![tampilan kode konfigurasi next-auth setelah penambahan full name](assets/image-14.png)
 
 ### 3. Tampilkan full name setelah login.
 
@@ -172,7 +172,7 @@ Saya juga sudah mengimplementasikan field full name ke next auth saya di sisi ca
 
 Berikut adalah tampilan full name setelah login di inspect element,
 
-![tampilan halaman dasar/root dengan inspect data dari session](image-16.png)
+![tampilan halaman dasar/root dengan inspect data dari session](assets/image-16.png)
 
 ### 4. Buat halaman profile.
 
@@ -180,7 +180,7 @@ Berikut adalah tampilan full name setelah login di inspect element,
 
 Lalu halaman profile nya adalah seperti berikut,
 
-![tampilan halmaan profil beserta inspect session nya](image-18.png)
+![tampilan halmaan profil beserta inspect session nya](assets/image-18.png)
 
 ### 5. Lindungi halaman profile dengan middleware.
 
@@ -188,7 +188,7 @@ Lalu halaman profile nya adalah seperti berikut,
 
 SAya sudah melindungi halaman `/profile` nya menggunakan `withAuth` yang diimplementasikan di middleware seperti berikut hasilnya,
 
-![tampilan belum login tapi mencoba mengakses halaman /profile (gagal)](Screencast_20260320_173624.gif)
+![tampilan belum login tapi mencoba mengakses halaman /profile (gagal)](assets/Screencast_20260320_173624.gif)
 
 ### 6. Dokumentasikan:
 
@@ -196,21 +196,21 @@ SAya sudah melindungi halaman `/profile` nya menggunakan `withAuth` yang diimple
 
 - Screenshot login
 
-![tampilan form sign in dari next-auth](image-6.png)
+![tampilan form sign in dari next-auth](assets/image-6.png)
 
 - Screenshot session
 
-![tampilan halaman dasar/root dengan inspect data dari session](image-16.png)
+![tampilan halaman dasar/root dengan inspect data dari session](assets/image-16.png)
 
 - Screenshot redirect middleware
 
 _(redirect belum login)_
 
-![tampilan belum login tapi mencoba mengakses halaman /profile (gagal)](Screencast_20260320_173624.gif)
+![tampilan belum login tapi mencoba mengakses halaman /profile (gagal)](assets/Screencast_20260320_173624.gif)
 
 _(sudah login lalu melakukan logout)_
 
-![tampilan sudah login lalu mencoba logout (di halaman profile), setelah auto redirect ke beranda dan tidak bisa masuk ke /profile](Screencast_20260320_174225.gif)
+![tampilan sudah login lalu mencoba logout (di halaman profile), setelah auto redirect ke beranda dan tidak bisa masuk ke /profile](assets/Screencast_20260320_174225.gif)
 
 # I. Pertanyaan Analisis
 
