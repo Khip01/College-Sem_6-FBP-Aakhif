@@ -105,3 +105,45 @@ an juga memodifikasi middleware nya untuk mengimplementasikan middleware auth ta
 ![tampilan kode middleware setelah modifikasi withAuth](image-20.png)
 
 Sehingga pada saat user yang belum login mengakses rute `/produk`, `/about`, `/profile`, mereka akan diredirect ke halaman dashbaord langsung oleh middleware `withAuth`.
+
+# F. Pengujian
+
+## Uji 1 – Belum Login
+
+Akses: `/profile`
+
+**Hasil:**
+
+> Redirect ke home
+
+#### **Jawab**
+
+Mencoba mengakses halaman `/profile` tetapi **belum login** hasilnya,
+
+![tampilan belum login tapi mencoba mengakses halaman /profile (gagal)](Screencast_20260320_173624.gif)
+
+## Uji 2 – Sudah Login
+
+Login terlebih dahulu → Akses `/profile`
+
+**Hasil:**
+
+> Bisa masuk
+
+#### **Jawab**
+
+Mencoba mengakses halaman `/profile` tetapi **sudah melakukan login** hasilnya,
+
+![tampilan sudah login dan mencoba mengakses halaman /produk dan /profile (bisa)](Screencast_20260320_174011.gif)
+
+## Uji 3 – Logout
+
+Klik Sign Out → Akses `/profile`
+
+**Hasil:**
+
+> Tidak bisa masuk
+
+#### **Jawab**
+
+![tampilan sudah login lalu mencoba logout (di halaman profile), setelah auto redirect ke beranda dan tidak bisa masuk ke /profile](Screencast_20260320_174225.gif)
