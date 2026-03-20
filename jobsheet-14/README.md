@@ -83,3 +83,25 @@ Sehingga isi dari sessionnya adalah seperti berikut,
 ![tampilan halaman dasar/root dengan inspect data dari session](image-16.png)
 
 Terlihat data Full Name sudah muncul.
+
+# E. Proteksi Halaman Profile
+
+Setelah itu saya mencoba untuk menambahkan proteksi untuk halaman profile.
+
+Pertama-tama saya memodifikasi halaman profile menjadi seperti berikut,
+
+![tampilan kode dari halaman profil](image-17.png)
+
+Sehingga hasilnya menjadi seperti ini,
+
+![tampilan halmaan profil beserta inspect session nya](image-18.png)
+
+Setelah itu saya coba buat middleware authorization nya untuk halaman profil, dengan cara membuat file baru bernama `withAuth.ts` di folder `src/middleware` sejajar dengan pages,
+
+![tampilan kode dari file withAuth.ts](image-19.png)
+
+an juga memodifikasi middleware nya untuk mengimplementasikan middleware auth tadi, yang sudah kita buat di file `withAuth.ts`,
+
+![tampilan kode middleware setelah modifikasi withAuth](image-20.png)
+
+Sehingga pada saat user yang belum login mengakses rute `/produk`, `/about`, `/profile`, mereka akan diredirect ke halaman dashbaord langsung oleh middleware `withAuth`.

@@ -1,7 +1,10 @@
+import { useSession } from "next-auth/react";
 import Head from "next/head";
 import Link from "next/link";
 
 const ProfilePage = () => {
+  const { data }: any = useSession();
+
   return (
     <>
       <Head>
@@ -10,6 +13,7 @@ const ProfilePage = () => {
       <main>
         <h1>Profile Page</h1>
         <p>Ini Halaman Profil</p>
+        <p>Selamat datang {data?.user?.fullname}</p>
         <Link href={"/profile/edit"} style={{ color: "blue" }}>
           Edit Profil
         </Link>
