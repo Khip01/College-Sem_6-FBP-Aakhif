@@ -63,3 +63,23 @@ _terlihat di gambar diatas tombol "sign in" berubah menjadi "sign out", dan seka
 ![tampilan halaman web dasar dan inspect session setelah sign out](image-12.png)
 
 _terlihat jika setelah menekan tombol "sign out", tombol nya berubah menjadi "sign in" dan data didalam session nya sudah tidak ada._
+
+# D. Menambahkan Data Tambahan (Full Name)
+
+Sekarang saya ingin menambahkan Full Name ke data yang berada di dalam session, seperti ini kode nya,
+
+![tampilan kode konfigurasi next-auth setelah penambahan full name](image-14.png)
+
+lalu setelah itu saya melakukan modifikasi styling terlebih dahulu seperti berikut hasilnya,
+
+![tampilan halaman setelah modifikasi styling](image-13.png)
+
+lalu saya mencoba untuk melakukan sign in dengan beberapa field form terisi seperti berikut,
+
+![tampilan form sign in yang terisi](image-15.png)
+
+Sehingga isi dari sessionnya adalah seperti berikut,
+
+![tampilan halaman dasar/root dengan inspect data dari session](image-16.png)
+
+Terlihat data Full Name sudah muncul.
