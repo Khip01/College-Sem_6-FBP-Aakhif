@@ -211,3 +211,43 @@ _(redirect belum login)_
 _(sudah login lalu melakukan logout)_
 
 ![tampilan sudah login lalu mencoba logout (di halaman profile), setelah auto redirect ke beranda dan tidak bisa masuk ke /profile](Screencast_20260320_174225.gif)
+
+# I. Pertanyaan Analisis
+
+### 1. Mengapa session menggunakan JWT?
+
+#### **Jawab**
+
+Karena JWT (JSON Web Token) merupakan manajemen Session stateless yang sederhana untuk menyimpan session pengguna yang disimpan didalam token, yang dimana token itu sendiri di pegang oleh sisi client.
+
+Sehingga lebih responsif interaksinya dengan sisi client karena informasi sesi tidak disimpan di server.
+
+### 2. Apa perbedaan authorize() dan callback jwt()?
+
+#### **Jawab**
+
+Jika `authorize()` dalam `CredentialsProvider` fungsinya untuk authorisasi kredensial pengguna, pada saat pengguna menekan tombol sign in, jadi fungsi ini dijalankan lebih dahulu untuk authorisasi pengguna.
+
+Sedangkan fungsi `jwt()` di sisi callback, untuk memperbarui JWT (JSON Web Token)/untuk memperbarui token session nya. Callback sendiri disini dijalankan pada saat pengguna sudah berhasil melewati proses authorisasi/sudah berhasil login.
+
+### 3. Mengapa middleware perlu getToken()?
+
+#### **Jawab**
+
+Karena untuk memastikan apakah pengguna ini sudah melakukan login (sign in) atau belum, karena token sendiri akan mengembalikan data session hasil sign in kita.
+
+### 4. Apa risiko jika NEXTAUTH_SECRET tidak digunakan?
+
+#### **Jawab**
+
+Maka siapa saja bisa memodifikasi isi token yang sudah tersimpan di website kita. Jika kita menerapkan NEXTAUTH_SECRET, maka yang memiliki secret nya saja lah yang bisa memodifikasi/memperbarui isi token.
+
+Jadi secret disini tujuannya sebagai pengaman hanya kita yang memiliki secret yang bisa mengotak atik token yang telah kita buat.
+
+### 5. Apa perbedaan autentikasi dan otorisasi dalam sistem ini?
+
+#### **Jawab**
+
+Autentikasi disini artinya validasi apakah user ini memiliki kredensial yang benar untuk memasuki sistem informasi kita.
+
+Sedangkan otorisasi disini adalah aturan untuk pengguna sesuai dengan role mereka, aturan berupa siapa bisa mengakses apa, didalam sistem informasi ini.
