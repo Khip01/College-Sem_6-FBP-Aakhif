@@ -17,3 +17,9 @@ Saya menambahkan konfigurasi untuk autentikasi menggunakan next-auth dengan cara
 Saya menambahkan variabel secret di `.env.local` untuk menjadi secret dari next auth seperti berikut,
 
 ![tampilan next auth secret dari env local](image-2.png)
+
+## Bagian 4 – Tambahkan SessionProvider
+
+Lalu saya menuju ke file `_app.tsx` dan memodifikasi kode nya untuk mengimplementasikan autentikasi session dari next auth, dengan cara menambahkan `SessionProvider` seperti berikut,
+
+![tampilan kode implementasi SessionProvider](image-3.png)
