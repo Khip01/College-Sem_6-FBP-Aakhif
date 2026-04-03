@@ -141,3 +141,63 @@ Lalu saya mencoba untuk memberikan email yang sama dan hasilnya seperti berikut,
 Lalu saya juga menguji endpoint API `/register` saya dengan menggunakan method GET dan hasilnya seperti berikut,
 
 ![tampilan error pada saat melakukan GET endpoint API](image-14.png)
+
+# G. Tugas Praktikum
+
+### 1. Implementasikan register terhubung database.
+
+#### **Jawab**
+
+Saya sudah mengimplementasikan register agar terhubung ke database seperti berikut hasilnya,
+
+![tampilan gif dari proses register di halaman register](Screencast_20260403_203706.gif)
+
+![tampilan users yang sudah menambah di firestore database](image-11.png)
+
+### 2. Tambahkan validasi:
+
+- Email wajib
+- Password minimal 6 karakter
+
+#### **Jawab**
+
+Jadi saya menambahkan field email dan juga password seperti berikut,
+
+![tampilan setelah modifikasi scss dan penambahan field](image-5.png)
+
+### 3. Tambahkan role default "user".
+
+#### **Jawab**
+
+Jadi saya juga menambahkan role default pada untuk pengguna yang melakukan register, di kode berikut (dibawah kode
+bcrypt),
+
+![tampilan kode setelah modifikasi servicefirebase.ts](image-10.png)
+
+### 4. Tampilkan pesan error di UI.
+
+#### **Jawab**
+
+Saya juga sudah mencoba menampilkan pesan error di UI seperti berikut,
+
+![tampilan halaman setelah error dimunculkan](image-13.png)
+
+### 5. Screenshot hasil:
+
+- Register sukses
+- Email sudah ada
+- Database Firestore
+
+#### **Jawab**
+
+> **Register sukses**
+
+![tampilan gif dari proses register di halaman register](Screencast_20260403_203706.gif)
+
+> **Email sudah ada**
+
+![tampilan halaman setelah error dimunculkan](image-13.png)
+
+> **Database Firestore**
+
+![tampilan users yang sudah menambah di firestore database](image-11.png)
