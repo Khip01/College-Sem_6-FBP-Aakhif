@@ -34,3 +34,23 @@ Sehingga hasil akhirnya tampilannya seperti berikut,
 
 ![tampilan setelah modifikasi scss dan penambahan field](image-5.png)
 
+## Bagian 2 – Membuat API Register
+
+Setelah itu saya mencoba memodifikasi file `servicefirebase.ts` seperti berikut,
+
+![kode setelah melakukan modifikasi servicefirebase.ts](image-6.png)
+
+Setelah itu saya mencoba membuat file baru bernama `register.ts` didalam direktori `src/pages/api/`, lalu melakukan
+modifikasi untuk file `register.ts` juga seperti berikut,
+
+![tampilan kode register.ts](image-7.png)
+
+Setelah itu saya melakukan modifikasi pada kode `index.tsx` pada folder register,
+
+![tampilan kode index.tsx didalam folder register setelah modifikasi](image-8.png)
+
+Sehingga hasil tampilannya adalah sebagai berikut,
+
+![tampilan gif halaman register](Screencast_20260403_201229.gif)
+
+Terlihat jika pada saat ditekan masih tidak bisa mengarahkan ke halaman login walaupun tombol register sudah ditekan.
