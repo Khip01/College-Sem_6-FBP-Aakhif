@@ -38,3 +38,10 @@ fungsionalitas proses submit login.
 Setelah itu saya menambahkan fungsi untuk `signIn` di file `servicefirebase.ts` seperti berikut,
 
 ![tampilan kode servicefirebase.ts setelah penambahan kode signin](image-7.png)
+
+## BAGIAN 3 – Authorize di NextAuth (Database Login)
+
+Lalu saat ini saya memodifikasi kode di file `[...nextauth].ts` (di bagian provider) untuk memperbaiki mekanisme login
+
+![tampilan modifikasi kode [...nextauth].ts di bagian provider](image-8.png)
+
