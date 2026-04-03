@@ -96,7 +96,7 @@ const TampilanRegister = () => {
                     <button
                         type="submit"
                         className={style.register__form__item__button}
-                        disabled={isLoading}s
+                        disabled={isLoading}
                     >
                         {isLoading ? "Memproses..." : "Register"}
                     </button>

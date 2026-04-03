@@ -91,3 +91,53 @@ hasilnya seperti berikut,
 ![tampilan loading pada saat tombol register ditekan](Screencast_20260403_210510.gif)
 
 Terlihat jika saya bisa menampilkan/mengimplementasikan loading state pada tombol register.
+
+# D. Pengujian
+
+## Uji 1 – Register Baru
+
+Input:
+
+- Email baru
+
+> Hasil:
+> - Data tersimpan di Firestore
+> - Password ter-hash
+> - Redirect ke login
+
+#### **Jawab**
+
+Berikut adalah tampilan ketika saya berhasil membuat email baru,
+
+![tampilan gif dari proses register di halaman register](Screencast_20260403_203706.gif)
+
+![tampilan users yang sudah menambah di firestore database](image-11.png)
+
+## Uji 2 – Email Sudah Ada
+
+Input:
+
+- Email yang sama
+
+> Hasil:
+> - Error 400
+> - Message: Email already exists
+
+#### **Jawab**
+
+Lalu saya mencoba untuk memberikan email yang sama dan hasilnya seperti berikut,
+
+![tampilan kode yang sudah dimodifikasi untuk menampilkan error](image-12.png)
+
+## Uji 3 – Method GET
+
+**Akses:** `/api/register`
+
+> Hasil:
+> - 405 Method Not Allowed
+
+#### **Jawab**
+
+Lalu saya juga menguji endpoint API `/register` saya dengan menggunakan method GET dan hasilnya seperti berikut,
+
+![tampilan error pada saat melakukan GET endpoint API](image-14.png)
