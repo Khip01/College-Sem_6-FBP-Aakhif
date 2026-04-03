@@ -54,3 +54,40 @@ Sehingga hasil tampilannya adalah sebagai berikut,
 ![tampilan gif halaman register](Screencast_20260403_201229.gif)
 
 Terlihat jika pada saat ditekan masih tidak bisa mengarahkan ke halaman login walaupun tombol register sudah ditekan.
+
+## Bagian 3 – Install bcrypt
+
+Saya melakukan instalasi package `bcrypt` didalam project nextjs saya,
+
+![tampilan konsole instalasi package bcrypt](image-9.png)
+
+Lalu saya mencoba memodifikasi file `servicefirebase.ts` untuk menerapkan bcrypt pada password dan menambahkan field
+baru yaitu role seperti berikut,
+
+![tampilan kode setelah modifikasi servicefirebase.ts](image-10.png)
+
+Setelah itu saya mencoba untuk menjalankan register seperti berikut,
+
+![tampilan gif dari proses register di halaman register](Screencast_20260403_203706.gif)
+
+![tampilan users yang sudah menambah di firestore database](image-11.png)
+
+Telrihat jika pada saat setelah melakukan register saya sudah bisa diarahkan ke halaman login.
+
+Lalu agar error terlihat pada saat kita melakukan register dengan menggunakan akun yang sama, maka saya memodifikasi
+kode di `index.tsx` pada folder `views/auth/register` seperti berikut,
+
+![tampilan kode yang sudah dimodifikasi untuk menampilkan error](image-12.png)
+
+Sehingga tampilan halamannya pada saat memberikan akun email yang sama akan seperti berikut,
+
+![tampilan halaman setelah error dimunculkan](image-13.png)
+
+Terlihat jika tampilan errornya sekarang telah ditampilkan.
+
+Setelah itu untuk memperbaiki UX yang bagus, saya tambahkan loading pada saat tombol submit register ditekan, dan
+hasilnya seperti berikut,
+
+![tampilan loading pada saat tombol register ditekan](Screencast_20260403_210510.gif)
+
+Terlihat jika saya bisa menampilkan/mengimplementasikan loading state pada tombol register.
