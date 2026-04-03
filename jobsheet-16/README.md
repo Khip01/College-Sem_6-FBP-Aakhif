@@ -45,3 +45,18 @@ Lalu saat ini saya memodifikasi kode di file `[...nextauth].ts` (di bagian provi
 
 ![tampilan modifikasi kode [...nextauth].ts di bagian provider](image-8.png)
 
+## BAGIAN 4 – Tambahkan Role ke Token
+
+Setelah itu saya memperbaiki kode `[...nextauth].ts` (di bagian callbacks) untuk menyesuaikan validasi role dari
+pengguna,
+
+![tampilan kode hasil modifikasi file [...nextauth].ts di bagian callbacks](image-9.png)
+
+Setelah itu saya mencoba menjalankan browser dan mencoba login menggunakan hasil modifikasi yang sudah saya lakukan, dan
+hasilnya aadalah seperti berikut,
+
+**(sebelum login)**
+![tampilan halaman login setelah perubahan (sebelum login)](image-10.png)
+
+**(sesudah login)**
+![tampilan halaman setelah login sukses](image-11.png)
