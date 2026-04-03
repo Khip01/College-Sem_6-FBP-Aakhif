@@ -13,7 +13,7 @@ export function mainMiddleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/produk", "/about", "/profile"],
+  matcher: ["/produk", "/about", "/profile", "/admin"],
 };
 
 export default withAuth(mainMiddleware, config.matcher);

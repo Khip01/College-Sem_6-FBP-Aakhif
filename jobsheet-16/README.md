@@ -70,3 +70,33 @@ _(melakukan edit di baris 23 - 25)_
 
 Tujuannya pada saat user setelah login bisa kembali ke halaman sebelumnya yang ia akses.
 
+## BAGIAN 6 – Membuat halaman Admin dan authorize
+
+Setelah itu saat ini saya mencoba membuat halaman admin di direktori `/pages/admin/`, seperti berikut,
+
+![tampilan kode untuk halaman admin](image-13.png)
+
+Setelah itu saya memodifikasi kode di file `withAuth.ts` menjadi seperti berikut,
+
+![tampilan kode withAuth.ts setelah modifikasi](image-14.png)
+
+tujuannya agar path/url `/admin` dapat diakses oleh pengguna yanbg memiliki role `admin`.
+
+Sehingga pada saat kita mencoba mengakses halaman admin, yang padahal role kita sendiri adalah `user` alias **bukan
+admin**, maka kita akan dipentalkan ke halmaan utama `/` seperti berikut,
+
+**(role saya adalah `user`)**
+
+![tampilan document users akun saya di firestore database](image-15.png)
+
+![gif pada saat mencoba mengakses path /admin tetapi role masih user](Screencast_20260404_000414.gif)
+
+Setelah itu saya mencoba memodifikasi role saya sendiri menjadi seorang admin lewat firestore database langsung,
+
+![tampilan perubahan role secara manual lewat firestore database](image-16.png)
+
+setelah itu saya mencoba mengakses path `/admin` kembali,
+
+![gif pada saat saya mencoba mengakses path /admin dengan role yang sudah diubah menjadi /admin](Screencast_20260404_000848.gif)
+
+Terlihat jika saya bisa mengakses path admin setelah mengubah role saya menjadi seorang admin.
