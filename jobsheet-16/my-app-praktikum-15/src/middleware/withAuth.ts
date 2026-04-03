@@ -20,8 +20,9 @@ export default function withAuth(
       });
 
       if (token === null) {
-        const loginUrl = new URL("/", req.url);
-        return NextResponse.redirect(loginUrl);
+        const Url = new URL("/auth/login", req.url);
+        Url.searchParams.set("callbackUrl", encodeURI(req.url));
+        return NextResponse.redirect(Url);
       }
     }
     return middleware(req, next);

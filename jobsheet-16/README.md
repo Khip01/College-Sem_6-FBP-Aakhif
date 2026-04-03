@@ -60,3 +60,13 @@ hasilnya aadalah seperti berikut,
 
 **(sesudah login)**
 ![tampilan halaman setelah login sukses](image-11.png)
+
+## BAGIAN 5 – Callback URL Logic
+
+Lalu saya sekarang memodifikasi file `withAuth.ts` pada folder `src/middleware/`, dan kodenya adalah seperti berikut,
+
+_(melakukan edit di baris 23 - 25)_
+![tampilan hasil modifikasi kode withAuth.ts](image-12.png)
+
+Tujuannya pada saat user setelah login bisa kembali ke halaman sebelumnya yang ia akses.
+
