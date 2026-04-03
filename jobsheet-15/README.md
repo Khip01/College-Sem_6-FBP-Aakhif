@@ -201,3 +201,39 @@ Saya juga sudah mencoba menampilkan pesan error di UI seperti berikut,
 > **Database Firestore**
 
 ![tampilan users yang sudah menambah di firestore database](image-11.png)
+
+# H. Pertanyaan Analisis
+
+### 1. Mengapa password harus di-hash?
+
+#### **Jawab**
+
+Karena agar tidak ada orang yang bisa membaca text asli dari password yang telah user tersebut buat. Dan password yang
+sudah di hash tidak bisa kembalikan ke plain text (alias satu arah saja).
+
+### 2. Apa perbedaan addDoc dan setDoc?
+
+#### **Jawab**
+
+Jika `addDoc` maka firestore database akan menambahkan doc baru didalam collection, jika setDoc maka firestore database
+akan melakukan perubahan pada data yang sudah ada.
+
+### 3. Mengapa perlu validasi method POST?
+
+#### **Jawab**
+
+Karena untuk mencegah kesalahan method pada saat mengakses endpoint, dan juga untuk memberitahu user/developer yang
+mengakses endpoint tersebut apabila dirinya melakukan kesalahan penggunaaan method pada saat mengakses endpoint.
+
+### 4. Apa risiko jika email tidak dicek unik?
+
+#### **Jawab**
+
+Maka email yang sama akan dibuat lebih dari satu/terjadi multiple data padahal email nya sama. Nantinya pada saat login
+menggunakan email, maka email duplikat yang lain tidak akan digunakan.
+
+### 5. Apa fungsi role pada user?
+
+#### **Jawab**
+
+Untuk membatasi hak akses pengguna di sebuah sistem informasi tersebut. Atau bisa disebut dengan otorisasi.
