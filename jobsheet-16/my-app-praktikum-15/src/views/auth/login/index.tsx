@@ -1,53 +1,94 @@
 import Link from "next/link";
+import style from "../../auth/login/login.module.scss";
+import { useState } from "react";
 import { useRouter } from "next/router";
-// import styles from "./login.module.css";
-import styles from "./login.module.scss";
-import TitleText from "@/components/utility/title-text";
-import PrimaryButton from "@/components/utility/primary-button";
-import BodyText from "@/components/utility/body-text";
-import TextField from "@/components/utility/text-field";
+import { signIn } from "next-auth/react";
 
 const TampilanLogin = () => {
-  const { push } = useRouter();
+    const [isLoading, setIsLoading] = useState(false);
+    const { push, query } = useRouter();
 
-  const handlerLogin = () => {
-    // setIsLogin(true);
-    push("/produk");
-  };
+    const callbackUrl: any = query.callbackUrl || "/";
+    const [error, setError] = useState("");
 
-  return (
-    <div className={styles.login}>
-      {/* <h1 className="text-3xl font-bold text-blue-600 ">Halaman Login</h1> */}
-      <TitleText text="Halaman Login" />
-      {/* <button onClick={handlerLogin}>Login</button>
-      <br />
-      <button onClick={() => push("/produk")}>Login</button>
-      <br /> */}
-      <BodyText text="Silahkan isi form dibawah untuk masuk ke halaman produk" />
+    const handleSubmit = async (event: any) => {
+        event.preventDefault();
+        setError("");
+        setIsLoading(true);
 
-      <h1
-        style={{
-          color: "red",
-          border: "1px solid red",
-          borderRadius: "5px",
-          padding: "5px",
-        }}
-      >
-        belum punya akun
-      </h1>
-      <br />
+        try {
+            const res = await signIn("credentials", {
+                redirect: false,
+                email: event.target.email.value,
+                password: event.target.password.value,
+                callbackUrl,
+            });
 
-      <TextField label="Email" value="" onChange={() => {}} />
-      <TextField label="Password" value="" onChange={() => {}} />
-      <br />
+            if (!res?.error) {
+                setIsLoading(false);
+                push(callbackUrl);
+            } else {
+                setIsLoading(false);
+                setError(res?.error || "Login failed");
+            }
+        } catch (error) {
+            setIsLoading(false);
+            setError("wrong email or password");
+        }
+    };
 
-      {/* <button onClick={() => handlerLogin()}>Login</button> */}
-      <PrimaryButton text="Login" onClick={() => handlerLogin()} />
-      <br />
+    return (
+        <div className={style.login}>
+            {error && <p className={style.login__error}>{error}</p>}
+            <h1 className={style.login__title}>Halaman Login</h1>
+            <div className={style.login__form}>
+                <form onSubmit={handleSubmit}>
+                    <div className={style.login__form__item}>
+                        <label
+                            htmlFor="email"
+                            className={style.login__form__item__label}
+                        >
+                            Email
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Email"
+                            className={style.login__form__item__input}
+                        />
+                    </div>
 
-      <Link href="/auth/register">Ke Halaman Register</Link>
-    </div>
-  );
+                    <div className={style.login__form__item}>
+                        <label
+                            htmlFor="Password"
+                            className={style.login__form__item__label}
+                        >
+                            Password
+                        </label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="password"
+                            className={style.login__form__item__input}
+                        />
+                    </div>
+                    <button
+                        type="submit"
+                        className={style.login__form__item__button}
+                        disabled={isLoading}
+                    >
+                        {isLoading ? "Memproses..." : "Login"}
+                    </button>
+                </form>
+                <br />
+                <p className={style.login__form__item__text}>
+                    Sudah punya akun? <Link href="/auth/register">Ke Halaman Register</Link>
+                </p>
+            </div>
+        </div>
+    );
 };
 
 export default TampilanLogin;
