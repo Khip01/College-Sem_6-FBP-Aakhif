@@ -54,8 +54,29 @@ Saya melakukan copy paste Client ID yang sudah saya buat ke .env project seperti
 
 # D. Konfigurasi Google Provider di NextAuth dan Handle Callback JWT & Session
 
-Lalu setelah saya mendapatkan Client ID dari OAuth, saya modifikasi fiel `[...nextauth].ts` pada direktori `api/auth/` menjadi seperti berikut,
+Lalu setelah saya mendapatkan Client ID dari OAuth, saya modifikasi fiel `[...nextauth].ts` pada direktori `api/auth/`
+menjadi seperti berikut,
 
 ![tampilan kode [..nextauth].ts seletah modifkasi](image-13.png)
 
 ![tampilan kode [..nextauth].ts seletah modifkasi](image-14.png)
+
+# E. Tambahkan Button Login Google
+
+Lalu setelah mengkonfigurasi google client di api, saya mencoba memodifikasi halaman login saya di file `index.tsx` pada
+direktori `views/auth/login` dengan tombol login menggunakan google seperti berikut,
+
+![tampilan kode hasil modifikasi untuk menambahkan tombol login menggunakan google](image-15.png)
+
+Dan hasil tampilannya adalah seperti berikut,
+
+![tampilan halaman login setelah modifikasi tambahan tombol](image-16.png)
+
+Lalu saya modifikasi lagi untuk halaman `index.tsx` dari navbar di direktori `components/layouts/navbar/` dengan
+menampilkan gambar/profil picture seperti berikut,
+
+![tampilan kode navbar setelah modifikasi picture profile](image-17.png)
+
+![tampilan kode css styling setelah modifikasi picture profile](image-18.png)
+
+![tampilan hasil profil di navbar](image-19.png)

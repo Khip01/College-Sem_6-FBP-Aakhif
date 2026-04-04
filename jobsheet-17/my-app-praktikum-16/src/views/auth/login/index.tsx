@@ -1,12 +1,12 @@
 import Link from "next/link";
 import style from "../../auth/login/login.module.scss";
-import { useState } from "react";
-import { useRouter } from "next/router";
-import { signIn } from "next-auth/react";
+import {useState} from "react";
+import {useRouter} from "next/router";
+import {signIn} from "next-auth/react";
 
 const TampilanLogin = () => {
     const [isLoading, setIsLoading] = useState(false);
-    const { push, query } = useRouter();
+    const {push, query} = useRouter();
 
     const callbackUrl: any = query.callbackUrl || "/";
     const [error, setError] = useState("");
@@ -81,8 +81,16 @@ const TampilanLogin = () => {
                     >
                         {isLoading ? "Memproses..." : "Login"}
                     </button>
+                    <br/><br/>
+                    <button
+                        onClick={() => signIn("google", {callbackUrl, redirect: false})}
+                        className={style.login__form__item__button}
+                        disabled={isLoading}
+                    >
+                        {isLoading ? "Loading..." : "Sign In with Google"}
+                    </button>
                 </form>
-                <br />
+                <br/>
                 <p className={style.login__form__item__text}>
                     Sudah punya akun? <Link href="/auth/register">Ke Halaman Register</Link>
                 </p>
