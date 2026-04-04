@@ -236,3 +236,39 @@ Saya juga sudah mengimplementasikan callback URL seperti berikut,
 terlihat jika callback tampil di url, setelah login berhasil saya diarahkan lagi ke halaman `/admin`,
 
 ![tampilan setelah callback dijalankan](image-18.png)
+
+# H. Pertanyaan Analisis
+
+### 1. Mengapa password harus diverifikasi dengan bcrypt.compare?
+
+#### **Jawab**
+
+Karena tujuan dari bcrypt compare itu adalah untuk melakukan algoritma hashing milik bcrypt yang setelah itu hasilnya
+dibandingkan dengan password hash user tersebut yang ada di database.
+
+### 2. Mengapa role disimpan di token?
+
+#### **Jawab**
+
+Karena itu bertujuan untuk memberikan hak akses/menyimpan state hak akses role dari pengguna yang telah login tersebut.
+
+### 3. Apa fungsi callbackUrl?
+
+#### **Jawab**
+
+Fungsi dari callback url sendiri agar ketika kita selesai melakukan login, kita di alihkan ke halaman yang tertera di
+callback/dialihkan ke halaman terakhir yang akan kita akses (sebelum halaman login ditampilkan).
+
+### 4. Mengapa middleware penting untuk security?
+
+#### **Jawab**
+
+Middleware sangat penting karena dia bertugas sebagai pengecekan kevalidan pengguna sebelum pengguna diberikan halaman
+yang ingin dituju.
+
+### 5. Apa risiko jika role tidak dicek di middleware?
+
+#### **Jawab**
+
+Maka semua pengguna (tidak pandang role) akan bisa mengakses semua halaman. Sehingga fitur role disini kurang dianggap
+berguna.
