@@ -43,3 +43,11 @@ Lalu saya menekan tombol `Get started`, dan saya mendapati halaman seperti berik
 Lalu saya membuat OAuth Clients seperti berikut,
 
 ![tampilan formulir pengisian pembuatan Client Baru](image-10.png)
+
+# C. Tambahkan Environment Variables
+
+Saya melakukan copy paste Client ID yang sudah saya buat ke .env project seperti berikut,
+
+![tampilan Client ID yang sudah dibuat](image-11.png)
+
+![tampilan .env.local](image-12.png)
