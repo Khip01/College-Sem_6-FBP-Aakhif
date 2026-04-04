@@ -180,3 +180,59 @@ Akses: `/admin`
 **(role saya adalah `admin`)**
 
 ![gif pada saat saya mencoba mengakses path /admin dengan role yang sudah diubah menjadi /admin](Screencast_20260404_000848.gif)
+
+# G. Tugas Praktikum
+
+### 1. Implementasikan login database.
+
+#### **Jawab**
+
+Saya sudah mengimplementasikan login database,
+
+**(sebelum login)**
+![tampilan halaman login setelah perubahan (sebelum login)](image-10.png)
+
+**(sesudah login)**
+![tampilan halaman setelah login sukses](image-11.png)
+
+### 2. Tambahkan role pada user.
+
+#### **Jawab**
+
+saya sudah menambahkan **role untuk user** seperti berikut,
+
+![tampilan document users akun saya di firestore database](image-15.png)
+
+### 3. Buat halaman:
+
+- /profile
+- /admin
+
+#### **Jawab**
+
+Saya juga sudah membuat halaman `/profile` dan `/admin`
+
+![tampilan halaman profile](image-20.png)
+
+![tampilan halaman admin](image-18.png)
+
+### 4. Proteksi /admin hanya untuk admin.
+
+#### **Jawab**
+
+Saya juga sudah memproteksi url `/admin` dengan menggunakan middleware `withAuth.ts` supaya hanya role `admin` yang bisa
+mengaksesnya, seperti berikut,
+
+![tampilan kode withAuth.ts setelah modifikasi](image-14.png)
+
+### 5. Implementasikan callback URL.
+
+#### **Jawab**
+
+Saya juga sudah mengimplementasikan callback URL seperti berikut,
+
+![tampilan callback di url](image-17.png)
+
+terlihat jika callback tampil di url, setelah login berhasil saya diarahkan lagi ke halaman `/admin`,
+
+![tampilan setelah callback dijalankan](image-18.png)
