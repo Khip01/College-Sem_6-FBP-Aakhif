@@ -51,3 +51,11 @@ Saya melakukan copy paste Client ID yang sudah saya buat ke .env project seperti
 ![tampilan Client ID yang sudah dibuat](image-11.png)
 
 ![tampilan .env.local](image-12.png)
+
+# D. Konfigurasi Google Provider di NextAuth dan Handle Callback JWT & Session
+
+Lalu setelah saya mendapatkan Client ID dari OAuth, saya modifikasi fiel `[...nextauth].ts` pada direktori `api/auth/` menjadi seperti berikut,
+
+![tampilan kode [..nextauth].ts seletah modifkasi](image-13.png)
+
+![tampilan kode [..nextauth].ts seletah modifkasi](image-14.png)
