@@ -104,3 +104,14 @@ Lalu saya coba login menggunakan akun google,
 ![tampilan setelah login menggunakan provider google](image-23.png)
 
 ![tampilan firebase setelah login menggunakan provider google](image-24.png)
+
+# H. Pengujian
+
+| Skenario                     | Hasil yang Diharapkan       | Bukti Screenshot                                                             |
+|:-----------------------------|:----------------------------|:-----------------------------------------------------------------------------|
+| Login Google pertama kali    | Data tersimpan di Firestore | <img src="image-22.png" width="400" alt="Login Pertama">                     |
+| Login Google kedua kali      | Data diupdate               | <img src="image-24.png" width="400" alt="Update Data">                       |
+| User role user akses /admin  | Redirect                    | <img src="Screencast_20260404_000414.gif" width="400" alt="Redirect Member"> |
+| User role admin akses /admin | Bisa masuk                  | <img src="Screencast_20260404_000848.gif" width="400" alt="Akses Admin">     |
+| Avatar tampil                | Ya                          | <img src="image-19.png" width="100" alt="Avatar Tampil">                     |
+
