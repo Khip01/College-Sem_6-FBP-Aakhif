@@ -1,8 +1,9 @@
 import CredentialsProvider from "next-auth/providers/credentials";
 import NextAuth, { NextAuthOptions } from "next-auth";
-import {signIn, signInWithGoogle} from "../../../utils/db/servicefirebase";
+import {signIn, signInWithProvider,} from "../../../utils/db/servicefirebase";
 import bcrypt from "bcrypt";
 import GoogleProvider from "next-auth/providers/google";
+import GithubProvider from "next-auth/providers/github";
 
 export const authOptions: NextAuthOptions = {
   session: {
@@ -44,6 +45,10 @@ export const authOptions: NextAuthOptions = {
         clientId: process.env.GOOGLE_CLIENT_ID || "",
         clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
       }),
+      GithubProvider({
+        clientId: process.env.GITHUB_CLIENT_ID || "",
+        clientSecret: process.env.GITHUB_CLIENT_SECRET || "",
+      }),
   ],
 
   callbacks: {
@@ -55,7 +60,7 @@ export const authOptions: NextAuthOptions = {
       }
 
       // Jika login dengan Google, tambahkan informasi yang diperlukan ke token
-      if (account?.provider === "google") {
+      if (account?.provider === "google" || account?.provider === "github") {
         const data = {
           fullname: user.name,
           email: user.email,
@@ -63,7 +68,7 @@ export const authOptions: NextAuthOptions = {
           type: account.provider,
         };
 
-        await signInWithGoogle(data, (result: any) => {
+        await signInWithProvider(data, (result: any) => {
           // Pastikan mengecek result.status sesuai dengan object yang dikirim
           if (result.status) {
             // console.log("Google login data", { data });

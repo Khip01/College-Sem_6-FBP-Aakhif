@@ -108,7 +108,7 @@ Lalu saya coba login menggunakan akun google,
 # H. Pengujian
 
 | Skenario                     | Hasil yang Diharapkan       | Bukti Screenshot                                                             |
-|:-----------------------------|:----------------------------|:-----------------------------------------------------------------------------|
+| :--------------------------- | :-------------------------- | :--------------------------------------------------------------------------- |
 | Login Google pertama kali    | Data tersimpan di Firestore | <img src="image-22.png" width="400" alt="Login Pertama">                     |
 | Login Google kedua kali      | Data diupdate               | <img src="image-24.png" width="400" alt="Update Data">                       |
 | User role user akses /admin  | Redirect                    | <img src="Screencast_20260404_000414.gif" width="400" alt="Redirect Member"> |
@@ -149,3 +149,158 @@ Karena untuk membatasi hak akses yang ada pada website kita untuk masing-masing 
 
 Maka nantinya kita akan kesulitan pada saat ingin menampilkan profil pengguna ataupun melakukan validasi
 role/kredensial.
+
+# Tugas Mandiri
+
+### 1. Tambahkan role editor
+
+#### **Jawab**
+
+Sekarang saya menambahkan role baru yaitu role editor,
+
+![tampilan pengguna dengan role baru yaitu editor](image-25.png)
+
+### 2. Buat halaman khusus editor
+
+#### **Jawab**
+
+Lalu sekarang setelah itu saya menambahkan halaman baru yang nantinya bisa diakses khusus hanya untuk editor,
+
+![tampilan kode untuk view halaman pengguna](image-26.png)
+
+Lalu agar halaman editor saya hanya bisa diakses oleh role editor, saya perlu melakukan guard ke url `/editor` saya
+seperti berikut,
+
+> **guard middleware** \
+> ![tampilan perubahan guard middleware](image-27.png)
+
+> **logika pengkondisian path `/editor`** \
+> ![tampilan perubahan logika pengkondisian path /editor](image-28.png)
+
+> **percobaan login menggunakan akun editor** \
+> ![tampilan halaman pada saat percobaan login menggunakan akun editor](image-29.png)
+
+> **berhasil login sebagai editor dan bisa mengakses halaman editor** \
+> ![tampilan halaman berhasil login sebagai editor dan bisa mengakses halaman editor](image-30.png)
+
+### 3. Tambahkan provider GitHub
+
+#### **Jawab**
+
+> Jadi pertama-tama kita harus login ke website [github.com](github.com), \
+> ![tampilan halaman github](image-31.png)
+
+> Lalu kita akan **membuat OAuth dari github**, dengan cara:
+>
+> 1. Kita ke halaman settings
+>    ![tampilan tombol sign in](image-32.png)
+> 2. Scroll paling bawah ada tombol `"Developer settings"`,
+>    ![tampilan tombol developer settings](image-33.png)
+> 3. Lalu kita tekan tombol **`OAuth Apps`**, lalu tekan tombol hijau **`New OAuth app`**
+>    ![tampilan tombol OAuth Apps](image-34.png)
+>    ![tampilan tombol hijau](image-35.png)
+> 4. Lalu saya mengisikan formulir pembuatan OAuth Apps nya seperti berikut,
+>    ![tampilan pengisian formulir](image-36.png)
+> 5. Setelah itu pencet tombol `Register application`
+>    ![tampilan tombol Register application](image-37.png)
+> 6. Lalu setelah itu tampilannya akan seperti berikut, dan tekan tombol `Generate a new client secret`
+>    ![tampilan tombol Generate a new client secret](image-38.png)
+> 7. Setelah itu maka Client Secret baru akan terbentuk,
+>    ![tampilan client secret baru](image-39.png)
+
+Lalu karena kita sudah mendapatkan `Client ID` dan `Client Secret` dari Github OAuth, maka kita bisa simpan kredensial
+tersebut ke `.env.local` seperti berikut,
+
+![tampilan .env.local setelah mendapatkan kredensial OAuth dari github](image-40.png)
+
+Setelah itu kita hanya perlu memodifikasi kode untuk implementasi login menggunakan provider Github yang sudah saya
+buat,
+
+> **kode modifikasi file `/views/auth/login/index.tsx`** untuk menambahkan tombol login menggunakan github \
+> ![tampilan modifikasi kode view login](image-41.png)
+
+> **kode modifikasi file `/pages/api/auth/[...nextauth].ts`** untuk autentikasi menggunakan Github \
+> ![tampilan modifikasi kode [...nextauth].ts](image-42.png)
+> ![tampilan modifikasi kode [...nextauth].ts](image-43.png)
+
+Sehingga hasilnya adalah seperti berikut,
+
+![tampilan halaman login](image-44.png)
+
+![tampilan halaman authorize github](image-45.png)
+
+![tampilan halaman setelah login menggunakan provider github](image-46.png)
+
+Tetapi terlihat jika nama di profil navbar nya tidak muncul **dikarenakan struktur response json dari provider
+Github berbeda
+daripada provider milik Google**,
+
+![tampilan struktur response json yg berbeda](image-47.png)
+
+sehingga saya perlu untuk memperbaikinya seperti berikut,
+
+> kode modifikasi file `/pages/api/auth/[...nextauth].ts` untuk memperbaiki penangkapan struktur Response JSON \
+> ![tampilan modifikasi kode [...nextauth].ts](image-48.png)
+>
+> [!NOTE]
+> Terlihat juga saya disitu membuat fungsi baru bernama `signInWithGithub` untuk menyimpan/update data kredensial login
+> pengguna dari provider **Github** (walaupun jujur ini terasa lebih boros kode, sehingga ini akan kita **refactor** di
+> step selanjutnya)
+
+> kode modifikasi file `/src/utils/db/servicefirebase.ts` untuk fungsi khusus Github,
+> ![tampilan modifikasi kode servicefirebase.ts](image-49.png)
+> [!NOTE]
+> Kode fungsi ini lah yang menurut saya boros, padahal isinya serupa dengan fungsi sebelumnya `signInWithGoogle`. Nanti
+> akan kita **refactor**.
+
+Setelah itu hasil dari tampilan profil di navbar nya setelah selesai diperbarui adalah seperti berikut,
+
+![tampilan navbar hasil modifikasi](image-50.png)
+
+Dan juga, setelah **login menggunakan Github**, data kredensial di firestore database kita juga akan diperbarui,
+
+![tampilan perubahan data kredensial firestore database dari login menggunakan github](image-54.png)
+
+### 4. Refactor service agar reusable
+
+#### **Jawab**
+
+Karena ada fungsi fungsi yang berulang, saya akan melakukan refactor beberapa fungsi terasebut agar tidak boros baris
+kode (reusable) mengikuti DRY (Don't Repeat Yourself),
+
+> Isi dari kode `servicefirebase.ts`
+> **Sebelum** \
+> ![tampilan before](image-51.png)
+> **Sesudah**
+> ![tampilan after](image-52.png)
+> **Implementasi**
+> ![tampilan implementasi](image-53.png)
+
+> isi dari kode `[...nextauth].ts`
+> **Sebelum** \
+> ![tampilan before](image-53.png)
+> **Sesudah**
+> ![tampilan after](image-55.png)
+
+### 5. Gunakan next/image untuk optimasi avatar
+
+Setelah itu karena sebelumnya profile picture di navbar menggunakan tag `<img>` biasa,
+
+![tampilan kode untuk menampilkan profile picture di navbar](image-56.png)
+
+sehingga saya lakukan optimasi pada profile picture/avatar tersebut dengan menggunakan tag `<Image>` bawaan nextjs di
+library `next/image` seperti berikut,
+
+![tampilan kode navbar untuk menampilkan avatar](image-57.png)
+
+Lalu saya juga memodifikasi kode `next.config.js` berikut untuk mendaftarkan domain asal provider avatar seperti
+berikut,
+
+(hal ini wajib dilakukan, jika kita menggunakan tag `<Image>` bawaan nextjs, **jika tidak, maka halaman web akan
+mengalami error**),
+
+![tampilan kode next.config.js](image-58.png)
+
+Jadi hasil akhir avatar pada navbar setelah login menggunakan provider github nya akan seperti berikut,
+
+![tampilan akhir avatar pada navbar setelah login menggunakan provider github](image-59.png)
