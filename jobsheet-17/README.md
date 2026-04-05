@@ -115,3 +115,37 @@ Lalu saya coba login menggunakan akun google,
 | User role admin akses /admin | Bisa masuk                  | <img src="Screencast_20260404_000848.gif" width="400" alt="Akses Admin">     |
 | Avatar tampil                | Ya                          | <img src="image-19.png" width="100" alt="Avatar Tampil">                     |
 
+# Analisis & Diskusi
+
+### 1. Apa perbedaan login credential dan login Google?
+
+#### **Jawab**
+
+Jika login credentials maka kita dibebaskan untuk login menggunakan akun email selain akun google `@gmail.com`. Tetapi
+jika login menggunakan provider google, maka kita hanya bisa login menggunakan akun google `@gmail.com`.
+
+### 2. Mengapa data Google tetap perlu disimpan ke database?
+
+#### **Jawab**
+
+Karena tetap berguna digunakan untuk mendata perubahan informasi dari pengguna.
+
+### 3. Apa fungsi JWT callback?
+
+#### **Jawab**
+
+Fungsi "Callback JWT" dalam auth ini (di kasus ini) bertujuan untuk melakukan pembaruan state JWT dan penyimpanan
+kredensial hasil autentikasi ke database.
+
+### 4. Mengapa perlu multi-role?
+
+#### **Jawab**
+
+Karena untuk membatasi hak akses yang ada pada website kita untuk masing-masing user.
+
+### 5. Apa risiko jika tidak menyimpan user ke database?
+
+#### **Jawab**
+
+Maka nantinya kita akan kesulitan pada saat ingin menampilkan profil pengguna ataupun melakukan validasi
+role/kredensial.
