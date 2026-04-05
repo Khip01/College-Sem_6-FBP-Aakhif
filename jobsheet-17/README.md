@@ -80,3 +80,27 @@ menampilkan gambar/profil picture seperti berikut,
 ![tampilan kode css styling setelah modifikasi picture profile](image-18.png)
 
 ![tampilan hasil profil di navbar](image-19.png)
+
+# G. Simpan Data Google ke Database
+
+Setelah itu saya ingin menambahkan proses untuk menyimpan data akun google ke firestore database pada saat pengguna
+login menggunakan provider google (bukan login biasa), jadi tidak hanya sekadar di state jwt saja.
+
+Pertama-tama saya mememperbarui kode `servicefirebase.ts` untuk membuat fungsi baru untuk menyimpan ke database,
+
+![tampilan kode servicefirebase.ts](image-20.png)
+
+Lalu saya memanggilnya di file `[...nextauth].ts` seperti berikut,
+
+![tampilan kode [...nextauth].ts](image-21.png)
+
+Setelah itu saya mencoba menjalankan browser dengan sign-in menggunakan provider google, tetapi sebelumnya data saya di
+firebase adalah seperti ini (sebelum login menggunakan akun google),
+
+![tampilan data users akun saya sebelum login menggunakan provider google](image-22.png)
+
+Lalu saya coba login menggunakan akun google,
+
+![tampilan setelah login menggunakan provider google](image-23.png)
+
+![tampilan firebase setelah login menggunakan provider google](image-24.png)
