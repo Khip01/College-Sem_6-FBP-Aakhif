@@ -132,3 +132,50 @@ Lalu saya melakukan testing performa dari beberapa halaman dari website,
 
 > **Tampilan hasil testing performa halaman `/admin` (dengan proses rintangan validasi di middleware nya)** \
 > ![tampilan halamannya](image-16.png)
+
+# Refleksi & Diskusi
+
+### 1. Mengapa `<img>` biasa tidak optimal?
+
+#### **Jawab**
+
+Karena tag `<img>` biasa akan **mengunduh gambar dengan ukuran aslinya**. Misal jika Anda punya gambar 3mb, browser akan
+mengunduh 3MB meskipun hanya ditampilkan kecil di layar HP.
+
+`<Image>` Next.js: Secara **otomatis melakukan Resizing**. Next.js akan **mengirimkan gambar dengan dimensi yang pas**
+sesuai perangkat pengguna (Mobile vs Desktop).
+
+### 2. Apa perbedaan font CDN dan next/font?
+
+#### **Jawab**
+
+Menurut saya, jika font dari CDN (Content Delivery Network) maka kita akan **mengunduh font style dari luar** project
+kita, sehingga bisa **berdampak pada Performance**.
+
+Jika `next/font`, maka kita menggunakan **font lokal dari project yang sudah disediakan oleh nextjs** sendiri, bahasa
+lainnya yaitu kita **sudah punya assets font nya tanpa download dari luar**.
+
+### 3. Mengapa script bisa membuat website lambat?
+
+#### **Jawab**
+
+Karena pada saat browser merender website HTML yang ada script nya, maka render tersebut tidak dilanjutkan alias
+terhenti untuk menunggu browser untuk mengunduh script dan mengeksekusinya. Ini akan berpengaruh pada performa, jadi
+kita berusaha untuk menuliskan sesuatu dalam bentuk static.
+
+### 4. Kapan harus menggunakan dynamic import?
+
+#### **Jawab**
+
+Pada saat kita tahu ada suatu komponen yang **jarang diperlihatkan ke pengguna/jarang dilakukan interaksi**, sehingga
+kita
+tidak memprioritaskan import yang kurang berguna tadi **untuk memangkas performa pada saat halaman pertama kali dimuat
+**.
+
+### 5. Apa dampak bundle size terhadap UX?
+
+#### **Jawab**
+
+Dampaknya bisa membuat **pengguna menunggu terlalu lama untuk mengunduh** file yang sangat besar. Sehingga performa website
+menurun. Dan pengguna menjadi **malas untuk mengakses website kita lagi**/bahkan kegiatan pengguna di dalam website akan
+terganggu karena **pemrosesan website yang sangat lambat dan kurang responsif**.
