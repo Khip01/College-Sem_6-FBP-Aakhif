@@ -96,3 +96,15 @@ Lalu saya coba jalankan lagi `test:coverage` nya,
 ![tampilan error testing](image-20.png)
 
 Terlihat jika hasil testing nya ada yang gagal/tidak sesuai ekspektasi.
+
+# PRAKTIKUM 7 – Testing Page dengan Router (Mocking)
+
+Lalu saya mencoba untuk melakukan testing halaman produk,
+
+![tampilan direktori testing](image-21.png)
+
+![tampilan kode testing untuk halaman produk](image-22.png)
+
+Tapi hasilnya error karena undefined data,
+
+![tampilan error data undefined](image-23.png)
