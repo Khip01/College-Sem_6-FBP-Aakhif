@@ -54,3 +54,19 @@ Dan hasil nya saya mendapatkan folder baru bernama `coverage` dan isinya adalah 
 Dan tampilan report versi webnya adalah seperti berikut,
 
 ![tampilan hasil report versi web](image-10.png)
+
+# PRAKTIKUM 5 – Konfigurasi Coverage Lengkap
+
+Lalu saya melakukan modifikasi kode di `jest.config.mjs` untuk melakukan test coverage ke seluruh isi dari direktori
+`/<rootDir>/src/` seperti berikut,
+
+![tampilan modifikasi kode config .mjs](image-11.png)
+
+Dan setelah itu saya jalankan `npm run test:coverage` lagi di konsole/terminal saya dan hasilnya seperti berikut,
+
+![tampilan hasil run coverage pt1](image-12.png)
+![tampilan hasil run coverage pt2](image-13.png)
+
+Untuk tampilan dari `index.html` nya adalah seperti berikut,
+
+![tampilan report test coverage versi web](image-14.png)
