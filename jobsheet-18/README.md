@@ -9,3 +9,16 @@ seperti berikut,
 
 ![tampilan halaman 404 notfound setelah diganti dengan tag <Image>](image-1.png)
 
+## B. Optimasi Gambar Remote (External URL)
+
+Setelah itu saya melakukan optimasi gambar dari eksternal, contohnya di halaman `/produk`, maka saya melakukan
+modifikasi di file `/views/product/index.tsx` seperti berikut,
+
+![tampilan halaman index dari produk](image-2.png)
+
+Setelah itu dikarenakan gambar-gambarnya diambil dari url tertentu, maka konfigurasi nya berbeda di file
+`next.config.js` nya seperti berikut,
+
+![tampilan modifikasi file next.config.js](image-3.png)
+
+![tampilan halaman /produk](image-4.png)
