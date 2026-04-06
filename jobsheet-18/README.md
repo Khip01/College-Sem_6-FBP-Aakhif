@@ -33,3 +33,16 @@ akan berubah. Jadi saya akan memodifikasi file `/components/layouts/Appshell/ind
 ![tampilan kode hasil modifikasi optimisasi font](image-5.png)
 
 ![tampilan halaman setelah perubahan font](image-6.png)
+
+# PRAKTIKUM 3 – Script Optimization
+
+## B. Menggunakan next/script
+
+Lalu saya melakukan optimisasi lagi di bagian loading sebuah teks `"MyApp"` yang awalnya ditulis langsung didalam tag
+`<div>`, dengan cara menuliskan strategy `lazyOnload` didalam tag `<Script>` bawaan `next/script`, sehingga teks
+`"MyApp"` akan di load setelah semua sumber daya utama dari konten website selesai (alias terakhir),
+
+![tampilan kode penggunaan script sebagai sarana 'lazyOnload'](image-7.png)
+
+Jadi itu adalah salah satu implementasi tag `<Script>` bawaan `next/script` sebagai sarana lazyOnload pada sebuah
+konten.
