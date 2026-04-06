@@ -21,3 +21,21 @@ Lalu saya menambahkan test coverage nya di `package.json` bagian `scripts`,
 Lalu saya membuat folder bernama `__test__` didalam direktori `src/` seperti berikut,
 
 ![tampilan folder baru bernama __test__](image-3.png)
+
+# PRAKTIKUM 3 – Testing Halaman About
+
+Lalu saya mencoba membuat file testing didalam direktori `src/__test__/pages/about.spec.tsx` seperti berikut,
+
+> [!IMPORTANT]
+> Karena saya sempat mendapatkan error mengenai type definition dari fungsi milik `jest` seperti berikut, \
+> ![tampilan error type definition jest](image-4.png)
+>
+> Saya menyelesaikannya dengan cara menginstall package `@types/jest` \
+> ![tampilan konsole instalasi types/jest](image-5.png)
+>
+> Sehingga tampilannya sudah tidak error seperti berikut, \
+> ![tampilan kode setelah instalasi library types/jest](image-6.png)
+
+Setelah itu saya coba menjalankan testing dengan menggunakan `npm run test` di konsole/terminal saya seperti berikut,
+
+![tampilan konsole hasil testing](image-7.png)

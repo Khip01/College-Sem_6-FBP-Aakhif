@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "types": ["node", "jest"],
     "lib": [
       "dom",
       "dom.iterable",
@@ -27,7 +28,11 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/__tests__/**/*",  // Keperluan testing
+    "**/__test__/**/*",   // Keperluan testing
+    "**/*.test.tsx",      // Keperluan testing
+    "**/*.spec.tsx"       // Keperluan testing
   ],
   "exclude": [
     "node_modules"
