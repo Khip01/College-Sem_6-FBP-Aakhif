@@ -207,3 +207,48 @@ Hasil akhir test:coverage adalah seperti berikut,
 ![tampilan hasil akhir test:coverage](image-37.png)
 
 ![tampilan hasil akhir test:coverage web](image-38.png)
+
+# Diskusi & Refleksi
+
+### 1. Mengapa unit testing penting sebelum production?
+
+#### **Jawab**
+
+Karena bisa membantu untuk membuat hasil perubahan dari tahap development menjadi tetap konsisten dan dapat
+dipantau/tracking apabila ada kesalahan/perbedaan yang terjadi setelah tahap development perangkat lunak dilakukan.
+
+### 2. Mengapa branch coverage sulit mencapai 100%?
+
+#### **Jawab**
+
+Jika logika, proses yang dilakukan oleh program yang akan di test terlalu dalam, maka bisa saja kita sulit untuk
+mengcover seluruh kemungkinan yang ada sehingga bisa saja mengakibatkan kemungkinan testing terlompati.
+
+Misal dalam kasus nullable data yang terus beruntun, pengkondisian yang mendalam, callback function didalam sebuah
+proses, dan sejenisnya yang memiliki kemungkinan yang banyak dan bercabang.
+
+### 3. Apa itu mocking?
+
+#### **Jawab**
+
+Jika dari sudut pandang saya, mocking adalah sebuah pemberian data palsu/data uji pada saat melakukan testing di sebuah
+test case. Sehingga pada saat test case dijalankan, data yang digunakan untuk menguji hanyalah data buatan yang dibuat
+seolah-olah data tersebut data asli.
+
+### 4. Kapan snapshot test digunakan?
+
+#### **Jawab**
+
+Snapshot Test ini digunakan ketika tampilannya sudah dianggap konsisten, jadi snapshot test ini akan digunakan sebagai
+patokan tampilan/proses/fungsi halaman yang sudah stabil.
+
+### 5. Apakah semua file harus dites?
+
+#### **Jawab**
+
+Menurut saya tidak semua, mungkin paling saya rekomendasikan adalah tes halaman-halaman dengan data dinamis, halaman
+dengan adanya beberapa hasil kemungkinan yang berbeda, halaman dengan masukan yang bermacam-macam, intinya halaman
+dengan isi data/masukan yang bisa berubah-ubah.
+
+Jadi saya pribadi kurang merekomendasikan untuk tes halaman yang tampilannya berupa tampilan statis tanpa ada perubahan
+sedikitpun baik dalam tahap pengembangan ataupun tahap deployment.
