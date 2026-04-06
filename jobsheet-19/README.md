@@ -128,3 +128,82 @@ Setelah itu saya coba jalankan lagi untuk `test:coverage` nya, dan hasilnya adal
 ![tampilan report test:coverage pt2](image-28.png)
 
 ![tampilan report test:coverage versi web](image-29.png)
+
+# Tugas Praktikum
+
+### 1. Buat unit test untuk:
+
+    - Halaman Product
+    - 1 Komponen
+
+#### **Jawab**
+
+Saya sudah membuat unit test di halaman produk seperti berikut,
+
+![tampilan kode testing untuk halaman produk](image-22.png)
+
+![tampilan report test:coverage pt1](image-27.png)
+![tampilan report test:coverage pt2](image-28.png)
+
+![tampilan report test:coverage versi web](image-29.png)
+
+### 2. Gunakan minimal:
+
+    - 1 Snapshot test
+    - 1 toBe()
+    - 1 getByTestId()
+
+#### **Jawab**
+
+Saya sudah mencoba untuk menggunakan beberapa test tersebut seperti ini,
+
+![tampilan modifikasi kode html penambahan atribut data-testid](image-15.png)
+
+![tampilan modifikasi kode testing jika disalahkan](image-18.png)
+
+![tampilan error testing](image-19.png)
+
+![tampilan error testing](image-20.png)
+
+### 3. Buat coverage minimal 50%
+
+#### **Jawab**
+
+Untuk itu saya sudah mencoba melakukan test coverage pada beberapa tampilan berikut saja,
+
+- login
+- register
+- navbar
+- produk
+- produk/id
+- appshell
+
+![tampilan file testing](image-30.png)
+
+Dan hasilnya adalah seperti berikut,
+
+![tampilan konsole hasil testing report](image-31.png)
+
+![tampilan hasil testing report tampilan web](image-32.png)
+
+### 4. Lakukan mocking untuk router
+
+#### **Jawab**
+
+Saya sudah mencoba untuk mocking `next/router` seperti berikut,
+
+![tampilan kode mocking router](image-33.png)
+
+![tampilan test case pengunaan mocking router](image-34.png)
+
+### 5. Dokumentasikan hasil coverage
+
+#### **Jawab**
+
+Hasil akhir test:coverage adalah seperti berikut,
+
+![tampilan hasil akhir test:coverage](image-35.png) \
+![tampilan hasil akhir test:coverage](image-36.png) \
+![tampilan hasil akhir test:coverage](image-37.png)
+
+![tampilan hasil akhir test:coverage web](image-38.png)
