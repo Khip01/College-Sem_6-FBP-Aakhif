@@ -39,3 +39,18 @@ Lalu saya mencoba membuat file testing didalam direktori `src/__test__/pages/abo
 Setelah itu saya coba menjalankan testing dengan menggunakan `npm run test` di konsole/terminal saya seperti berikut,
 
 ![tampilan konsole hasil testing](image-7.png)
+
+# PRAKTIKUM 4 – Coverage Report
+
+Setelah itu saya mencoba untuk menjalankan test coverage dengan menggunakan perintah `npm run test:coverage` seperti
+berikut,
+
+![tampilan hasil test:coverage konsole](image-8.png)
+
+Dan hasil nya saya mendapatkan folder baru bernama `coverage` dan isinya adalah sebagai berikut,
+
+![tampilan direktori `coverage` dan isinya](image-9.png)
+
+Dan tampilan report versi webnya adalah seperti berikut,
+
+![tampilan hasil report versi web](image-10.png)
