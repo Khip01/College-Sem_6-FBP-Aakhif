@@ -108,3 +108,23 @@ Lalu saya mencoba untuk melakukan testing halaman produk,
 Tapi hasilnya error karena undefined data,
 
 ![tampilan error data undefined](image-23.png)
+
+# PRAKTIKUM 8 – Menangani Undefined Data
+
+Untuk menyelesaikan masalah error **undefined data** tersebut, saya melakukan beberapa modifikasi seperti berikut,
+
+> **kode `/pages/produk/index.tsx`**
+> ![tampilan perubahan kode](image-24.png)
+
+> **kode `/views/product/index.tsx`**
+> ![tampilan perubahan kode di views/product/index.tsx](image-25.png)
+
+> **kode `about.spec.tsx` dan `product.spec.tsx`**
+> ![tampilan komentar pada masing masing kode testing](image-26.png)
+
+Setelah itu saya coba jalankan lagi untuk `test:coverage` nya, dan hasilnya adalah seperti berikut,
+
+![tampilan report test:coverage pt1](image-27.png)
+![tampilan report test:coverage pt2](image-28.png)
+
+![tampilan report test:coverage versi web](image-29.png)
