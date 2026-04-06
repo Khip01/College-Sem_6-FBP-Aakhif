@@ -7,7 +7,9 @@ exports[`About Page renders about page correctly 1`] = `
     <div>
       <div>
         <main>
-          <h1>
+          <h1
+            data-testid="title"
+          >
             ini halaman about aakhif dengan folder
           </h1>
         </main>
@@ -17,7 +19,9 @@ exports[`About Page renders about page correctly 1`] = `
   "container": <div>
     <div>
       <main>
-        <h1>
+        <h1
+          data-testid="title"
+        >
           ini halaman about aakhif dengan folder
         </h1>
       </main>

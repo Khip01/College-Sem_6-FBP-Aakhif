@@ -7,7 +7,7 @@ export default function About() {
         <title>Halaman About Dengan Folder</title>
       </Head>
       <main>
-        <h1>ini halaman about aakhif dengan folder</h1>
+        <h1 data-testid="title">ini halaman about aakhif dengan folder</h1>
       </main>
     </div>
   );

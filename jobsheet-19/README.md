@@ -70,3 +70,29 @@ Dan setelah itu saya jalankan `npm run test:coverage` lagi di konsole/terminal s
 Untuk tampilan dari `index.html` nya adalah seperti berikut,
 
 ![tampilan report test coverage versi web](image-14.png)
+
+# PRAKTIKUM 6 – Testing dengan getByTestId
+
+Saya mencoba untuk menambahkan atribut `data-testid` pada kode html `about/index.tsx` seperti berikut,
+
+![tampilan modifikasi kode html penambahan atribut data-testid](image-15.png)
+
+Lalu saya update kode testing `about.spec.tsx` nya untuk melakukan test atribut `data-testid` seperti berikut,
+
+![tampilan kode testing setelah modifikasi](image-16.png)
+
+Setelah itu saya run kembali `test:coverage` nya seperti berikut,
+
+![tampilan hasil test:coverage berhasil](image-17.png)
+
+Coba misal saya salahkan expected value nya menjadi seperti berikut,
+
+![tampilan modifikasi kode testing jika disalahkan](image-18.png)
+
+Lalu saya coba jalankan lagi `test:coverage` nya,
+
+![tampilan error testing](image-19.png)
+
+![tampilan error testing](image-20.png)
+
+Terlihat jika hasil testing nya ada yang gagal/tidak sesuai ekspektasi.
