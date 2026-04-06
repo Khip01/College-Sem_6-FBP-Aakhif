@@ -22,3 +22,14 @@ Setelah itu dikarenakan gambar-gambarnya diambil dari url tertentu, maka konfigu
 ![tampilan modifikasi file next.config.js](image-3.png)
 
 ![tampilan halaman /produk](image-4.png)
+
+# PRAKTIKUM 2 – Font Optimization
+
+## A. Menggunakan next/font
+
+Lalu sekarang saya melakukan font optimization di sisi parent (yaitu via `Appshell`), sehingga seluruh font dari konten
+akan berubah. Jadi saya akan memodifikasi file `/components/layouts/Appshell/index.tsx` seperti berikut,
+
+![tampilan kode hasil modifikasi optimisasi font](image-5.png)
+
+![tampilan halaman setelah perubahan font](image-6.png)
