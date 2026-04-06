@@ -56,3 +56,79 @@ Saya sudah melakukan optimisasi avatar yang ada pada navbar seperti berikut,
 ![tampilan kode next.config.js](assets/image-58.png)
 
 ![tampilan akhir avatar pada navbar setelah login menggunakan provider github](assets/image-59.png)
+
+# Tugas Praktikum
+
+### 1. Optimasi semua image di project menggunakan next/image
+
+#### **Jawab**
+
+Saya sudah melakukan optimasi semua image di project menggunakan next/image,
+
+> **halaman 404 notfound** \
+> ![tampilan halaman 404 notfound setelah diganti dengan tag <Image>](image-1.png)
+
+> **tampilan preview image pada `/produk`** \
+> ![tampilan halaman /produk](image-4.png)
+
+> **tampilan avatar pada navbar**
+> ![tampilan akhir avatar pada navbar setelah login menggunakan provider github](assets/image-59.png)
+
+### 2. Gunakan minimal 1 font dari next/font
+
+#### **Jawab**
+
+Disini saya sudah menggunakan font yaitu `roboto`,
+
+![tampilan kode hasil modifikasi optimisasi font](image-5.png)
+
+![tampilan halaman setelah perubahan font](image-6.png)
+
+### 3. Tambahkan script Google Analytics menggunakan next/script
+
+#### **Jawab**
+
+Jadi saya mencoba memasang Google Analytics ini di file `_app.tsx` seperti berikut,
+
+![tampilan kode _app.tsx setelah diberi GA](image-8.png)
+
+### 4. Terapkan dynamic import pada minimal 1 komponen
+
+#### **Jawab**
+
+Karena disini terdapat komponen yang kurang begitu banyak berinteraksi dengan pengguna yaitu komponen `footer`, sehingga
+saya memilih footer sebagai komponen dinamis, sehingga saya modifikasi kode di file `Appshell/index.tsx` seperti
+berikut,
+
+> **Sebelum menggunakan footer dynamic component**
+> ![tampilan kode footer sebelum menggunakan dynamic component](image-9.png)
+
+> **Sesudah menggunakan footer dynamic component**
+> ![tampilan kode footer sesudah menggunakan dynamic component](image-10.png)
+
+Jadi setelah menambahkan dynamic import di komponen footer, maka import untuk **komponen footer tidak perlu langsung
+dimuat** ketika halaman pertama kali dimuat.
+
+### 5. Dokumentasikan perubahan performa (screenshot Lighthouse)
+
+#### **Jawab**
+
+Lalu saya melakukan testing performa dari beberapa halaman dari website,
+
+> **Tampilan hasil testing performa halaman utama `/`** \
+> ![tampilan halamannya](image-12.png)
+
+> **Tampilan hasil testing performa halaman `/produk/static`** \
+> ![tampilan halamannya](image-11.png)
+
+> **Tampilan hasil testing performa halaman `/produk`** \
+> ![tampilan halamannya](image-13.png)
+
+> **Tampilan hasil testing performa halaman notfound `(error 404)`** \
+> ![tampilan halamannya](image-14.png)
+
+> **Tampilan hasil testing performa halaman `/about`** \
+> ![tampilan halamannya](image-15.png)
+
+> **Tampilan hasil testing performa halaman `/admin` (dengan proses rintangan validasi di middleware nya)** \
+> ![tampilan halamannya](image-16.png)

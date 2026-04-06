@@ -1,9 +1,14 @@
 import { useRouter } from "next/router";
 import Navbar from "../navbar";
-import Footer from "@/components/utility/footer";
 import { Roboto } from "next/font/google";
+import dynamic from "next/dynamic";
 
 const disableNavbar = ["/auth/login", "/auth/register", "/404"];
+
+const Footer = dynamic(() => import ("@/components/utility/footer"), {
+    ssr: false,
+    loading: () => <div className="p-4 text-center">Loading Footer...</div>,
+});
 
 type AppShellProps = {
   children: React.ReactNode;
