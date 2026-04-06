@@ -15,3 +15,9 @@ Lalu saya membuat file konfigurasi baru bernama `jest.config.mjs` untuk melakuka
 Lalu saya menambahkan test coverage nya di `package.json` bagian `scripts`,
 
 ![tampilan kode package.json](image-2.png)
+
+# PRAKTIKUM 2 – Struktur Folder Testing
+
+Lalu saya membuat folder bernama `__test__` didalam direktori `src/` seperti berikut,
+
+![tampilan folder baru bernama __test__](image-3.png)
