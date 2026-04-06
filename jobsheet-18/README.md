@@ -46,3 +46,13 @@ Lalu saya melakukan optimisasi lagi di bagian loading sebuah teks `"MyApp"` yang
 
 Jadi itu adalah salah satu implementasi tag `<Script>` bawaan `next/script` sebagai sarana lazyOnload pada sebuah
 konten.
+
+# PRAKTIKUM 4 – Optimasi Avatar dengan next/image
+
+Saya sudah melakukan optimisasi avatar yang ada pada navbar seperti berikut,
+
+![tampilan kode navbar untuk menampilkan avatar](assets/image-57.png)
+
+![tampilan kode next.config.js](assets/image-58.png)
+
+![tampilan akhir avatar pada navbar setelah login menggunakan provider github](assets/image-59.png)
