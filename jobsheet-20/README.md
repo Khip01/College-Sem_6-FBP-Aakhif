@@ -83,3 +83,16 @@ Lalu saya melakukan modifikasi ke salah satu variabel `NEXT_PUBLIC_API_URL` sepe
 Lalu sekarang saya melakukan redeploy project saya di vercel,
 
 ![tampilan tombol redeploy](image-20.png)
+
+# PRAKTIKUM 4 – Konfigurasi Google OAuth Production
+
+Sekarang saya mengkonfigurasi kembali Google OAuth yang pernah ditambahkan agar mengizinkan URL production dari vercel
+seperti berikut,
+
+![tampilan authorized origins URL](image-21.png)
+
+Lalu saya juga memperbaiki beberapa kode tampilan tombol halaman login
+
+![tampilan perbaikan tombol styling](image-22.png)
+
+Setelah selesai, lalu saya melakukan redeploy.
