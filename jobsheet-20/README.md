@@ -96,3 +96,41 @@ Lalu saya juga memperbaiki beberapa kode tampilan tombol halaman login
 ![tampilan perbaikan tombol styling](image-22.png)
 
 Setelah selesai, lalu saya melakukan redeploy.
+
+# PRAKTIKUM 5 – Pengujian Setelah Deployment
+
+Terlihat jika setelah re-deployment dari perubahan praktikum sebelumnya berhasil dijalankan,
+
+![setelah deployment selesai dan berhasil dilakukan](image-23.png)
+
+Saya mengecek url `/`:
+
+![tampilan halaman beranda `/`](image-24.png)
+
+url `/about`:
+
+> **Langsung diarahkan ke halaman login,**
+> ![tampilan halaman login setelah mengakses URL /about sebelum melakukan login](image-25.png)
+
+> **Setelah melakukan login,**
+> ![tampilan halaman /about](image-26.png)
+
+url `/produk`
+
+![tampilan halaman produk /produk](image-27.png)
+
+url `/profile`
+
+![tampilan halaman profile /profile](image-28.png)
+
+Melakukan Login Google,
+
+![tampilan login menggunakan google](image-29.png)
+
+![tampilan setelah login](image-30.png)
+
+Melakukan Login menggunakan Credential biasa,
+
+![tampilan login menggunakan credential biasa](image-31.png)
+
+![tampilan setelah login menggunakan credential biasa](image-32.png)
