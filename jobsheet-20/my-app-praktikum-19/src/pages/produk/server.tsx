@@ -12,7 +12,7 @@ const HalamanProdukServer = (props: { products: ProductType[] }) => {
 export default HalamanProdukServer;
 
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3000/api/products");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products`);
   const response = await res.json();
   return {
     props: {
@@ -20,3 +20,12 @@ export async function getServerSideProps() {
     },
   };
 }
+
+
+
+
+
+
+
+
+
