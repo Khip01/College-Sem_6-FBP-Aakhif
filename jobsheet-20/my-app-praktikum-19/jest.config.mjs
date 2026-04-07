@@ -18,7 +18,7 @@ const config = {
         // '!**/jest.config.mjs',
         // '!**/next.config.mjs',
         '!src/pages/produk/server.tsx',
-        '!src/pages/produk/static.tsx',
+        // '!src/pages/produk/static.tsx',
         '!**/*.d.ts',
         '!**/node_modules/**',
         '!**/.next/**',
