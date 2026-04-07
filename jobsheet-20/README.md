@@ -58,3 +58,28 @@ Setelah itu saya menekan tombol deploy dan hasilnya seperti berikut,
 ![tampilan halaman yang sudah dideploy ke vercel](image-14.png)
 
 Terlihat jika saya sudah berhasil melakukan deploy ke vercel.
+
+# PRAKTIKUM 3 – Menambahkan Environment Variable di Vercel
+
+Lalu saya menambahkan environment variable dari project saya (_`env.local`_) ke project yang sudah di deploy di vercel.
+
+Dengan cara menekan tombol `Settings` di sidebar dan menekan `Environment Variables`, setelah itu menekan
+`Add Variables`,
+
+![tampilan tomnbol settings](image-15.png)
+
+![tampilan tombol environment variables](image-16.png)
+
+![tampilan tombol add variables](image-17.png)
+
+Lalu melakukan import .env dari lokal project dan memilih file `.env.local` seperti berikut,
+
+![tampilan iport .env.local dari project nextjs local](image-18.png)
+
+Lalu saya melakukan modifikasi ke salah satu variabel `NEXT_PUBLIC_API_URL` seperti berikut,
+
+![tampilan perubahan NEXT_PUBLIC_API_URL](image-19.png)
+
+Lalu sekarang saya melakukan redeploy project saya di vercel,
+
+![tampilan tombol redeploy](image-20.png)
