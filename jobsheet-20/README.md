@@ -134,3 +134,79 @@ Melakukan Login menggunakan Credential biasa,
 ![tampilan login menggunakan credential biasa](image-31.png)
 
 ![tampilan setelah login menggunakan credential biasa](image-32.png)
+
+# Tugas Praktikum
+
+### 1. Deploy project Next.js ke Vercel
+
+#### **Jawab**
+
+Saya sudah melakukan deploy project nextjs saya ke Vercel, seperti berikut,
+
+![tampilan deployment berhasil](image-13.png)
+
+![tampilan halaman yang sudah dideploy ke vercel](image-14.png)
+
+### 2. Pastikan API tidak menggunakan localhost
+
+#### **Jawab**
+
+Saya sudah mengubah endpoint API dan mengaturnya menggunakan .env seperti berikut,
+
+![tampilan perubahan NEXT_PUBLIC_API_URL](image-19.png)
+
+![tampilan .env.local untuk halaman](image-8.png)
+
+![tampilan 2 file yang URL nya perlu dimodifikasi](image-9.png)
+
+![tampilan 2 file setelah dimodifikasi](image-10.png)
+
+### 3. Konfigurasikan Google OAuth production
+
+#### **Jawab**
+
+Saya juga sudah mengkonfigurasi Google OAuth product
+
+![tampilan authorized origins URL](image-21.png)
+
+### 4. Lakukan minimal 1 redeploy
+
+#### **Jawab**
+
+Saya sudah pernah melakukan redeploy pada saat merubah .env untuk pengaturan API Endpoint seperti berikut,
+
+![tampilan tombol redeploy](image-20.png)
+
+Jika dilihat juga saya sudah melakukan redeploy berkali kali,
+
+![tampilan redeploy berkali kali](image-33.png)
+
+### 5. Dokumentasikan:
+
+- Screenshot dashboard Vercel
+- URL hasil deployment
+- Screenshot login Google berhasil
+
+#### **Jawab**
+
+1. Berikut adalah screenshot dari dashboard Vercel saya,
+
+![screenshot dashboard Vercel](image-34.png)
+
+2. Lalu berikut juga screenshot URL hasil deployment nya,
+
+![tampilan halaman yang sudah dideploy ke vercel](image-14.png)
+
+3. Lalu berikut adalah screenshot login google yang berhasil,
+
+Melakukan **Login Google**,
+
+![tampilan login menggunakan google](image-29.png)
+
+![tampilan setelah login](image-30.png)
+
+Melakukan **Login menggunakan Credential biasa**,
+
+![tampilan login menggunakan credential biasa](image-31.png)
+
+![tampilan setelah login menggunakan credential biasa](image-32.png)
