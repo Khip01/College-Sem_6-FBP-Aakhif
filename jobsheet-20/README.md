@@ -210,3 +210,39 @@ Melakukan **Login menggunakan Credential biasa**,
 ![tampilan login menggunakan credential biasa](image-31.png)
 
 ![tampilan setelah login menggunakan credential biasa](image-32.png)
+
+# Refleksi & Diskusi
+
+### 1. Mengapa localhost tidak boleh digunakan di production?
+
+#### **Jawab**
+
+Karena pada saat production sudah menggunakan domain yang berbeda dari localhost yang menggunakan URL lokal.
+
+### 2. Mengapa SSG bisa gagal saat build?
+
+#### **Jawab**
+
+Sejujurnya saya kurang tahu, jika dilihat dari vercelnya sendiri, vercel itu harusnya bisa melakukan build SSG ataupun
+ISR.
+
+### 3. Apa perbedaan SSR dan SSG saat deployment?
+
+#### **Jawab**
+
+SSR melakukan load konten pada saat diakses oleh pengguna, jadi pada saat deployment isi kontennya tidak diambil. Lain
+jika SSG yang akan melakukan load semua konten statis yang dimana itu akan dilakukan pad saat proses build di
+deployment.
+
+### 4. Mengapa perlu redeploy setelah menambahkan environment?
+
+#### **Jawab**
+
+Untuk melakukan refresh project, sehingga variabel di .env yang sebelumnya tidak ada bisa diambil dan dikenali.
+
+### 5. Apa fungsi redirect URI pada OAuth?
+
+#### **Jawab**
+
+Fungsi Redirect URI pada OAuth adalah untuk memberi tahu penyedia layanan (seperti Google atau GitHub) ke mana mereka
+harus mengirimkan pengguna dan kode otorisasi setelah pengguna berhasil login. 
